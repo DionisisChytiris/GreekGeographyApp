@@ -75,6 +75,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    backgroundColor: 'blue',
+    height: 400
   },
   infoContainer2: {
     flexDirection: "row",
