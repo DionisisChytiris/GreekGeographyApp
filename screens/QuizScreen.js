@@ -67,11 +67,11 @@ const QuizScreen = () => {
           </Text>
         </Pressable>
         <Pressable
-          onPress={() => navigation.navigate("TestQuiz")}
+          onPress={() => navigation.navigate("Nomoi1")}
           style={{
             backgroundColor: "green",
             padding: 14,
-            width: 160,
+            width: '60%',
             borderRadius: 25,
             marginLeft: "auto",
             marginRight: "auto",
@@ -86,7 +86,7 @@ const QuizScreen = () => {
               fontSize: 20,
             }}
           >
-            TestQuiz
+            Νομοί Ελλάδας
           </Text>
         </Pressable>
       </ImageBackground>

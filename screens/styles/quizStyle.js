@@ -4,8 +4,8 @@ const styles = StyleSheet.create({
   containerInfo: {
     textAlign: "center",
     // marginHorizontal: 20,
-    marginTop: 60,
-    marginBottom: 40
+    marginTop: '5%',
+    marginBottom: '2%'
   },
   counterBox: {
     padding: 10,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: 5,
     borderRadius: 20,
     justifyContent: "center",
-    marginTop: 20,
+    marginTop: '3%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
