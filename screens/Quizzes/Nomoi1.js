@@ -7,13 +7,14 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import questions2 from "../../data/questions2";
+import questions1 from "../../data/questions1";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../styles/testStyle";
+import { Entypo } from "@expo/vector-icons";
 
 const Nomoi1 = () => {
   const navigation = useNavigation();
-  const data = questions2;
+  const data = questions1;
   const totalQuestions = data.length;
   const [points, setPoints] = useState(0);
   const [index, setIndex] = useState(0);
@@ -21,9 +22,10 @@ const Nomoi1 = () => {
   const [answers, setAnswers] = useState([]);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [counter, setCounter] = useState(5);
-  const [style, setStyle] = useState(styles.quizContainer)
+  const [style, setStyle] = useState(styles.quizContainer);
+  const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
-  let index1 = index+1
+  let index1 = index + 1;
   // const progressPercentage = Math.floor((index / totalQuestions) * 100);
 
   useEffect(() => {
@@ -31,20 +33,23 @@ const Nomoi1 = () => {
       if (selectedAnswerIndex === currentQuestion?.correctAnswerIndex) {
         setPoints((points) => points + 1);
         setAnswerStatus(true);
-        setStyle(styles.quizContainer1)
+        setStyle(styles.quizContainer1);
+        setNextQueButton(styles.nextQueButton1);
         answers.push({ question: index + 1, answer: true });
       } else {
         setAnswerStatus(false);
-        setStyle(styles.quizContainer2)
+        setStyle(styles.quizContainer2);
+        setNextQueButton(styles.nextQueButton2);
         answers.push({ question: index + 1, answer: false });
       }
     }
   }, [selectedAnswerIndex]);
-  
+
   useEffect(() => {
     setSelectedAnswerIndex(null);
+    setStyle(styles.quizContainer);
+    setNextQueButton(styles.nextQueButton);
     setAnswerStatus(null);
-    setStyle(styles.quizContainer)
   }, [index]);
 
   // useEffect(() => {
@@ -53,12 +58,12 @@ const Nomoi1 = () => {
   //       setCounter((counter) => counter - 1);
   //     }
   //     if (counter === 0) {
-  //       navigation.navigate("Results");
+  //       navigation.navigate("LoseScreen");
   //     }
   //   };
   //   interval = setTimeout(myInterval, 1000);
 
-  //   // clean up
+  // clean up
   //   return () => {
   //     clearTimeout(interval);
   //   };
@@ -87,17 +92,21 @@ const Nomoi1 = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <View style={{ height: "100vh", backgroundColor: "darkblue" }}>
+        <View style={{ height: "115vh", backgroundColor: "darkblue" }}>
           <View style={styles.containerInfo}>
+            <View style={styles.levelBox}>
+              <Entypo name="star" size={16} color="gold" />
+              <Text style={{ color: "white" }}>Επίπεδο 1</Text>
+            </View>
             <Text style={{ fontSize: 20, fontWeight: 600, color: "white" }}>
-              Test Quiz
+              Νομοί / Πόλεις
             </Text>
           </View>
 
           <View style={styles.progressContainerInfo}>
             <View>
               <Text style={{ color: "white" }}>
-               {index +1 } / {totalQuestions}
+                {index + 1} / {totalQuestions}
                 {/* Questions 1 out of 10 */}
               </Text>
             </View>
@@ -117,42 +126,20 @@ const Nomoi1 = () => {
                 left: 0,
                 height: 10,
                 right: 0,
-                width: `${Math.floor((index1 / totalQuestions ) * 100)}%`,
+                width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
               }}
             />
           </View>
 
           <View style={{ paddingVertical: 30, paddingHorizontal: 15 }}>
-            <View
-              // style={styles.quizContainer}
-              style={style}
-              // style={
-              //   currentQuestion.correctAnswerIndex
-              //     ? styles.quizContainer1
-              //     : styles.quizContainer2
-              // }
-            >
+            <View style={style}>
               <Image
                 source={currentQuestion?.img}
                 resizeMode="cover"
-                style={{
-                  borderRadius: 10,
-                  marginVertical: 10,
-                  width: "100%",
-                  height: 200,
-                }}
+                style={styles.image}
               />
 
-              <Text
-                style={{
-                  marginLeft: 20,
-                  marginTop: 10,
-                  fontSize: 18,
-                  fontWeight: "bold",
-                }}
-              >
-                {currentQuestion?.question}
-              </Text>
+              <Text style={styles.question}>{currentQuestion?.question}</Text>
               <View style={styles.answersContainer}>
                 {currentQuestion?.options.map((item, index) => (
                   <Pressable
@@ -187,19 +174,26 @@ const Nomoi1 = () => {
           </View>
 
           <View style={styles.feedBackArea}>
-            {index + 1 >= questions2.length ? (
-              <Pressable
-                onPress={() => navigation.navigate("TestResults", {points: points, data: data})}
-                style={styles.nextQueButton}
-              >
-                <Text style={{ color: "white" }}>Done</Text>
-              </Pressable>
+            {index + 1 >= questions1.length ? (
+              answerStatus === null ? null : (
+                <Pressable
+                  onPress={() =>
+                    navigation.navigate("NomoiResult1", {
+                      points: points,
+                      data: data,
+                    })
+                  }
+                  style={nextQueButton}
+                >
+                  <Text style={{ color: "white" }}>Αποτελέσματα</Text>
+                </Pressable>
+              )
             ) : answerStatus === null ? null : (
               <Pressable
                 onPress={() => setIndex(index + 1)}
-                style={styles.nextQueButton}
+                style={nextQueButton}
               >
-                <Text style={{ color: "white" }}>Next Question</Text>
+                <Text style={{ color: "white" }}>Επόμενη Ερώτηση</Text>
               </Pressable>
             )}
 
@@ -217,12 +211,19 @@ const Nomoi1 = () => {
                     }}
                   >
                     <View
-                      style={{ flexDirection: "column", alignItems: "center", marginTop: 30, width: 250, height: 180 }}
+                      style={{
+                        flexDirection: "column",
+                        alignItems: "center",
+                        marginTop: 30,
+                        width: 250,
+                        height: 180,
+                      }}
                     >
-                      <Text style={{ color: "green", fontSize: 20, padding: 10 }}>
+                      <Text
+                        style={{ color: "green", fontSize: 20, padding: 10 }}
+                      >
                         Σωστή Απάντηση
                       </Text>
-                      <Text>{(points*100)/data.length}</Text>
                       <Image
                         source={require("../../assets/thumbUp.jpg")}
                         resizeMode="cover"
@@ -232,7 +233,7 @@ const Nomoi1 = () => {
                           height: 50,
                         }}
                       />
-                    <Text>Συνέχισε έτσι</Text>
+                      <Text>Συνέχισε έτσι</Text>
                     </View>
                     <Image
                       source={currentQuestion?.imgMap}
@@ -257,7 +258,13 @@ const Nomoi1 = () => {
                     }}
                   >
                     <View
-                      style={{ flexDirection: "column", alignItems: "center", marginTop: 30, width: 250, height: 200 }}
+                      style={{
+                        flexDirection: "column",
+                        alignItems: "center",
+                        marginTop: 30,
+                        width: 250,
+                        height: 200,
+                      }}
                     >
                       <Text style={{ color: "red", fontSize: 20, padding: 10 }}>
                         Λάθος Απάντηση
@@ -271,7 +278,7 @@ const Nomoi1 = () => {
                           height: 50,
                         }}
                       />
-                    <Text>Προσπάθησε περισσότερο</Text>
+                      <Text>Προσπάθησε περισσότερο</Text>
                     </View>
                   </View>
                 )}

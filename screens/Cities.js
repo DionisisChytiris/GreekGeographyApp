@@ -7,13 +7,13 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import questions1 from "../data/questions1";
+import questions from "../data/questions";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles/quizStyle";
 
 const Cities = () => {
   const navigation = useNavigation();
-  const data = questions1;
+  const data = questions;
   const totalQuestions = data.length;
   // points
   const [points, setPoints] = useState(0);
@@ -200,7 +200,7 @@ const Cities = () => {
               </Text>
             )}
 
-            {index + 1 >= questions1.length ? (
+            {index + 1 >= questions.length ? (
               <Pressable
                 onPress={() =>
                   navigation.navigate("Results", {

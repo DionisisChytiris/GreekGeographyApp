@@ -1,84 +1,84 @@
-const questions2 =  [
+const questions3 =  [
     {
         id: 1,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Έβρου;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Αιτωλοακαρνανίας;",
         options:[
             {
                 id:"0",
-                answer:"Ροδόπη",
+                answer:"Πάτρα",
             },
             {
                 id:"1",
-                answer:"Αλεξανδρούπολη",
+                answer:"'Aμφισσα",
             },
             {
                 id:"2",
-                answer:"Αλεξάνδρεια",
+                answer:"Μεσολόγγι",
             },
             {
                 id:"3",
-                answer:"Καβάλα",
+                answer:"Καρπενήσι",
             },
         ],
-        correctAnswerIndex: 1,
-        img: require('../assets/capitals/Alexandroupoli.jpg'),
-        imgMap: require('../assets/maps/N.Evrou.png'),
-        nomos: "'Εβρου",
-        capital: 'Αλεξανδρούπολη'
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/Mesologi.jpg'),
+        imgMap: require('../assets/maps/N.Aitoloakarnanias.png'),
+        nomos: 'Αιτωλοακαρνανίας',
+        capital: 'Μεσολόγγι'
     },
     {
         id: 2,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Κυκλάδων;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Ροδόπης;",
         options:[
             {
                 id:"0",
-                answer:"Ερμούπολη",
+                answer:"Κομοτηνή",
             },
             {
                 id:"1",
-                answer:"Σύρος",
+                answer:"Καβάλα",
             },
             {
                 id:"2",
-                answer:"Ρόδος",
+                answer:"Ξάνθη",
             },
             {
                 id:"3",
-                answer:"Νάξος",
+                answer:"Αλεξανδρούπολη",
             },
         ],
         correctAnswerIndex: 0,
-        img: require('../assets/capitals/siros.jpg'),
-        imgMap: require('../assets/maps/N.Kykladwn.png'),
+        img: require('../assets/capitals/Komotini.jpg'),
+        imgMap: require('../assets/maps/N.Rodopis.jpg'),
         nomos: 'Ροδόπης',
         capital: 'Κομοτηνή'
     },
     {
         id: 3,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Κιλκίς;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Ιωαννίνων;",
         options:[
             {
                 id:"0",
-                answer:"Σέρρες",
+                answer:"Κόνιτσα",
             },
             {
                 id:"1",
-                answer:"Κοζάνη",
+                answer:"Μέτσοβο",
             },
             {
                 id:"2",
-                answer:"Κιλκίς",
+                answer:"Ηγουμενίτσα",
             },
             {
                 id:"3",
-                answer:"Καστοριά",
+                answer:"Ιωάννινα",
             },
         ],
-        correctAnswerIndex: 2,
-        img: require('../assets/capitals/kilkis.jpg'),
-        imgMap: require('../assets/maps/N.Kilkis.png'),
-        nomos: 'Κιλκίς',
-        capital: 'Κιλκίς'
+        correctAnswerIndex: 3,
+        img: require('../assets/capitals/ioannina.jpg'),
+        imgMap: require('../assets/maps/N.Ioanninwn.png'),
+        nomos: 'Ιωαννίνων',
+        capital: 'Ιωάννινα'
     },
     {
         id: 4,
@@ -270,4 +270,4 @@ const questions2 =  [
         capital: 'Λευκάδα'
     },
 ]
-export default questions2
+export default questions3
