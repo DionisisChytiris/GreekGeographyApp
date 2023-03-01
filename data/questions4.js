@@ -28,246 +28,246 @@ const questions4 =  [
     },
     {
         id: 2,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Ροδόπης;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Θεσπρωτίας;",
         options:[
             {
                 id:"0",
-                answer:"Κομοτηνή",
-            },
-            {
-                id:"1",
-                answer:"Καβάλα",
-            },
-            {
-                id:"2",
-                answer:"Ξάνθη",
-            },
-            {
-                id:"3",
-                answer:"Αλεξανδρούπολη",
-            },
-        ],
-        correctAnswerIndex: 0,
-        img: require('../assets/capitals/Komotini.jpg'),
-        imgMap: require('../assets/maps/N.Rodopis.jpg'),
-        nomos: 'Ροδόπης',
-        capital: 'Κομοτηνή'
-    },
-    {
-        id: 3,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Ιωαννίνων;",
-        options:[
-            {
-                id:"0",
-                answer:"Κόνιτσα",
-            },
-            {
-                id:"1",
-                answer:"Μέτσοβο",
-            },
-            {
-                id:"2",
                 answer:"Ηγουμενίτσα",
             },
             {
-                id:"3",
-                answer:"Ιωάννινα",
-            },
-        ],
-        correctAnswerIndex: 3,
-        img: require('../assets/capitals/ioannina.jpg'),
-        imgMap: require('../assets/maps/N.Ioanninwn.png'),
-        nomos: 'Ιωαννίνων',
-        capital: 'Ιωάννινα'
-    },
-    {
-        id: 4,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Λάρισας;",
-        options:[
-            {
-                id:"0",
-                answer:"Καρδίτσα",
-            },
-            {
                 id:"1",
-                answer:"Λάρισα",
+                answer:"Σύβοτα",
             },
             {
                 id:"2",
-                answer:"Λαμία",
+                answer:"Πάργα"
             },
             {
                 id:"3",
-                answer:"Λιβαδειά",
+                answer:"Φιλιάτες",
+            },
+        ],
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/igoumenitsa.jpg'),
+        imgMap: require('../assets/maps/N.Thesprotias.png'),
+        nomos: 'Θεσπρωτίας',
+        capital: 'Ηγουμενίτσα'
+    },
+    {
+        id: 3,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Αρκαδίας;",
+        options:[
+            {
+                id:"0",
+                answer:"Σπάρτη",
+            },
+            {
+                id:"1",
+                answer:"Τρίκαλα",
+            },
+            {
+                id:"2",
+                answer:"Τρίπολη",
+            },
+            {
+                id:"3",
+                answer:"Ναύπλιο",
+            },
+        ],
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/tripoli.jpg'),
+        imgMap: require('../assets/maps/N.Arkadias.png'),
+        nomos: 'Αρκαδίας',
+        capital: 'Τρίπολη'
+    },
+    {
+        id: 4,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Μαγνησίας;",
+        options:[
+            {
+                id:"0",
+                answer:"Πήλιο",
+            },
+            {
+                id:"1",
+                answer:"Βόλος",
+            },
+            {
+                id:"2",
+                answer:"Λάρισα",
+            },
+            {
+                id:"3",
+                answer:"Κατερίνη",
             },
         ],
         correctAnswerIndex: 1,
-        img: require('../assets/capitals/larissa.jpg'),
-        imgMap: require('../assets/maps/N.Larissas.png'),
-        nomos: 'Λάρισας',
-        capital: 'Λάρισα'
+        img: require('../assets/capitals/volos.jpg'),
+        imgMap: require('../assets/maps/N.Magnisias.png'),
+        nomos: 'Μαγνησίας',
+        capital: 'Βόλος'
     },
-    // {
-    //     id: 5,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Αχαΐας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Πάτρα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Πύργος",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Τρίπολη",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Λιβαδειά",
-    //         },
-    //     ], 
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/patra.jpg'),
-    //     imgMap: require('../assets/maps/N.Axaias.png'),
-    //     nomos: 'Αχαΐας',
-    //     capital: 'Πάτρα'
-    // },
-    // {
-    //     id: 6,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Θεσσαλονίκης;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Καλαμαριά",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Σέρρες",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Αλεξανδρούπολη",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Θεσσαλονίκη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 3,
-    //     img: require('../assets/capitals/thessaloniki.jpg'),
-    //     imgMap: require('../assets/maps/N.Thessalonikis.png'),
-    //     nomos: 'Θεσσαλονίκης',
-    //     capital: 'Θεσσαλονίκη'
-    // },
-    // {
-    //     id: 7,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Κέρκυρας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Κέρκυρα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Παξοί",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Λευκάδα",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Ηγουμενίτσα",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/kerkyra1.jpg'),
-    //     imgMap: require('../assets/maps/N.Kerkyras.png'),
-    //     nomos: 'Κέρκυρα',
-    //     capital: 'Κέρκυρα'
-    // },
-    // {
-    //     id: 8,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Χίου;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Λέσβος",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Σάμος",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Χίος",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Μυτιλήνη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 2,
-    //     img: require('../assets/capitals/xiosad1.jpg'),
-    //     imgMap: require('../assets/maps/N.Xiou.png'),
-    //     nomos: 'Χίου',
-    //     capital: 'Χίος'
-    // },
-    // {
-    //     id: 9,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Χανίων;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Χανιά",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Ηράκλειο",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Άγιος Νικόλαος",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Ρέθυμνο",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/chania.jpg'),
-    //     imgMap: require('../assets/maps/N.Xaniwn.png'),
-    //     nomos: 'Χανίων',
-    //     capital: 'Χανιά'
-    // },
-    // {
-    //     id: 10,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Λευκάδας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Πρέβεζα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Νυδρί",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Λευκάδα",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Λευκίμμη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 2,
-    //     img: require('../assets/capitals/lefkada.jpg'),
-    //     imgMap: require('../assets/maps/N.Lefkadas.png'),
-    //     nomos: 'Λευκάδας',
-    //     capital: 'Λευκάδα'
-    // },
+    {
+        id: 5,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Αττικής;",
+        options:[
+            {
+                id:"0",
+                answer:"Αθήνα",
+            },
+            {
+                id:"1",
+                answer:"Πειραιάς",
+            },
+            {
+                id:"2",
+                answer:"Ραφήνα",
+            },
+            {
+                id:"3",
+                answer:"Λαύριο",
+            },
+        ], 
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/athens.jpg'),
+        imgMap: require('../assets/maps/attiki.png'),
+        nomos: 'Αττικής',
+        capital: 'Αθήνα'
+    },
+    {
+        id: 6,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Λέσβου;",
+        options:[
+            {
+                id:"0",
+                answer:"Πλωμάρι",
+            },
+            {
+                id:"1",
+                answer:"Λήμνος",
+            },
+            {
+                id:"2",
+                answer:"Χίος",
+            },
+            {
+                id:"3",
+                answer:"Μυτιλήνη",
+            },
+        ],
+        correctAnswerIndex: 3,
+        img: require('../assets/capitals/Mitilini.jpg'),
+        imgMap: require('../assets/maps/N.Lesvou.png'),
+        nomos: 'Λέσβου',
+        capital: 'Μυτιλήνη'
+    },
+    {
+        id: 7,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Κεφαλληνίας;",
+        options:[
+            {
+                id:"0",
+                answer:"Αργοστόλι",
+            },
+            {
+                id:"1",
+                answer:"Ληξούρι",
+            },
+            {
+                id:"2",
+                answer:"Λευκάδα",
+            },
+            {
+                id:"3",
+                answer:"Κυλλήνη",
+            },
+        ],
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/kefalonia.jpg'),
+        imgMap: require('../assets/maps/N.Kefalinias.png'),
+        nomos: 'Κεφαλληνίας',
+        capital: 'Αργοστόλι'
+    },
+    {
+        id: 8,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Ευβοίας;",
+        options:[
+            {
+                id:"0",
+                answer:"Χαλκίδα",
+            },
+            {
+                id:"1",
+                answer:"Κάρυστος",
+            },
+            {
+                id:"2",
+                answer:"Ναύπακτος",
+            },
+            {
+                id:"3",
+                answer:"Λαμία",
+            },
+        ],
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/xalkida.jpg'),
+        imgMap: require('../assets/maps/N.Evoias.png'),
+        nomos: 'Ευβοίας',
+        capital: 'Χαλκίδα'
+    },
+    {
+        id: 9,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Αργολίδας;",
+        options:[
+            {
+                id:"0",
+                answer:"Άργος",
+            },
+            {
+                id:"1",
+                answer:"Επίδαυρος",
+            },
+            {
+                id:"2",
+                answer:"Ναύπακτος",
+            },
+            {
+                id:"3",
+                answer:"Ναύπλιο",
+            },
+        ],
+        correctAnswerIndex: 3,
+        img: require('../assets/capitals/nafplio.jpg'),
+        imgMap: require('../assets/maps/N.Argolidas.png'),
+        nomos: 'Αργολίδας',
+        capital: 'Ναύπλιο'
+    },
+    {
+        id: 10,
+        question: "Ποια είναι η πρωτεύουσα του Ν.Μεσσηνίας;",
+        options:[
+            {
+                id:"0",
+                answer:"Κυπαρισσία",
+            },
+            {
+                id:"1",
+                answer:"Σπάρτη",
+            },
+            {
+                id:"2",
+                answer:"Καλαμάτα",
+            },
+            {
+                id:"3",
+                answer:"Τρίπολη",
+            },
+        ],
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/kalamata.jpg'),
+        imgMap: require('../assets/maps/N.Messinias.png'),
+        nomos: 'Μεσσηνίας',
+        capital: 'Καλαμάτα'
+    }
 ]
 export default questions4

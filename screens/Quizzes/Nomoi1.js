@@ -26,6 +26,7 @@ const Nomoi1 = () => {
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
   let index1 = index + 1;
+  let nomoiR = "NomoiResult1"
   // const progressPercentage = Math.floor((index / totalQuestions) * 100);
 
   useEffect(() => {
@@ -174,11 +175,11 @@ const Nomoi1 = () => {
           </View>
 
           <View style={styles.feedBackArea}>
-            {index + 1 >= questions1.length ? (
+            {index + 1 >= data.length ? (
               answerStatus === null ? null : (
                 <Pressable
                   onPress={() =>
-                    navigation.navigate("NomoiResult1", {
+                    navigation.navigate(nomoiR, {
                       points: points,
                       data: data,
                     })

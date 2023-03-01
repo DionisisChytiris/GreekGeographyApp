@@ -42,7 +42,7 @@ const LoseScreen = () => {
         </Pressable>
         <Pressable
           onPress={() =>
-            navigation.navigate("TestResults")
+            navigation.navigate("Results")
           }
           style={{
             backgroundColor: "magenta",

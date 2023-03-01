@@ -1,273 +1,273 @@
 const questions6 =  [
     {
         id: 1,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Αιτωλοακαρνανίας;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Λασιθίου;",
         options:[
             {
                 id:"0",
-                answer:"Πάτρα",
+                answer:"Ρέθυμνο",
             },
             {
                 id:"1",
-                answer:"'Aμφισσα",
+                answer:"Ηράκλειο",
             },
             {
                 id:"2",
-                answer:"Μεσολόγγι",
+                answer:'Άγιος Νικόλαος',
             },
             {
                 id:"3",
-                answer:"Καρπενήσι",
+                answer:"Χανιά",
             },
         ],
         correctAnswerIndex: 2,
-        img: require('../assets/capitals/Mesologi.jpg'),
-        imgMap: require('../assets/maps/N.Aitoloakarnanias.png'),
-        nomos: 'Αιτωλοακαρνανίας',
-        capital: 'Μεσολόγγι'
+        img: require('../assets/capitals/lasithi.jpg'),
+        imgMap: require('../assets/maps/N.Lasithiou.png'),
+        nomos: 'Λασιθίου',
+        capital: 'Άγιος Νικόλαος'
     },
     {
         id: 2,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Ροδόπης;",
+        question: "Σε ποιο νομό βρίσκεται η Μονεμβασιά;",
         options:[
             {
                 id:"0",
-                answer:"Κομοτηνή",
+                answer:"Ν.Αργολίδας",
             },
             {
                 id:"1",
-                answer:"Καβάλα",
+                answer:"Ν.Μεσσηνίας",
             },
             {
                 id:"2",
-                answer:"Ξάνθη",
+                answer:"N.Λακωνίας",
             },
             {
                 id:"3",
-                answer:"Αλεξανδρούπολη",
+                answer:"Ν.Αρκαδίας",
             },
         ],
-        correctAnswerIndex: 0,
-        img: require('../assets/capitals/Komotini.jpg'),
-        imgMap: require('../assets/maps/N.Rodopis.jpg'),
-        nomos: 'Ροδόπης',
-        capital: 'Κομοτηνή'
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/monemvasia.jpg'),
+        imgMap: require('../assets/maps/N.Lakonias.png'),
+        nomos: 'Λακωνίας',
+        capital: 'Σπάρτη'
     },
     {
         id: 3,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Ιωαννίνων;",
+        question: "Σε ποιο νομό βρίσκεται η Αρχαία Ολυμπία;",
         options:[
             {
                 id:"0",
-                answer:"Κόνιτσα",
+                answer:"Ν.Ηλείας",
             },
             {
                 id:"1",
-                answer:"Μέτσοβο",
+                answer:"Ν.Αχαΐας",
             },
             {
                 id:"2",
-                answer:"Ηγουμενίτσα",
+                answer:"Ν.Αρκαδίας",
             },
             {
                 id:"3",
-                answer:"Ιωάννινα",
+                answer:"Ν.Κορινθίας",
             },
         ],
-        correctAnswerIndex: 3,
-        img: require('../assets/capitals/ioannina.jpg'),
-        imgMap: require('../assets/maps/N.Ioanninwn.png'),
-        nomos: 'Ιωαννίνων',
-        capital: 'Ιωάννινα'
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/hliaOlympia.jpg'),
+        imgMap: require('../assets/maps/N.Hlias.png'),
+        nomos: 'Ηλείας',
+        capital: 'Πύργος'
     },
     {
         id: 4,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Λάρισας;",
+        question: "Σε ποιο νομό βρίσκεται ο αρχαιολογικός χώρος των Δελφών;",
         options:[
             {
                 id:"0",
-                answer:"Καρδίτσα",
+                answer:"Ν.Βοιωτίας",
             },
             {
                 id:"1",
-                answer:"Λάρισα",
+                answer:"Ν.Φωκίδας",
             },
             {
                 id:"2",
-                answer:"Λαμία",
+                answer:"Ν.Ευρυτανίας",
             },
             {
                 id:"3",
-                answer:"Λιβαδειά",
+                answer:"Ν.Φθιώτιδας",
             },
         ],
         correctAnswerIndex: 1,
-        img: require('../assets/capitals/larissa.jpg'),
-        imgMap: require('../assets/maps/N.Larissas.png'),
-        nomos: 'Λάρισας',
-        capital: 'Λάρισα'
+        img: require('../assets/capitals/delphiFokida.jpg'),
+        imgMap: require('../assets/maps/N.Fokidas.png'),
+        nomos: 'Φωκίδα',
+        capital: 'Άμφισσα'
     },
-    // {
-    //     id: 5,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Αχαΐας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Πάτρα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Πύργος",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Τρίπολη",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Λιβαδειά",
-    //         },
-    //     ], 
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/patra.jpg'),
-    //     imgMap: require('../assets/maps/N.Axaias.png'),
-    //     nomos: 'Αχαΐας',
-    //     capital: 'Πάτρα'
-    // },
-    // {
-    //     id: 6,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Θεσσαλονίκης;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Καλαμαριά",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Σέρρες",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Αλεξανδρούπολη",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Θεσσαλονίκη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 3,
-    //     img: require('../assets/capitals/thessaloniki.jpg'),
-    //     imgMap: require('../assets/maps/N.Thessalonikis.png'),
-    //     nomos: 'Θεσσαλονίκης',
-    //     capital: 'Θεσσαλονίκη'
-    // },
-    // {
-    //     id: 7,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Κέρκυρας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Κέρκυρα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Παξοί",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Λευκάδα",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Ηγουμενίτσα",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/kerkyra1.jpg'),
-    //     imgMap: require('../assets/maps/N.Kerkyras.png'),
-    //     nomos: 'Κέρκυρα',
-    //     capital: 'Κέρκυρα'
-    // },
-    // {
-    //     id: 8,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Χίου;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Λέσβος",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Σάμος",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Χίος",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Μυτιλήνη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 2,
-    //     img: require('../assets/capitals/xiosad1.jpg'),
-    //     imgMap: require('../assets/maps/N.Xiou.png'),
-    //     nomos: 'Χίου',
-    //     capital: 'Χίος'
-    // },
-    // {
-    //     id: 9,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Χανίων;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Χανιά",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Ηράκλειο",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Άγιος Νικόλαος",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Ρέθυμνο",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 0,
-    //     img: require('../assets/capitals/chania.jpg'),
-    //     imgMap: require('../assets/maps/N.Xaniwn.png'),
-    //     nomos: 'Χανίων',
-    //     capital: 'Χανιά'
-    // },
-    // {
-    //     id: 10,
-    //     question: "Ποια είναι η πρωτεύουσα του Ν.Λευκάδας;",
-    //     options:[
-    //         {
-    //             id:"0",
-    //             answer:"Πρέβεζα",
-    //         },
-    //         {
-    //             id:"1",
-    //             answer:"Νυδρί",
-    //         },
-    //         {
-    //             id:"2",
-    //             answer:"Λευκάδα",
-    //         },
-    //         {
-    //             id:"3",
-    //             answer:"Λευκίμμη",
-    //         },
-    //     ],
-    //     correctAnswerIndex: 2,
-    //     img: require('../assets/capitals/lefkada.jpg'),
-    //     imgMap: require('../assets/maps/N.Lefkadas.png'),
-    //     nomos: 'Λευκάδας',
-    //     capital: 'Λευκάδα'
-    // },
+    {
+        id: 5,
+        question: "Σε ποιο νομό βρίσκεται η Σύρος;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Κυκλάδων",
+            },
+            {
+                id:"1",
+                answer:"Ν.Δωδεκανήσου",
+            },
+            {
+                id:"2",
+                answer:"Ν.Σποράδων",
+            },
+            {
+                id:"3",
+                answer:"Ν.Αττικής",
+            },
+        ], 
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/siros.jpg'),
+        imgMap: require('../assets/maps/N.Kykladwn.png'),
+        nomos: 'Κυκλάδες',
+        capital: 'Ερμούπολη'
+    },
+    {
+        id: 6,
+        question: "Σε ποιο νομό βρίσκονται οι Θερμοπύλες;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Ευβοίας",
+            },
+            {
+                id:"1",
+                answer:"Ν.Φωκίδας",
+            },
+            {
+                id:"2",
+                answer:"Ν.Φθιώτιδας",
+            },
+            {
+                id:"3",
+                answer:"Ν.Βοιωτίας",
+            },
+        ],
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/fthiotidaThermopiles.jpg'),
+        imgMap: require('../assets/maps/N.Fthiotidas.png'),
+        nomos: 'Φθιώτιδα',
+        capital: 'Λαμία'
+    },
+    {
+        id: 7,
+        question: "Σε ποιο νομό βρίσκεται ο αρχαιολογικός χώρος της Κνωσσού;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Ηρακλείου",
+            },
+            {
+                id:"1",
+                answer:"Ν.Αγίου Νικολάου",
+            },
+            {
+                id:"2",
+                answer:"Ν.Χανίων",
+            },
+            {
+                id:"3",
+                answer:"Ν.Ρεθύμνου",
+            },
+        ],
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/Knossos.jpg'),
+        imgMap: require('../assets/maps/N.Hrakliou.png'),
+        nomos: 'Ηράκλειο',
+        capital: 'Ηράκλειο'
+    },
+    {
+        id: 8,
+        question: "Σε ποιο νομό βρίσκονται τα Μετέωρα;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Γρεβενών",
+            },
+            {
+                id:"1",
+                answer:"Ν.Καρδίτσας",
+            },
+            {
+                id:"2",
+                answer:"Ν.Τρικάλων",
+            },
+            {
+                id:"3",
+                answer:"Ν.Ευρυτανίας",
+            },
+        ],
+        correctAnswerIndex: 2,
+        img: require('../assets/meteora.jpg'),
+        imgMap: require('../assets/maps/N.Trikalwn.png'),
+        nomos: 'Τρικάλων',
+        capital: 'Τρίκαλα'
+    },
+    {
+        id: 9,
+        question: "Σε ποιο νομό βρίσκεται η Λήμνος;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Λέσβου",
+            },
+            {
+                id:"1",
+                answer:"Ν.Σάμου",
+            },
+            {
+                id:"2",
+                answer:"Ν.Κυκλάδων",
+            },
+            {
+                id:"3",
+                answer:"Ν.Καβάλας",
+            },
+        ],
+        correctAnswerIndex: 0,
+        img: require('../assets/capitals/limnos.png'),
+        imgMap: require('../assets/maps/N.Lesvou.png'),
+        nomos: 'Λέσβος',
+        capital: 'Μυτιλήνη'
+    },
+    {
+        id: 10,
+        question: "Σε ποιο νομό βρίσκεται η Σαντορίνη;",
+        options:[
+            {
+                id:"0",
+                answer:"Ν.Λέσβου",
+            },
+            {
+                id:"1",
+                answer:"Ν.Δωδεκανήσου",
+            },
+            {
+                id:"2",
+                answer:"Ν.Κυκλάδων",
+            },
+            {
+                id:"3",
+                answer:"Ν.Αττικής",
+            },
+        ],
+        correctAnswerIndex: 2,
+        img: require('../assets/capitals/santorini.jpg'),
+        imgMap: require('../assets/maps/N.Kykladwn.png'),
+        nomos: 'Ν.Κυκλάδων',
+        capital: 'Ερμούπολη'
+    },
 ]
 export default questions6
