@@ -5,7 +5,7 @@ import questions1 from "../../data/questions1";
 import styles from "../styles/testStyle";
 import { Entypo } from "@expo/vector-icons";
 
-const NomoiTest1 = () => {
+const Nomoi1R = () => {
   return (
     <ScrollView>
       <View style={{ backgroundColor: "darkblue" }}>
@@ -16,8 +16,6 @@ const NomoiTest1 = () => {
           star={
             <View style={{ flexDirection: "row" }}>
               <Entypo name="star" size={16} color="gold" />
-              {/* <Entypo name="star" size={16} color="gold" />
-              <Entypo name="star" size={16} color="gold" /> */}
             </View>
           }
         />
@@ -26,4 +24,4 @@ const NomoiTest1 = () => {
   );
 };
 
-export default NomoiTest1;
+export default Nomoi1R;

@@ -178,7 +178,7 @@ import {
             </View>
   
             <View style={styles.feedBackArea}>
-              {index + 1 >= questions3.length ? (
+              {index + 1 >= data.length ? (
                 answerStatus === null ? null : (
                   <Pressable
                     onPress={() =>

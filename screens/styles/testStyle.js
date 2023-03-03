@@ -14,6 +14,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     marginBottom: 20
   },
+  levelBox1: {
+    // backgroundColor: 'darkblue',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 30,
+    paddingTop: 30,
+   
+  },
   counterBox: {
     padding: 10,
     backgroundColor: "green",

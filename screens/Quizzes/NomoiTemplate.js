@@ -7,14 +7,14 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import questions1 from "../../data/questions1";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../styles/testStyle";
-import { Entypo } from "@expo/vector-icons";
+// import { Entypo } from "@expo/vector-icons";
 
-const Nomoi1 = () => {
+const NomoiTemplate = (props) => {
   const navigation = useNavigation();
-  const data = questions1;
+  const data = props.questions;
+  const nomoiR = props.nomoiResults;
   const totalQuestions = data.length;
   const [points, setPoints] = useState(0);
   const [index, setIndex] = useState(0);
@@ -26,8 +26,6 @@ const Nomoi1 = () => {
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
   let index1 = index + 1;
-  let nomoiR = "NomoiResult1"
-  // const progressPercentage = Math.floor((index / totalQuestions) * 100);
 
   useEffect(() => {
     if (selectedAnswerIndex !== null) {
@@ -52,52 +50,43 @@ const Nomoi1 = () => {
     setNextQueButton(styles.nextQueButton);
     setAnswerStatus(null);
   }, [index]);
-  
-  useEffect(()=>{
-    if (index+1 >= data.length) {
-      setSelectedAnswerIndex(null);
-      setStyle(styles.quizContainer);
-      setNextQueButton(styles.nextQueButton);
-      setAnswerStatus(null);
-    }
-  }, [currentQuestion])
 
-  // useEffect(() => {
-  //   const myInterval = () => {
-  //     if (counter >= 1) {
-  //       setCounter((counter) => counter - 1);
-  //     }
-  //     if (counter === 0) {
-  //       navigation.navigate("LoseScreen");
-  //     }
-  //   };
-  //   interval = setTimeout(myInterval, 1000);
+  //   useEffect(() => {
+  //     const myInterval = () => {
+  //       if (counter >= 1) {
+  //         setCounter((counter) => counter - 1);
+  //       }
+  //       if (counter === 0) {
+  //         navigation.navigate("LoseScreen");
+  //       }
+  //     };
+  //     interval = setTimeout(myInterval, 1000);
 
-  // clean up
-  //   return () => {
-  //     clearTimeout(interval);
-  //   };
-  // }, [counter]);
+  //     return () => {
+  //       clearTimeout(interval);
+  //     };
+  //   }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
   //   setCounter(15)
   // }
 
-  // useEffect(() => {
-  //   if (index + 1 > data.length) {
-  //     navigation.navigate("Results");
-  //   }
-  // }, [currentQuestion]);
+  //   useEffect(() => {
+  //     if (index + 1 > data.length) {
+  //       navigation.navigate("Results");
+  //     }
+  //   }, [currentQuestion]);
 
-  useEffect(() => {
-    if (!interval) {
-      setCounter(15);
-    }
-  }, [index]);
+  //   useEffect(() => {
+  //     if (!interval) {
+  //       setCounter(15);
+  //     }
+  //   }, [index]);
 
   const currentQuestion = data[index];
-  // console.log(answerStatus);
+  
+ 
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -105,8 +94,12 @@ const Nomoi1 = () => {
         <View style={{ height: "115vh", backgroundColor: "darkblue" }}>
           <View style={styles.containerInfo}>
             <View style={styles.levelBox}>
-              <Entypo name="star" size={16} color="gold" />
-              <Text style={{ color: "white" }}>Επίπεδο 1</Text>
+              <View>{props.star}</View>
+              {/* <View style={{flexDirection: 'row'}}>
+                <Entypo name="star" size={16} color="gold" />
+                <Entypo name="star" size={16} color="gold" />
+              </View> */}
+              <Text style={{ color: "white" }}>Επίπεδο {props.num}</Text>
             </View>
             <Text style={{ fontSize: 20, fontWeight: 600, color: "white" }}>
               Νομοί / Πόλεις
@@ -301,4 +294,4 @@ const Nomoi1 = () => {
   );
 };
 
-export default Nomoi1;
+export default NomoiTemplate;
