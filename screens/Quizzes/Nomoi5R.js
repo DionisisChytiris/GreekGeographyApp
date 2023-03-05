@@ -1,22 +1,20 @@
-import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { View,  ScrollView} from "react-native";
 import React from "react";
 import NomoiTemplate from "./NomoiTemplate";
-import questions1 from "../../data/questions1";
+import questions5 from "../../data/questions5";
 import { Entypo } from "@expo/vector-icons";
 
-const NomoiTest1 = () => {
+const Nomoi5R = () => {
   return (
     <ScrollView>
       <View style={{ backgroundColor: "darkblue" }}>
         <NomoiTemplate
-          questions={questions1}
-          nomoiResults={"NomoiResult1"}
-          num={1}
+          questions={questions5}
+          nomoiResults={"NomoiResult5"}
+          num={5}
           star={
             <View style={{ flexDirection: "row" }}>
               <Entypo name="star" size={16} color="gold" />
-              {/* <Entypo name="star" size={16} color="gold" />
-              <Entypo name="star" size={16} color="gold" /> */}
             </View>
           }
         />
@@ -25,4 +23,4 @@ const NomoiTest1 = () => {
   );
 };
 
-export default NomoiTest1;
+export default Nomoi5R;

@@ -95,10 +95,6 @@ const NomoiTemplate = (props) => {
           <View style={styles.containerInfo}>
             <View style={styles.levelBox}>
               <View>{props.star}</View>
-              {/* <View style={{flexDirection: 'row'}}>
-                <Entypo name="star" size={16} color="gold" />
-                <Entypo name="star" size={16} color="gold" />
-              </View> */}
               <Text style={{ color: "white" }}>Επίπεδο {props.num}</Text>
             </View>
             <Text style={{ fontSize: 20, fontWeight: 600, color: "white" }}>
@@ -110,7 +106,6 @@ const NomoiTemplate = (props) => {
             <View>
               <Text style={{ color: "white" }}>
                 {index + 1} / {totalQuestions}
-                {/* Questions 1 out of 10 */}
               </Text>
             </View>
             <View style={styles.counterBox}>

@@ -11,12 +11,17 @@ const Home = () => {
         resizeMode='cover'
         style={{flex: 1, justifyContent: 'center'}}
       >
-        <Text style={{ textAlign: 'center', color: "white", fontSize: 30 }}>Geography Quiz!!!</Text>
+        <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{color: "white", fontSize: 30 }}>Γεωγραφία</Text>
+          <Text style={{color: "white", fontSize: 26 }}>της</Text>
+          <Text style={{color: "white", fontSize: 30 }}>Ελλάδας</Text>
+        </View>
         <Pressable
           onPress={() => navigation.navigate("Quiz")}
           style={styles.button}
         >
-          <Text style={styles.btnText}>Start Quiz</Text>
+          <View style={styles.button1}/>
+          <Text style={styles.btnText}>Είσοδος</Text>
         </Pressable>
       </ImageBackground>
     </View>
@@ -25,24 +30,31 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // backgroundColor: "blue",
-    // alignItems: "center",
-    // justifyContent: "center",
+    flex: 1
   },
   button: {
-    backgroundColor: "magenta",
-    padding: 14,
+    position: 'relative',
     width: 160,
+    height: 50,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: 50,
   },
+  button1: {
+    position: 'absolute',
+    opacity: 0.4,
+    backgroundColor: "magenta",
+    width: '100%',
+    height: '100%',
+    borderRadius: 25
+  },
   btnText: {
+    position: 'absolute',
+    bottom: 15,
+    left: 42,
     color: "white",
     fontWeight: "600",
-    textAlign: "center",
     fontSize: 20,
   }
 });

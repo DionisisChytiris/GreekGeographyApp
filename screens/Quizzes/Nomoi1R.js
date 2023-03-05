@@ -1,8 +1,7 @@
-import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { View,  ScrollView} from "react-native";
 import React from "react";
 import NomoiTemplate from "./NomoiTemplate";
 import questions1 from "../../data/questions1";
-import styles from "../styles/testStyle";
 import { Entypo } from "@expo/vector-icons";
 
 const Nomoi1R = () => {
