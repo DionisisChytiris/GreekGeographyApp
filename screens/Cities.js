@@ -90,7 +90,7 @@ const Cities = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <View style={{ height: 1000, backgroundColor: "darkblue" }}>
+        <View style={{height: '100vh', backgroundColor: "darkblue" }}>
           <View style={styles.containerInfo}>
             <Text style={{ fontSize: 20, fontWeight: 600, color: "white" }}>
               Quiz Challenge
@@ -124,21 +124,15 @@ const Cities = () => {
             />
           </View>
 
-          <View style={{ paddingVertical: 30, paddingHorizontal: 15 }}>
+          <View style={{ flex: 1,paddingVertical: 30, paddingHorizontal: 15 }}>
             <View style={styles.quizContainer}>
               {/* {currentQuestion.img.map((i) => ( */}
-                <Image
+                {/* <Image
                   source={require('../assets/meteora.jpg')}
                   resizeMode= "cover"
-                  style={{
-                    borderRadius: 10,
-                    marginVertical: 10,
-                    width: "100%",
-                    height: 200,
-                  }}
-                />
-              
-
+                  style={styles.image}
+                /> */}
+                <View style={{width: '60%', height: '30%', backgroundColor: 'green', marginLeft: 'auto', marginRight: 'auto'}}/>
               <Text
                 style={{
                   marginLeft: 20,
