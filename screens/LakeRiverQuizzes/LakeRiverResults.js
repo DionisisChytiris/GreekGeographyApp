@@ -9,41 +9,37 @@ import {
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { AntDesign, MaterialIcons, Ionicons } from "@expo/vector-icons";
+// import styles from "../styles/testStyle";
 
-const GenerQueResultsTemplate = () => {
+const LakeRiverResults = () => {
   const route = useRoute();
   const navigation = useNavigation();
-  // const data= props.data
-  // const repeatQ = props.repeatQ
 
-
-  const score = 60;
-  // const score = (route.params.points * 100) / route.params.data.length
+  const score = (route.params.points * 100) / route.params.data.length;
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>
       <ImageBackground
-        source={require("../../assets/MorePhotos/Acropolis.jpg")}
+        source={require("../../assets/MorePhotos/lake2.jpg")}
         resizeMode="cover"
-        style={{ height: "100vh" }}
+        style={{height: '100vh'}}
       >
         <View style={{ marginVertical: "auto" }}>
-          <View style={stylesT.title}>
-            <Text style={{ fontWeight: 600, fontSize: 26, color: "white" }}>
+          <View style={styles.title}>
+            <Text style={{ color: "white", fontWeight: 600, fontSize: 30 }}>
               Βαθμολογία
             </Text>
           </View>
-
-          <View style={stylesT.container}>
+          <View style={styles.container}>
             {score > 49 ? (
               <View>
-                <View style={stylesT.score}>
+                <View style={styles.score}>
                   <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
+                    style={{ fontWeight: "bold", fontSize: 60, color: "green" }}
                   >
                     {score}
                   </Text>
-                  <Text style={{ fontSize: 20, color: "green" }}>%</Text>
+                  <Text styles={{ fontSize: 20, color: "green" }}>%</Text>
                 </View>
                 <View style={{ alignItems: "center", marginHorizontal: 20 }}>
                   {score === 100 ? (
@@ -81,7 +77,7 @@ const GenerQueResultsTemplate = () => {
               </View>
             ) : (
               <View>
-                <View style={stylesT.score}>
+                <View style={styles.score}>
                   <Text
                     style={{ fontSize: 60, fontWeight: "bold", color: "red" }}
                   >
@@ -106,23 +102,23 @@ const GenerQueResultsTemplate = () => {
               </View>
             )}
           </View>
-
-          <View style={stylesT.buttonBox}>
+          <View style={styles.buttonBox}>
             <Pressable
               onPress={() => navigation.navigate("Quiz")}
-              style={stylesT.button0}
+              style={styles.button0}
             >
-              <View style={stylesT.button1} />
-              <View style={stylesT.btnText}>
+              <View style={styles.button1} />
+              <View style={styles.btnText}>
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
             <Pressable
-              onPress={() => navigation.navigate("GeneralQuestions1")}
-              style={stylesT.button0}
+              onPress={() => navigation.navigate("LakeRiverRepeat")}
+              style={styles.button0}
             >
-              <View style={stylesT.button1} />
-              <View style={stylesT.btnText}>
+              <View style={styles.button1} />
+              <View style={styles.btnText}>
+                {/* <Ionicons name="home-outline" size={24} color="white" /> */}
                 <MaterialIcons name="replay" size={24} color="white" />
               </View>
             </Pressable>
@@ -133,9 +129,9 @@ const GenerQueResultsTemplate = () => {
   );
 };
 
-export default GenerQueResultsTemplate;
+export default LakeRiverResults;
 
-const stylesT = StyleSheet.create({
+const styles = StyleSheet.create({
   title: {
     // marginTop: "10%",
     marginHorizontal: "auto",
@@ -169,6 +165,14 @@ const stylesT = StyleSheet.create({
     marginTop: 80,
     flexDirection: "row",
   },
+  // button: {
+  //   backgroundColor: "magenta",
+  //   padding: 10,
+  //   alignItems: "center",
+  //   width: 80,
+  //   borderRadius: 6,
+  //   marginHorizontal: "auto",
+  // },
   button0: {
     position: "relative",
     width: 100,

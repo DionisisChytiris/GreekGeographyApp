@@ -13,7 +13,7 @@ const QuizScreen = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../assets/romaikiAgora.jpg")}
+        source={require("../assets/MorePhotos/door.jpg")}
         // source={require("../assets/ath.jpg")}
         resizeMode="cover"
         style={{ flex: 1, justifyContent: "center" }}
@@ -22,13 +22,13 @@ const QuizScreen = () => {
           Επέλεξε κατηγορία
         </Text>
         <Pressable
-          onPress={() => navigation.navigate("Cities")}
+          onPress={() => navigation.navigate("LakeRiver")}
           style={styles.buttonA}>
           <View style={styles.button1}/>
           <Text style={styles.buttonTxt1}>Λίμνες / Ποτάμια</Text>
         </Pressable>
         <Pressable
-          onPress={() => navigation.navigate("Counties")}
+          onPress={() => navigation.navigate("Mountain")}
           style={styles.buttonB}>
           <View style={styles.button2}/>
           <Text style={styles.buttonTxt2}>Βουνά</Text>

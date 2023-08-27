@@ -1,681 +1,630 @@
 const questions1 =  [
-    {
-        id: 1,
-        question: "Ποιo είναι το μεγαλύτερο νησί της Ελλάδας;",
-        options:[
-            {
-                id:"0",
-                answer:"Κέρκυρα",
-            },
-            {
-                id:"1",
-                answer:"Kρήτη",
-            },
-            {
-                id:"2",
-                answer:"Εύβοια",
-            },
-            {
-                id:"3",
-                answer:"Ρόδος",
-            },
-        ],
-        correctAnswerIndex: 1,
-        img: require('../../assets/generalQuestions/greece.jpg'),
-        result: 'H έκταση της Κρήτης είναι 8.303 χλμ². \nH έκταση της Εύβοιας είναι 3.670 χλμ². \nH έκταση της Ρόδου είναι 1.401 χλμ². \nH έκταση της Κέρκυρας είναι 585,3 χλμ². '
-        // imgMap: require('../../assets/maps/N.Kerkyras.png'),
-        // nomos: 'Κέρκυρα',
-        // capital: 'Κέρκυρα'
-    },
-    {
-        id: 2,
-        question: "Ποιο είναι το μεγαλύτερο από τα παρακάτω νησιά;",
-        options:[
-            {
-                id:"0",
-                answer:"Σάμος",
-            },
-            {
-                id:"1",
-                answer:"Κεφαλοννιά",
-            },
-            {
-                id:"2",
-                answer:"Χίος",
-            },
-            {
-                id:"3",
-                answer:"Λήμνος",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/generalQuestions/greece.jpg'),
-        result: 'H έκταση της Χίου είναι 842,3 χλμ². \nH έκταση της Κεφαλλονιάς είναι 786,6 χλμ². \nH έκταση της Σάμου είναι 477,4 χλμ². \nH έκταση της Λήμνου είναι 476 χλμ². '
-        // imgMap: require('../../assets/maps/N.Kilkis.png'),
-        // nomos: 'Κιλκίς',
-        // capital: 'Κιλκίς'
-    },
-    {
-        id: 3,
-        question: "Που βρίσκεται το «Μονοπάτι του Ασκληπειού»;",
-        options:[
-            {
-                id:"0",
-                answer:"Λάρισα",
-            },
-            {
-                id:"1",
-                answer:"Γρεβενά",
-            },
-            {
-                id:"2",
-                answer:"Καρδίτσα",
-            },
-            {
-                id:"3",
-                answer:"Τρίκαλα",
-            },
-        ],
-        correctAnswerIndex: 3,
-        img: require('../../assets/generalQuestions/greece.jpg'),
-        imgMap: require('../../assets/maps/N.Ioanninwn.png'),
-        nomos: 'Ιωαννίνων',
-        capital: 'Ιωάννινα'
-    },
-    {
-        id: 4,
-        question: "Σε ποιο νομό βρίσκεται η Σαντορίνη;",
-        options:[
-            {
-                id:"0",
-                answer:"Ν.Δωδεκανήσου",
-            },
-            {
-                id:"1",
-                answer:"Ν.Κυκλάδων",
-            },
-            {
-                id:"2",
-                answer:"Ν.Θήρας",
-            },
-            {
-                id:"3",
-                answer:"Ν.Σύρου",
-            },
-        ],
-        correctAnswerIndex: 1,
-        img: require('../../assets/generalQuestions/santorini.jpg'),
-        imgMap: require('../../assets/maps/N.Larissas.png'),
-        nomos: 'Λάρισας',
-        capital: 'Λάρισα'
-    },
-    {
-        id: 5,
-        question: "Ποια βρίσκεται το «Πέτρινο Δάσος»;",
-        options:[
-            {
-                id:"0",
-                answer:"Πάτρα",
-            },
-            {
-                id:"1",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"2",
-                answer:"Πάργα",
-            },
-            {
-                id:"3",
-                answer:"Πράγα",
-            },
-        ],
-        correctAnswerIndex: 1,
-        img: require('../../assets/capitals/preveza.jpg'),
-        imgMap: require('../../assets/maps/N.Prevezas.png'),
-        nomos: 'Πρέβεζας',
-        capital: 'Πρέβεζα'
-    },
-    {
-        id: 6,
-        question: "Σε ποιο γεωγραφικό διαμέρισμα ανήκει το νησί της Ιθάκης;",
-        options:[
-            {
-                id:"0",
-                answer:"Καλαμαριά",
-            },
-            {
-                id:"1",
-                answer:"Σέρρες",
-            },
-            {
-                id:"2",
-                answer:"Αλεξανδρούπολη",
-            },
-            {
-                id:"3",
-                answer:"Θεσσαλονίκη",
-            },
-        ],
-        correctAnswerIndex: 3,
-        img: require('../../assets/capitals/thessaloniki.jpg'),
-        imgMap: require('../../assets/maps/N.Thessalonikis.png'),
-        nomos: 'Θεσσαλονίκης',
-        capital: 'Θεσσαλονίκη'
-    },
+    // {
+    //     id: 1,
+    //     question: "Ποιo είναι το μεγαλύτερο νησί της Ελλάδας;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Κέρκυρα",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Kρήτη",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Εύβοια",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ρόδος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'H έκταση της Κρήτης είναι 8.303 χλμ². \nH έκταση της Εύβοιας είναι 3.670 χλμ². \nH έκταση της Ρόδου είναι 1.401 χλμ². \nH έκταση της Κέρκυρας είναι 585,3 χλμ². '
+    // },
+    // {
+    //     id: 2,
+    //     question: "Ποιο είναι το μεγαλύτερο από τα παρακάτω νησιά;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Σάμος",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Κεφαλοννιά",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Χίος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Λήμνος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'H έκταση της Χίου είναι 842,3 χλμ². \nH έκταση της Κεφαλλονιάς είναι 786,6 χλμ². \nH έκταση της Σάμου είναι 477,4 χλμ². \nH έκταση της Λήμνου είναι 476 χλμ². '
+    // },
+    // {
+    //     id: 3,
+    //     question: "Που βρίσκεται το «Μονοπάτι του Ασκληπιού»;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Λάρισα",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Γρεβενά",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Καρδίτσα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Τρίκαλα",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 3,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Σύμφωνα με την παράδοση, ο Ασκληπιός συχνά ανηφόριζε προς τις πλαγιές του ξακουστού βουνού Κόζιακα (Κερκέτιο όρος 1.901 μ.υψόμετρο), τμήμα της νότιας Πίνδου που εκτείνεται από την Καλαμπάκα έως την Πύλη Τρικάλων, προκειμένου να μαζέψει αρωματικά και φαρμακευτικά βότανα για την παρασκευή φαρμάκων για την ίαση των ασθενών του.'
+    // },
+    // {
+    //     id: 4,
+    //     question: "Σε ποιο νομό βρίσκεται η Σαντορίνη;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Δωδεκανήσου",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Κυκλάδων",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Θήρας",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Σύρου",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/santorini.jpg'),
+    //     result: "Ο Νομός Κυκλάδων είναι ένας νησιωτικός νομός που περιλαμβάνει όλα τα νησιά του συμπλέγματος των Κυκλάδων. Πρωτεύουσα είναι η Ερμούπολη, η οποία βρίσκεται στο νησί της Σύρου. \nΆλλα νησιά των Κυκλάδων είναι η Άνδρος, η Κέα, η Νάξος, η Τήνος κλπ."
+    // },
+    // {
+    //     id: 5,
+    //     question: "Ποια βρίσκεται το «Πέτρινο Δάσος»;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Χανίων",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Πρέβεζας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Ιωαννίνων",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Γρεβενών",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Το «Πέτρινο Δάσος» βρίσκεται στον Νομό Ιωαννίνων. Συγκεκριμένα στα Ζαγοροχώρια κοντά στο χωριό Μονοδένδρι.'
+    // },
+    // {
+    //     id: 6,
+    //     question: "Σε ποιο γεωγραφικό διαμέρισμα ανήκει η Πρέβεζα;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ήπειρος",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Θεσσαλία",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Μακεδονία",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Στερεά Ελλάδα",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 0,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Τα γεωγραφικά διαμερίσματα της Ελλάδας είναι εννιά: \nΘράκη, Μακεδονία, Θεσσαλία, Ήπειρος, Στερεά Ελλάδα, Πελοπόννησος, Κρήτη, Νησιά Αιγαίου και Νησιά Ιονίου. \nΗ Πρέβεζα ανήκει στην Ήπειρο.'
+    // },
     
-    {
-        id: 7,
-        question: "Ποια από τις παρακάτω πόλεις έχει μεγαλύτερο πληθυσμό;",
-        options:[
-            {
-                id:"0",
-                answer:"Άμφισσα",
-            },
-            {
-                id:"1",
-                answer:"Άρτα",
-            },
-            {
-                id:"2",
-                answer:"Αμφιλοχία",
-            },
-            {
-                id:"3",
-                answer:"Άρτεμη",
-            },
-        ],
-        correctAnswerIndex: 1,
-        img: require('../../assets/capitals/arta.jpg'),
-        imgMap: require('../../assets/maps/N.Thessalonikis.png'),
-        nomos: 'Άρτας',
-        capital: 'Άρτα'
-    },
-    {
-        id: 8,
-        question: "Ποιο από τα παρακάτω νησιά ΔΕΝ ανήκει στις Κυκλάδες;",
-        options:[
-            {
-                id:"0",
-                answer:"Λέσβος",
-            },
-            {
-                id:"1",
-                answer:"Σάμος",
-            },
-            {
-                id:"2",
-                answer:"Χίος",
-            },
-            {
-                id:"3",
-                answer:"Μυτιλήνη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/xiosad1.jpg'),
-        imgMap: require('../../assets/maps/N.Xiou.png'),
-        nomos: 'Χίου',
-        capital: 'Χίος'
-    },
-    {
-        id: 9,
-        question: "Πως ονομάζεται η μεγαλύτερη τεχνητή λίμνη της Ελλάδας;",
-        options:[
-            {
-                id:"0",
-                answer:"Χανιά",
-            },
-            {
-                id:"1",
-                answer:"Ηράκλειο",
-            },
-            {
-                id:"2",
-                answer:"Άγιος Νικόλαος",
-            },
-            {
-                id:"3",
-                answer:"Ρέθυμνο",
-            },
-        ],
-        correctAnswerIndex: 0,
-        img: require('../../assets/capitals/chania.jpg'),
-        imgMap: require('../../assets/maps/N.Xaniwn.png'),
-        nomos: 'Χανίων',
-        capital: 'Χανιά'
-    },
-    {
-        id: 10,
-        question: "Ποια είναι η μεγαλύτερη πόλη της Πελοποννήσου;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 11,
-        question: "Ποια από τις παρακάτω πόλεις βρίσκεται στην Μακεδονία;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 12,
-        question: "Η Καβάλα βρίσκεται στην Μακεδονία ή τον 'Εβρο;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 13,
-        question: "Σε ποια ελληνική πόλη βρίσκεται το Λαογραφικό Μουσείο Βλάχων;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 14,
-        question: "Με ποια από τις παρακάτω χώρες ΔΕΝ συνορεύει η Ελλάδα;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
+    // {
+    //     id: 7,
+    //     question: "Ποιος από τους παρακάτω νομούς έχει μεγαλύτερο πληθυσμό;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Μαγνησίας",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Αιτωλοακαρνανίας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Δωδεκανήσου",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Ηλείας",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Ο πληθυσμός του Ν.Αιτωλοακαρνανίας είναι περίπου 224.429 κάτοικοι.\nΟ πληθυσμός του Ν.Μαγνησίας είναι περίπου 206.995 κάτοικοι. \nΟ πληθυσμός του Ν.Ηλείας είναι περίπου 193.288 κάτοικοι. \nΟ πληθυσμός του Ν.Δωδεκανήσου είναι περίπου 190.071.'
+    // },
+    // {
+    //     id: 8,
+    //     question: "Ποιο από τα παρακάτω νησιά ΔΕΝ ανήκει στις Κυκλάδες;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Κάρπαθος",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Μήλος",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Νάξος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Τήνος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 0,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η Κάρπαθος ανήκει στο Νομό Δωδεκανήσου. \nΗ Μήλος, η Νάξος και η Τήνος ανήκουν στο Νομό Κυκλάδων.'
+    // },
+    // {
+    //     id: 9,
+    //     question: "Πως ονομάζεται η μεγαλύτερη λίμνη της Ελλάδας;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Βόλβη",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Τριχωνίδα",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Βιστωνίδα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Βεγορίτιδα",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η λίμνη Τριχωνίδα βρίσκεται στον Νομό Αιτωλοακαρνανίας και έχει έκταση 96,510 στρέμματα. \nΗ λίμνη Βόλβη βρίσκεται στον Νομό Θεσσαλονίκης και έχει έκταση 72,017 στρέμματα. \nΗ λίμνη Βιστωνίδα βρίσκεται στους Νομούς Ξάνθης και Ροδόπης, και έχει έκταση 54,000 στρέμματα. \nΗ λίμνη Βεγορίτιδα βρίσκεται στον Νομό Φλώρινας και έχει έκταση 53,968 στρέμματα. '
+    // },
+    // {
+    //     id: 10,
+    //     question: "Ποια είναι η μεγαλύτερη πόλη της Πελοποννήσου;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Τρίπολη",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Καλαμάτα",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Κόρινθος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Πύργος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η Καλαμάτα έχει πληθυσμό 54,100 κατοίκους. \nΗ Τρίπολη έχει πληθυσμό 30,866 κατοίκους. \nΗ Κόρινθος έχει πληθυσμό 30,176 κατοίκους. \nΟ Πύργος έχει πληθυσμό 24,359 κατοίκους. '
+    // },
+    // {
+    //     id: 11,
+    //     question: "Ποια από τις παρακάτω πόλεις βρίσκεται στην Θεσσαλία;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Βέροια",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Κατερίνη",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Τρίκαλα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Γιαννιτσά",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Τα Τρίκαλα βρίσκονται στην Θεσσαλία. \nΗ Βέροια, η Κατερίνη και τα Γιαννιτσά βρίσκονται στην Μακεδονία.'
+    // },
+    // {
+    //     id: 12,
+    //     question: "Ποιο νησί αποκαλείται το νησί των Ιπποτών;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ρόδος",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Κέρκυρα",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Χίος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ζάκυνθος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 0,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η παλιά πόλη της Ρόδου είναι χτισμένη από τους Ιωαννίτες ιππότες τον 13ο αιώνα. Υπάρχουν γραπτές μαρτυρίες που αναφέρουν πως εδώ υπήρχε φρούριο το οποίο προστάτευε τον πληθυσμό από εχθρικές επιδρομές από τον 7ο ακόμα αιώνα.'
+    // },
+    // {
+    //     id: 13,
+    //     question: "Σε ποιο νομό βρίσκεται το Αρχαίο θέατρο της Επιδαύρου;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Αρκαδίας",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Κορινθίας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Αργολίδας",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Μεσσηνίας",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Το αρχαίο θέατρο της Επιδαύρου βρίσκεται στο νοτιοανατολικό άκρο του ιερού που ήταν αφιερωμένο στον θεραπευτή θεό της αρχαιότητας, τον Ασκληπιό, στο Ασκληπιείο Επιδαύρου. Βρίσκεται κοντά στο σημερινό Λυγουριό της Αργολίδας. Θεωρείται το τελειότερο αρχαίο ελληνικό θέατρο από άποψη ακουστικής και αισθητικής.'
+    // },
+    // {
+    //     id: 14,
+    //     question: "Με ποια από τις παρακάτω χώρες ΔΕΝ συνορεύει η Ελλάδα;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Αλβανία",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Τουρκία",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Σερβία",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Βουλγαρία",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η Ελλάδα συνορεύει με την Αλβανία, την Βόρειο Μακεδονία, τη Βουλγαρία και την Τουρκία.'
+    // },
     {
         id: 15,
         question: 'Με πόσες χώρες συνορεύει η Ελλάδα;',
         options:[
             {
                 id:"0",
-                answer:"Πρέβεζα",
+                answer:"3",
             },
             {
                 id:"1",
-                answer:"Νυδρί",
+                answer:"2",
             },
             {
                 id:"2",
-                answer:"Λευκάδα",
+                answer:"5",
             },
             {
                 id:"3",
-                answer:"Λευκίμμη",
+                answer:"4",
             },
         ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
+        correctAnswerIndex: 3,
+        img: require('../../assets/generalQuestions/greece.jpg'),
+        result: 'Η Ελλάδα συνορεύει με 4 χώρες: την Αλβανία, την Βόρειο Μακεδονία, τη Βουλγαρία και την Τουρκία.'
     },
-    {
-        id: 16,
-        question: "Πως ονομάζεται η ψηλότερη κορυφή του Ολύμπου;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 17,
-        question: "Σε ποιο νησιωτικό σύμπλεγμα ανήκει η Ιθάκη;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 18,
-        question: "Ποιος είναι ο μεγαλύτερος ποταμός της Ελλάδας;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 19,
-        question: "Που βρίσκεται η λίμνη Βεγορίτιδα;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
+    // { 
+    //     id: 16,
+    //     question: "Πως ονομάζεται η ψηλότερη κορυφή του Ολύμπου;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Στεφάνι",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Μύτικας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Κίσσαβος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Σκολιό",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Ο Μύτικας είναι η ψηλότερη κορυφή της Ελλάδας. Γνωστή και ως «Πάνθεον», έχει υψόμετρο 2.919μ. \nΤο Στεφάνι, γνωστό και ως «ο Θρόνος του Δία», έχει υψόμετρο 2.909μ. \nΤο Σκολιό είναι δεύτερη σε ύψος κορυφή στα 2.912μ. \nΟ Κίσσαβος, γνωστός και με το όνομα Όσσα, βρίσκεται βορειοανατολικά του νομού Λάρισας απέναντι από τον Όλυμπο, με υψόμετρο στα 1.978μ.'
+    // },
+    // {
+    //     id: 17,
+    //     question: "Ποιο νησί αποκαλείται το νησί των Φαιάκων;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Κεφαλλονιά",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Λευκάδα",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Κέρκυρα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ζάκυνθος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Στην ελληνική μυθολογία οι Φαίακες ήταν ένας λαός γνωστός (ιδιαίτερα από τον Όμηρο) για τη ναυτοσύνη του. Οι Φαίακες ήταν οι αγαπημένοι των θεών και φίλοι των ανθρώπων. Αναφέρεται ότι αρχικώς κατοικούσαν στην απομακρυσμένη Υπέρεια, στα πέρατα του κόσμου. Μια εποχή που βασιλιάς τους ήταν ο Ναυσίθοος, οι Φαίακες εκδιώχθηκαν από την Υπέρεια από τους Κύκλωπες και μετοίκησαν σε ένα νησί, τη Σχερία, που αποκλήθηκε από αυτούς και «Νήσος των Φαιάκων», το οποίο ο Θουκυδίδης επιβεβαιώνει ότι πρόκειται για τη σημερινή Κέρκυρα.'
+    // },
+    // {
+    //     id: 18,
+    //     question: "Ποιος είναι ο μεγαλύτερος ποταμός της Ελλάδας;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Αλιάκμονας",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Στρυμόνας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Αχελώος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Πηνειός",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 0,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Ο Αλιάκμονας έχει μήκος 297χλμ. \nΟ Αχελώος έχει μήκος 220χλμ. \nΟ Πηνειός έχει μήκος 205χλμ. \nΟ Στρυμόνας έχει μήκος 118χλμ.'
+    // },
+    // {
+    //     id: 19,
+    //     question: "Που βρίσκεται η λίμνη Βεγορίτιδα;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Πρέβεζα",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Νυδρί",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Λευκάδα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Λευκίμμη",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 2,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η λίμνη Βεγορίτιδα είναι λίμνη της Μακεδονίας, και η τρίτη μεγαλύτερη λίμνη σε έκταση της Ελλάδας. '
+    // },
     {
         id: 20,
         question: "Πόσα τριεθνή σημεία έχει η Ελλάδα;",
         options:[
             {
                 id:"0",
-                answer:"Πρέβεζα",
+                answer:"1",
             },
             {
                 id:"1",
-                answer:"Νυδρί",
+                answer:"2",
             },
             {
                 id:"2",
-                answer:"Λευκάδα",
+                answer:"3",
             },
             {
                 id:"3",
-                answer:"Λευκίμμη",
+                answer:"4",
             },
         ],
         correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
+        img: require('../../assets/generalQuestions/greece.jpg'),
+        result: 'Η Ελλάδα έχει 3 τριεθνή σημεία: \n\n • Το «τριεθνές Έβρου», στα σύνορα της Ελλάδας, της Βουλγαρίας και της Τουρκίας. \n\n • Το «τριεθνές Μπέλλες», στα σύνορα Ελλάδας, της Βουλγαρίας και της Βόρειας Μακεδονίας. \n\n • Το «τριεθνές Μεγάλης Πρέσπας», στα σύνορα Ελλάδας, της Αλβανίας και της Βόρειας Μακεδονίας.'
     },
-    {
-        id: 21,
-        question: "Σε ποιο νομό βρίσκονται τα Μετέωρα;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 22,
-        question: "Σε ποιο νομό βρίσκονται οι Δελφοί;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 23,
-        question: "Ποιο ελληνικό νησί έχει την μικρότερη έκταση;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 24,
-        question: "Σε ποιο νομό βρίσκεται η παραλία της Βοϊδοκοιλιάς;",
-        options:[
-            {
-                id:"0",
-                answer:"Πρέβεζα",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-                answer:"Λευκάδα",
-            },
-            {
-                id:"3",
-                answer:"Λευκίμμη",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
-    {
-        id: 25,
-        question: "Πως αλλιώς ονομάζεταιν το Καστελόριζο;",
-        options:[
-            {
-                id:"0",
-                answer:"Τέλενδος",
-            },
-            {
-                id:"1",
-                answer:"Νυδρί",
-            },
-            {
-                id:"2",
-            },
-            {
-                id:"3",
-                answer:"Γυαλί",
-            },
-        ],
-        correctAnswerIndex: 2,
-        img: require('../../assets/capitals/lefkada.jpg'),
-        imgMap: require('../../assets/maps/N.Lefkadas.png'),
-        nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
-    },
+    // {
+    //     id: 21,
+    //     question: "Σε ποιο νομό βρίσκονται τα Μετέωρα;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Ιωαννίνων",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Τρικάλων",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Καρδίτσας",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Γρεβενών",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Τα Μετέωρα είναι ένα σύμπλεγμα από σκοτεινόχρωμους βράχους από ψαμμίτη οι οποίοι υψώνονται έξω από την Καλαμπάκα στη Θεσσαλία. Τα μοναστήρια των Μετεώρων, που είναι χτισμένα στις κορυφές κάποιων από τους βράχους, είναι σήμερα το δεύτερο σημαντικότερο μοναστικό συγκρότημα στην Ελλάδα, ύστερα από το Άγιο Όρος.'
+    // },
+    // {
+    //     id: 22,
+    //     question: "Σε ποιο νομό βρίσκεται το Μαντείο των Δελφών;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Ευρυτανίας",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Βοιωτίας",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Φθιώτιδας",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Φωκίδας",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 3,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Οι Δελφοί ήταν το σημαντικότερο μαντείο του αρχαιοελληνικού κόσμου. Εκεί έσπευδαν βασιλιάδες και νομοθέτες για να πάρουν χρησμό για τις κινήσεις τους, καθώς και πολλοί ακόμα λαοί της Ανατολικής Μεσογείου (Λύδοι, Φρύγες, Αιγύπτιοι κ.λπ.) για να ακούσουν τη γνώμη των θεών για τα ανθρώπινα καμώματά τους.'
+    // },
+    // {
+    //     id: 23,
+    //     question: "Που βρίσκεται το  λιμνοσπήλαιο Μελισσάνης;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Κέρκυρα",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Κεφαλλονιά",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Λευκάδα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ζάκυνθος",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 1,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Μοναδικό γεωλογικό φαινόμενο, το Λιμνοσπήλαιο της Μελισσάνης βρίσκεται σε απόσταση 2 χιλ. βορειοδυτικά της Σάμης, στην Κεφαλλονιά.'
+    // },
+    // {
+    //     id: 24,
+    //     question: "Σε ποιο νομό βρίσκεται η παραλία της Βοϊδοκοιλιάς;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Ν.Πρέβεζα",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Ν.Χανίων",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ν.Λευκάδα",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Ν.Μεσσηνίας",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 3,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Η παραλία της Βοϊδοκοιλιάς βρίσκεται στην δυτική πλευρά της Μεσσηνίας λίγα χιλιόμετρα από την Πύλο.'
+    // },
+    // {
+    //     id: 25,
+    //     question: "Πως αλλιώς ονομάζεται το Καστελόριζο;",
+    //     options:[
+    //         {
+    //             id:"0",
+    //             answer:"Τέλενδος",
+    //         },
+    //         {
+    //             id:"1",
+    //             answer:"Γαύδος",
+    //         },
+    //         {
+    //             id:"2",
+    //             answer:"Ψέριμος",
+    //         },
+    //         {
+    //             id:"3",
+    //             answer:"Μεγίστη",
+    //         },
+    //     ],
+    //     correctAnswerIndex: 3,
+    //     img: require('../../assets/generalQuestions/greece.jpg'),
+    //     result: 'Το Καστελλόριζο ή, επισήμως, η Μεγίστη είναι ελληνικό νησί των Δωδεκανήσων στο Λύκιο Πέλαγος στο γεωγραφικό διαμέρισμα των νησιών Αιγαίου. '
+    // },
 ]
 export default questions1
 

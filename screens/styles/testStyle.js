@@ -56,8 +56,6 @@ const styles = StyleSheet.create({
   },
   quizContainer: {
     flex: 1,
-    // position: 'absolute',
-    // height: '100%',
     justifyContent: "space-between",
     marginTop: 10,
     backgroundColor: "lightgray",
@@ -65,9 +63,8 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     shadowColor: "lightblue",
     shadowOffset: { width: 5, height: 8 },
-    // shadowOpacity: 0.4,
     shadowRadius: 10,
-    // height: 800,
+    // height: 600
   },
   quizContainer1: {
     flex: 1,
@@ -98,7 +95,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: "100%",
     height: 200,
-    // height: "60%",
   },
   question: {
     // marginLeft: 20,

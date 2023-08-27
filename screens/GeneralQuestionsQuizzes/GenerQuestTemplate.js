@@ -5,12 +5,16 @@ import {
   Pressable,
   Image,
   ScrollView,
+  StyleSheet,
   ImageBackground,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../styles/testStyle";
+import { Ionicons } from '@expo/vector-icons';
+
 // import { Entypo } from "@expo/vector-icons";
+
 
 const GenerQuestTemplate = (props) => {
   const navigation = useNavigation();
@@ -22,7 +26,7 @@ const GenerQuestTemplate = (props) => {
   const [answerStatus, setAnswerStatus] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(  5);
   const [style, setStyle] = useState(styles.quizContainer);
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
@@ -52,45 +56,50 @@ const GenerQuestTemplate = (props) => {
     setAnswerStatus(null);
   }, [index]);
 
-  //   useEffect(() => {
-  //     const myInterval = () => {
-  //       if (counter >= 1) {
-  //         setCounter((counter) => counter - 1);
-  //       }
-  //       if (counter === 0) {
-  //         navigation.navigate("LoseScreen");
-  //       }
-  //     };
-  //     interval = setTimeout(myInterval, 1000);
+    useEffect(() => {
+      const myInterval = () => {
+        if (counter >= 1) {
+          setCounter((counter) => counter - 1);
+        }
+        if (counter === 0) {
+          navigation.navigate("LoseScreen");
+        }
+      };
+      interval = setTimeout(myInterval, 1000);
 
-  //     return () => {
-  //       clearTimeout(interval);
-  //     };
-  //   }, [counter]);
+      return () => {
+        clearTimeout(interval);
+      };
+    }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
-  //   setCounter(15)
+  //   setCounter(5)
   // }
 
-  //   useEffect(() => {
-  //     if (index + 1 > data.length) {
-  //       navigation.navigate("Results");
-  //     }
-  //   }, [currentQuestion]);
+    useEffect(() => {
+      if (index + 1 > data.length) {
+        navigation.navigate("Results");
+      }
+    }, [currentQuestion]);
 
-  //   useEffect(() => {
-  //     if (!interval) {
-  //       setCounter(15);
-  //     }
-  //   }, [index]);
+    useEffect(() => {
+      if (!interval) {
+        setCounter(15);
+      }
+    }, [index]);
 
   const currentQuestion = data[index];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <View style={{ height: "100vh", backgroundColor: "blue" }}>
+        <ImageBackground
+          source={require("../../assets/MorePhotos/chania.jpg")}
+          resizeMode="cover"
+          style={{height: '100vh'}}
+        >
+        <View >
           <View style={styles.containerInfo}>
             {/* <View style={styles.levelBox}>
               <View>{props.star}</View>
@@ -133,7 +142,13 @@ const GenerQuestTemplate = (props) => {
               <Image
                 source={currentQuestion?.img}
                 resizeMethod="cover"
-                style={styles.image}
+                // style={styles.image}
+                style={{
+                  borderRadius: 10,
+                  marginVertical: 10,
+                  width: "100%",
+                  height: 200,
+                }}
                 // imageStyle={{borderRadius: 16}}
               />
               <Text style={styles.question}>{currentQuestion?.question}</Text>
@@ -302,10 +317,49 @@ const GenerQuestTemplate = (props) => {
               </View>
             )}
           </View>
+          <Pressable
+            onPress={() => navigation.navigate("Quiz")}
+            style={stylesT.button0}
+          >
+            <View style={stylesT.button1}/>
+            <View style={stylesT.btnText}>
+              <Ionicons name="home-outline" size={24} color="white" />
+            </View>
+          </Pressable>
         </View>
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
 export default GenerQuestTemplate;
+
+
+const stylesT = StyleSheet.create({
+  button0: {
+    position: 'relative',
+    width: 100,
+    height: 50,
+    borderRadius: 25,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    // marginTop: 0
+  },
+  button1: {
+    position: 'absolute',
+    opacity: 0.4,
+    backgroundColor: '#2E86C1',
+    width: '100%',
+    height: '100%',
+    borderRadius: 25
+  },
+  btnText: {
+    position: 'absolute',
+    bottom: 12,
+    left: 37,
+    color: 'white',
+    fontWeight: '600',
+    fontSize: 20
+  }
+})

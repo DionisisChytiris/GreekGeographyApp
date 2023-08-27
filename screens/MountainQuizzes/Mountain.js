@@ -5,19 +5,21 @@ import {
   Pressable,
   Image,
   ScrollView,
-  StyleSheet
+  ImageBackground,
+  StyleSheet,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../styles/testStyle";
+import questions from "../../data/Mountain/questions";
 import { Ionicons } from "@expo/vector-icons";
 
 // import { Entypo } from "@expo/vector-icons";
 
-const NomoiTemplate = (props) => {
+const Mountain = () => {
   const navigation = useNavigation();
-  const data = props.questions;
-  const nomoiR = props.nomoiResults;
+  const data = questions;
+  // const nomoiR = props.nomoiResults;
   const totalQuestions = data.length;
   const [points, setPoints] = useState(0);
   const [index, setIndex] = useState(0);
@@ -93,12 +95,20 @@ const NomoiTemplate = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
         {/* <View style={{ height: "110vh", backgroundColor: "darkblue" }}> */}
-        <View style={{ height: '110vh', backgroundColor: "darkblue" }}>
+        {/* <View style={{ height: '110vh', backgroundColor: "darkblue" }}> */}
+        <ImageBackground
+          source={require("../../assets/meteora.jpg")}
+          resizeMode="cover"
+          style={
+            answerStatus == null ? { height: "100vh" } : { height: "180vh" }
+            // answerStatus == null ? { height: "100vh" } : { aspectRatio: 10/5}
+          }
+        >
           <View style={styles.containerInfo}>
-            <View style={styles.levelBox}>
+            {/* <View style={styles.levelBox}>
               <View>{props.star}</View>
-              <Text style={{ color: "white" }}>Επίπεδο {props.num}</Text>
-            </View>
+              <Text style={{ color: "white" }}>Επίπεδο </Text>
+            </View> */}
           </View>
 
           <View style={styles.progressContainerInfo}>
@@ -107,8 +117,15 @@ const NomoiTemplate = (props) => {
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
-            <Text style={{ fontSize: 20, fontWeight: 600, color: "white", paddingBottom: 30 }}>
-              Νομοί / Πόλεις
+            <Text
+              style={{
+                fontSize: 20,
+                fontWeight: 600,
+                color: "white",
+                paddingBottom: 30,
+              }}
+            >
+              Βουνά
             </Text>
             <View style={styles.counterBox}>
               <Text style={styles.counterNumber}>{counter}</Text>
@@ -177,7 +194,7 @@ const NomoiTemplate = (props) => {
               answerStatus === null ? null : (
                 <Pressable
                   onPress={() =>
-                    navigation.navigate(nomoiR, {
+                    navigation.navigate("MountainResults", {
                       points: points,
                       data: data,
                     })
@@ -234,7 +251,7 @@ const NomoiTemplate = (props) => {
                       />
                       <Text>Συνέχισε έτσι</Text>
                     </View>
-                    <Image
+                    {/* <Image
                       source={currentQuestion?.imgMap}
                       resizeMode="cover"
                       style={{
@@ -244,8 +261,10 @@ const NomoiTemplate = (props) => {
                         width: 300,
                         height: 250,
                       }}
-                    />
-                    {/* <Text>Helo adfkjl </Text> */}
+                    /> */}
+                    <Text style={{ margin: 20, color: "green" }}>
+                      {currentQuestion?.result}{" "}
+                    </Text>
                   </View>
                 ) : (
                   <View
@@ -284,7 +303,8 @@ const NomoiTemplate = (props) => {
               </View>
             )}
           </View>
-        <Pressable
+
+          <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={stylesT.button0}
           >
@@ -293,14 +313,14 @@ const NomoiTemplate = (props) => {
               <Ionicons name="home-outline" size={24} color="white" />
             </View>
           </Pressable>
-        </View>
+        </ImageBackground>
+        {/* </View> */}
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default NomoiTemplate;
-
+export default Mountain;
 
 const stylesT = StyleSheet.create({
   button0: {
@@ -310,7 +330,7 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    // marginTop: 20,
+    marginTop: 20,
   },
   button1: {
     position: "absolute",
