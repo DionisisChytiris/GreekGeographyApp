@@ -5,10 +5,10 @@ import questions1 from "../../data/GeneralQuestions/questions1";
 import { Entypo } from "@expo/vector-icons";
 import GenerQuestTemplate from "./GenerQuestTemplate";
 
-const GeneralQuestions1 = () => {
+const GeneralQuestions1R = () => {
   return (
     <ScrollView>
-      <View>
+      <View style={{ backgroundColor: "gray" }}>
         <GenerQuestTemplate
           questions={questions1}
           nomoiResults={"GeneralQuestionsResult1"}
@@ -25,4 +25,4 @@ const GeneralQuestions1 = () => {
 
 };
 
-export default GeneralQuestions1;
+export default GeneralQuestions1R;

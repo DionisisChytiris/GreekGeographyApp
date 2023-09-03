@@ -93,7 +93,7 @@ const NomoiTemplate = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
         {/* <View style={{ height: "110vh", backgroundColor: "darkblue" }}> */}
-        <View style={{ height: '110vh', backgroundColor: "darkblue" }}>
+        <View style={{ height: '110vh', backgroundColor: "#005ce6" }}>
           <View style={styles.containerInfo}>
             <View style={styles.levelBox}>
               <View>{props.star}</View>

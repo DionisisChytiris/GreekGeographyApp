@@ -10,7 +10,7 @@ const NomoiResult2 = () => {
         dataQ={questions2}
         repeatQ={"Nomoi2R"}
         nextQ={"Nomoi3"}
-        img={require("../../assets/MorePhotos/plaka.jpg")}
+        img={require("../../assets/salonika.jpg")}
       />
     </View>
   );

@@ -2,13 +2,13 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Home, QuizScreen, Cities, Counties, LoseScreen} from './screens'
-import {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R} from './screens/NomoiQuizzes'
+import {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R, NomoiLoseScreen} from './screens/NomoiQuizzes'
 import {NomoiResult1, NomoiResult2, NomoiResult3, NomoiResult4, NomoiResult5, NomoiResult6, ResultsScreen} from './screens/NomoiResults'
 import NomoiInstructions from './screens/NomoiQuizzes/NomoiInstructions';
-import {GeneralQuestions1} from './screens/GeneralQuestionsQuizzes';
-import { LakeRiver, LakeRiverRepeat, LakeRiverResults, LakeRiverResultsRepeat} from './screens/LakeRiverQuizzes'
-import { Mountain, MountainRepeat, MountainResults, MountainResultsRepeat } from './screens/MountainQuizzes';
-import GeneralQuestionsResults1 from './screens/GeneralQuestionsResults/GeneralQuestionsResults1';
+import {GeneralQuestions1, GeneralQuestions1R} from './screens/GeneralQuestionsQuizzes';
+import { LakeRiver, LakeRiverRepeat, LakeRiverResults, LakeRiverResultsRepeat, LakeRiverLoseScreen, LakeRiverLoseScreenR} from './screens/LakeRiverQuizzes'
+import { Mountain, MountainRepeat, MountainResults, MountainResultsRepeat, MountainLoseScreen } from './screens/MountainQuizzes';
+import {GeneralQuestionsResults1, GenQResLoseScreen} from './screens/GeneralQuestionsResults';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +16,8 @@ const StackNavigator =()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Nomoi1} options={{headerShown: false, orientation: 'portrait'}}/> 
-        {/* <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>     */}
+        {/* <Stack.Screen name="Home" component={LoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>  */}
+        <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>    
         <Stack.Screen name="Quiz" component={QuizScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Instructions" component={NomoiInstructions} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Cities" component={Cities} options={{headerShown: false, orientation: 'portrait'}}/>
@@ -25,10 +25,13 @@ const StackNavigator =()=> {
         <Stack.Screen name="LakeRiverRepeat" component={LakeRiverRepeat} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="LakeRiverResults" component={LakeRiverResults} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="LakeRiverResultsRepeat" component={LakeRiverResultsRepeat} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="LakeRiverLoseScreen" component={LakeRiverLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="LakeRiverLoseScreenR" component={LakeRiverLoseScreenR} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Mountain" component={Mountain} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="MountainRepeat" component={MountainRepeat} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="MountainResults" component={MountainResults} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="MountainResultsRepeat" component={MountainResultsRepeat} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="MountainLoseScreen" component={MountainLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Counties" component={Counties} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="LoseScreen" component={LoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Nomoi1" component={Nomoi1} options={{headerShown: false, orientation: 'portrait'}}/>
@@ -50,8 +53,11 @@ const StackNavigator =()=> {
         <Stack.Screen name="NomoiResult4" component={NomoiResult4} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="NomoiResult5" component={NomoiResult5} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="NomoiResult6" component={NomoiResult6} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen" component={NomoiLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="GeneralQuestions1" component={GeneralQuestions1} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="GeneralQuestions1R" component={GeneralQuestions1R} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="GeneralQuestionsResult1" component={GeneralQuestionsResults1} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="GenQResLoseScreen" component={GenQResLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -22,11 +22,11 @@ const NomoiResultTemplate = (props) => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
-      {/* <ImageBackground
+      <ImageBackground
         source={img}
         resizeMode="cover"
         style={{ height: "100vh" }}
-      > */}
+      >
         <View style={{marginVertical: 'auto'}}>
           <View style={styles.title}>
             <Text style={{ color: "white", fontSize: 20 }}>Βαθμολογία</Text>
@@ -214,7 +214,7 @@ const NomoiResultTemplate = (props) => {
             </Pressable>
           )}
         </View>
-      {/* </ImageBackground> */}
+      </ImageBackground>
     </SafeAreaView>
   );
 };

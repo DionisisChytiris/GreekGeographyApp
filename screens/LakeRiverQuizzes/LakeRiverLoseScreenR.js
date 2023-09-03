@@ -3,13 +3,13 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
-const LoseScreen = (props) => {
+const LakeRiverLoseScreenR = () => {
   const navigation = useNavigation();
 
   return (
     <View style={{ height: "100vh", backgroundColor: "darkblue" }}>
       <ImageBackground
-        source={require("../assets/meteora.jpg")}
+        source={require("../../assets/meteora.jpg")}
         resizeMode="cover"
         style={{ height: "100vh" }}
       >
@@ -17,9 +17,6 @@ const LoseScreen = (props) => {
           style={{
             width: "75%",
             height: "50%",
-            // borderWidth: 1,
-            // borderColor: 'red',
-            // backgroundColor: "#ccc",
             marginHorizontal: "auto",
             marginTop: "35%",
             borderRadius: 20,
@@ -47,7 +44,6 @@ const LoseScreen = (props) => {
                 width: "100%",
                 height: "100%",
                 marginHorizontal: "auto",
-                // backgroundColor: 'yellow'
               }}
             >
               <Text style={{ color: "red", fontSize: 30, fontWeight: 600 }}>
@@ -60,12 +56,12 @@ const LoseScreen = (props) => {
                   fontWeight: 600,
                   marginLeft: 30,
                   marginTop: 20,
-                  marginBottom: 40
+                  marginBottom: 40,
                 }}
               >
                 Τέλος χρόνου
               </Text>
-              <Text
+              {/* <Text
                 style={{
                   color: "black",
                   fontSize: 16,
@@ -75,7 +71,7 @@ const LoseScreen = (props) => {
               >
                 Επανέλαβε το κουίζ{" "}
                 <MaterialIcons name="replay" size={24} color="white" />
-              </Text>
+              </Text> */}
 
               <Text
                 style={{
@@ -92,19 +88,6 @@ const LoseScreen = (props) => {
           </View>
         </View>
 
-        {/* <View
-          style={{
-            width: "75%",
-            height: 400,
-            backgroundColor: "#ccc",
-            marginHorizontal: "auto",
-            marginTop: '40%',
-            borderRadius: 20,
-          }}
-        >
-          <Text style={{ color: "white" }}>Λυπάμαι Έχασες</Text>
-        </View> */}
-
         <View
           style={{
             flexDirection: "row",
@@ -114,62 +97,57 @@ const LoseScreen = (props) => {
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={{
-              // backgroundColor: "magenta",
               padding: 10,
               alignItems: "center",
               width: 80,
               height: 50,
-              // borderRadius: 6,
               marginHorizontal: "auto",
             }}
           >
-            <View style={{
-              position: 'absolute',
-              top: 0,
-              backgroundColor: "magenta",
-              // padding: 10,
-              // alignItems: "center",
-              width: '100%',
-              height: '100%',
-              borderRadius: 6,
-              // marginHorizontal: "auto",
-              opacity: 0.5
-            }}/>
+            <View
+              style={{
+                position: "absolute",
+                top: 0,
+                backgroundColor: "magenta",
+                width: "100%",
+                height: "100%",
+                borderRadius: 6,
+                opacity: 0.5,
+              }}
+            />
             <View>
               <AntDesign name="home" size={24} color="white" />
             </View>
           </Pressable>
-          <Pressable
-            // onPress={() => navigation.navigate("Results")}
+          {/* <Pressable
             onPress={() => navigation.navigate(props.loseScreen)}
             style={{
               padding: 10,
               alignItems: "center",
               width: 80,
               height: 50,
-              // borderRadius: 6,
               marginHorizontal: "auto",
             }}
           >
-            <View style={{
-              position: 'absolute',
-               backgroundColor: "magenta",
-              //  padding: 10,
-              //  alignItems: "center",
-               width: '100%',
-               height: '100%',
-               top: 0,
-               borderRadius: 6,
-               opacity: 0.5
-            }}/>
-            <View style={{marginTop: 2.5}}>
+            <View
+              style={{
+                position: "absolute",
+                backgroundColor: "magenta",
+                width: "100%",
+                height: "100%",
+                top: 0,
+                borderRadius: 6,
+                opacity: 0.5,
+              }}
+            />
+            <View style={{ marginTop: 2.5 }}>
               <MaterialIcons name="replay" size={24} color="white" />
             </View>
-          </Pressable>
+          </Pressable> */}
         </View>
       </ImageBackground>
     </View>
   );
 };
 
-export default LoseScreen;
+export default LakeRiverLoseScreenR;

@@ -10,5 +10,6 @@ import Nomoi5 from "./Nomoi5";
 import Nomoi5R from "./Nomoi5R";
 import Nomoi6 from "./Nomoi6";
 import Nomoi6R from "./Nomoi6R";
+import NomoiLoseScreen from "./NomoiLoseScreen";
 
-export {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R}
+export {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R, NomoiLoseScreen}

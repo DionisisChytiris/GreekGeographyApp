@@ -56,38 +56,38 @@ import {
       setAnswerStatus(null);
     }, [index]);
   
-    //   useEffect(() => {
-    //     const myInterval = () => {
-    //       if (counter >= 1) {
-    //         setCounter((counter) => counter - 1);
-    //       }
-    //       if (counter === 0) {
-    //         navigation.navigate("LoseScreen");
-    //       }
-    //     };
-    //     interval = setTimeout(myInterval, 1000);
+      useEffect(() => {
+        const myInterval = () => {
+          if (counter >= 1) {
+            setCounter((counter) => counter - 1);
+          }
+          if (counter === 0) {
+            navigation.navigate("LakeRiverLoseScreenR");
+          }
+        };
+        interval = setTimeout(myInterval, 1000);
   
-    //     return () => {
-    //       clearTimeout(interval);
-    //     };
-    //   }, [counter]);
+        return () => {
+          clearTimeout(interval);
+        };
+      }, [counter]);
   
     // if(counter === 0){
     //   setIndex(index + 1)
     //   setCounter(15)
     // }
   
-    //   useEffect(() => {
-    //     if (index + 1 > data.length) {
-    //       navigation.navigate("Results");
-    //     }
-    //   }, [currentQuestion]);
+      useEffect(() => {
+        if (index + 1 > data.length) {
+          navigation.navigate("LakeRiverResultsRepeat");
+        }
+      }, [currentQuestion]);
   
-    //   useEffect(() => {
-    //     if (!interval) {
-    //       setCounter(15);
-    //     }
-    //   }, [index]);
+      useEffect(() => {
+        if (!interval) {
+          setCounter(15);
+        }
+      }, [index]);
   
     const currentQuestion = data[index];
   
@@ -150,9 +150,11 @@ import {
                   {currentQuestion?.options.map((item, index) => (
                     <Pressable
                       key={index}
-                      onPress={() =>
+                      onPress={() =>{
                         selectedAnswerIndex === null &&
                         setSelectedAnswerIndex(index)
+                        setCounter(false)
+                      }
                       }
                       style={
                         selectedAnswerIndex === index &&

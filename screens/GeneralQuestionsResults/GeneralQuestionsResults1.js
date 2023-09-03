@@ -6,7 +6,9 @@ import GenerQueResultsTemplate from './GenerQueResultsTemplate'
 const GeneralQuestionsResults1 = () => {
   return (
     <View style={{flex: 1}}>
-      <GenerQueResultsTemplate /> 
+      <GenerQueResultsTemplate 
+        repeat={'GeneralQuestions1R'}
+      /> 
        {/* <Text>hello</Text> */}
     </View>
   )

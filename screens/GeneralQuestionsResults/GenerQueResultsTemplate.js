@@ -10,15 +10,15 @@ import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { AntDesign, MaterialIcons, Ionicons } from "@expo/vector-icons";
 
-const GenerQueResultsTemplate = () => {
+const GenerQueResultsTemplate = (props) => {
   const route = useRoute();
   const navigation = useNavigation();
   // const data= props.data
   // const repeatQ = props.repeatQ
 
 
-  const score = 60;
-  // const score = (route.params.points * 100) / route.params.data.length
+  // const score = 60;
+  const score = (route.params.points * 100) / route.params.data.length
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
@@ -98,7 +98,7 @@ const GenerQueResultsTemplate = () => {
                       marginTop: 20,
                     }}
                   >
-                    Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να σκεφτείς
+                    Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να προσπαθήσεις
                     περισσότερο για να βρεις τις σωστές απαντήσεις. Επανέλαβε το
                     κουίζ για να βελτιώσεις τις γνώσεις σου.
                   </Text>
@@ -118,7 +118,8 @@ const GenerQueResultsTemplate = () => {
               </View>
             </Pressable>
             <Pressable
-              onPress={() => navigation.navigate("GeneralQuestions1")}
+              // onPress={() => navigation.navigate("GeneralQuestions1R")}
+              onPress={() => navigation.navigate(props.repeat)}
               style={stylesT.button0}
             >
               <View style={stylesT.button1} />
