@@ -1,7 +1,7 @@
 import { View, Text, Pressable, ImageBackground } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 
 const LakeRiverLoseScreenR = () => {
   const navigation = useNavigation();

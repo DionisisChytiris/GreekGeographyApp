@@ -24,7 +24,7 @@ const NomoiTemplate = (props) => {
   const [answerStatus, setAnswerStatus] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(15);
   const [style, setStyle] = useState(styles.quizContainer);
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
@@ -54,38 +54,38 @@ const NomoiTemplate = (props) => {
     setAnswerStatus(null);
   }, [index]);
 
-  //   useEffect(() => {
-  //     const myInterval = () => {
-  //       if (counter >= 1) {
-  //         setCounter((counter) => counter - 1);
-  //       }
-  //       if (counter === 0) {
-  //         navigation.navigate("LoseScreen");
-  //       }
-  //     };
-  //     interval = setTimeout(myInterval, 1000);
+    useEffect(() => {
+      const myInterval = () => {
+        if (counter >= 1) {
+          setCounter((counter) => counter - 1);
+        }
+        if (counter === 1) {
+          navigation.navigate("NomoiLoseScreen");
+        }
+      };
+      interval = setTimeout(myInterval, 1000);
 
-  //     return () => {
-  //       clearTimeout(interval);
-  //     };
-  //   }, [counter]);
+      return () => {
+        clearTimeout(interval);
+      };
+    }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
   //   setCounter(15)
   // }
 
-  //   useEffect(() => {
-  //     if (index + 1 > data.length) {
-  //       navigation.navigate("Results");
-  //     }
-  //   }, [currentQuestion]);
+    // useEffect(() => {
+    //   if (index + 1 > data.length) {
+    //     navigation.navigate("Results");
+    //   }
+    // }, [currentQuestion]);
 
-  //   useEffect(() => {
-  //     if (!interval) {
-  //       setCounter(15);
-  //     }
-  //   }, [index]);
+    useEffect(() => {
+      if (!interval) {
+        setCounter(15);
+      }
+    }, [index]);
 
   const currentQuestion = data[index];
 
@@ -143,9 +143,11 @@ const NomoiTemplate = (props) => {
                 {currentQuestion?.options.map((item, index) => (
                   <Pressable
                     key={index}
-                    onPress={() =>
+                    onPress={() =>{
                       selectedAnswerIndex === null &&
                       setSelectedAnswerIndex(index)
+                      setCounter(false)
+                    }
                     }
                     style={
                       selectedAnswerIndex === index &&

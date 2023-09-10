@@ -11,7 +11,8 @@ const GeneralQuestions1R = () => {
       <View style={{ backgroundColor: "gray" }}>
         <GenerQuestTemplate
           questions={questions1}
-          nomoiResults={"GeneralQuestionsResult1"}
+          nomoiResults={"GeneralQuestionsResult1R"}
+          losescr={"GenQResLoseScreenR"}
           // num={1}
           // star={
           //   <View style={{ flexDirection: "row" }}>

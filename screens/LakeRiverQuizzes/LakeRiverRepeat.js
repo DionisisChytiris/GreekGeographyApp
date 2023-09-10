@@ -26,7 +26,7 @@ import {
     const [answerStatus, setAnswerStatus] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-    const [counter, setCounter] = useState(5);
+    const [counter, setCounter] = useState(15);
     const [style, setStyle] = useState(styles.quizContainer);
     const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
     let interval = null;
@@ -61,7 +61,7 @@ import {
           if (counter >= 1) {
             setCounter((counter) => counter - 1);
           }
-          if (counter === 0) {
+          if (counter === 1) {
             navigation.navigate("LakeRiverLoseScreenR");
           }
         };
@@ -115,7 +115,11 @@ import {
               <Text style={{ fontSize: 20, fontWeight: 600, color: "white", paddingBottom: 30 }}>
                 Λίμνες / Ποτάμια
               </Text>
-              <View style={styles.counterBox}>
+              <View style={{
+                padding: 10,
+                backgroundColor: "blue",
+                borderRadius: 20,
+              }}>
                 <Text style={styles.counterNumber}>{counter}</Text>
               </View>
             </View>
@@ -125,7 +129,7 @@ import {
               <Text
                 style={{
                   // backgroundColor: "#ffc0cb",
-                  backgroundColor: "green",
+                  backgroundColor: "blue",
                   borderRadius: 12,
                   position: "absolute",
                   left: 0,

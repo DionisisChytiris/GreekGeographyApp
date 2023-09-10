@@ -60,7 +60,7 @@ const LoseScreen = (props) => {
                   fontWeight: 600,
                   marginLeft: 30,
                   marginTop: 20,
-                  marginBottom: 40
+                  marginBottom: 40,
                 }}
               >
                 Τέλος χρόνου
@@ -123,18 +123,20 @@ const LoseScreen = (props) => {
               marginHorizontal: "auto",
             }}
           >
-            <View style={{
-              position: 'absolute',
-              top: 0,
-              backgroundColor: "magenta",
-              // padding: 10,
-              // alignItems: "center",
-              width: '100%',
-              height: '100%',
-              borderRadius: 6,
-              // marginHorizontal: "auto",
-              opacity: 0.5
-            }}/>
+            <View
+              style={{
+                position: "absolute",
+                top: 0,
+                backgroundColor: "magenta",
+                // padding: 10,
+                // alignItems: "center",
+                width: "100%",
+                height: "100%",
+                borderRadius: 6,
+                // marginHorizontal: "auto",
+                opacity: 0.5,
+              }}
+            />
             <View>
               <AntDesign name="home" size={24} color="white" />
             </View>
@@ -151,18 +153,20 @@ const LoseScreen = (props) => {
               marginHorizontal: "auto",
             }}
           >
-            <View style={{
-              position: 'absolute',
-               backgroundColor: "magenta",
-              //  padding: 10,
-              //  alignItems: "center",
-               width: '100%',
-               height: '100%',
-               top: 0,
-               borderRadius: 6,
-               opacity: 0.5
-            }}/>
-            <View style={{marginTop: 2.5}}>
+            <View
+              style={{
+                position: "absolute",
+                backgroundColor: "magenta",
+                //  padding: 10,
+                //  alignItems: "center",
+                width: "100%",
+                height: "100%",
+                top: 0,
+                borderRadius: 6,
+                opacity: 0.5,
+              }}
+            />
+            <View style={{ marginTop: 2.5 }}>
               <MaterialIcons name="replay" size={24} color="white" />
             </View>
           </Pressable>

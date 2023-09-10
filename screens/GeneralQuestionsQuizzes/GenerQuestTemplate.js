@@ -26,7 +26,7 @@ const GenerQuestTemplate = (props) => {
   const [answerStatus, setAnswerStatus] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(15);
   const [style, setStyle] = useState(styles.quizContainer);
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
@@ -61,10 +61,8 @@ const GenerQuestTemplate = (props) => {
         if (counter >= 1) {
           setCounter((counter) => counter - 1);
         }
-        if (counter === 0) {
-          // setCounter((counter) => counter + 1);
-          navigation.navigate("GenQResLoseScreen");
-          console.log('hey')
+        if (counter === 1) {
+          navigation.navigate(props.losescr);
         }
       };
       interval = setTimeout(myInterval, 1000);
@@ -88,7 +86,7 @@ const GenerQuestTemplate = (props) => {
 
     useEffect(() => {
       if (!interval) {
-        setCounter(5);
+        setCounter(15);
       }
     }, [index]);
 
@@ -97,12 +95,12 @@ const GenerQuestTemplate = (props) => {
   return (
     <SafeAreaView style={{ flex: 1}}>
       <ScrollView>
-        {/* <ImageBackground
-          source={require("../../assets/MorePhotos/chania.jpg")}
+        <ImageBackground
+          source={require("../../assets/generalQuestions/imgpxls.jpg")}
           resizeMode="cover"
-          style={{height: '100vh'}}
-        > */}
-        <View style={answerStatus == null ? { height: "100vh", backgroundColor: 'gray' } : { height: "170vh", backgroundColor: 'gray' }}>
+          style={answerStatus == null ? { height: "100vh"} : { height: "170vh"}}
+        >
+        <View >
           <View style={styles.containerInfo}>
             {/* <View style={styles.levelBox}>
               <View>{props.star}</View>
@@ -119,7 +117,11 @@ const GenerQuestTemplate = (props) => {
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
-            <View style={styles.counterBox}>
+            <View style={{
+                 padding: 10,
+                 backgroundColor: "magenta",
+                 borderRadius: 20,
+              }}>
               <Text style={styles.counterNumber}>{counter}</Text>
             </View>
           </View>
@@ -129,7 +131,7 @@ const GenerQuestTemplate = (props) => {
             <Text
               style={{
                 // backgroundColor: "#ffc0cb",
-                backgroundColor: "green",
+                backgroundColor: "magenta",
                 borderRadius: 12,
                 position: "absolute",
                 left: 0,
@@ -335,7 +337,7 @@ const GenerQuestTemplate = (props) => {
           </Pressable>
           
         </View>
-        {/* </ImageBackground> */}
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
@@ -357,7 +359,7 @@ const stylesT = StyleSheet.create({
   button1: {
     position: 'absolute',
     opacity: 0.4,
-    backgroundColor: '#2E86C1',
+    backgroundColor: 'magenta',
     width: '100%',
     height: '100%',
     borderRadius: 25

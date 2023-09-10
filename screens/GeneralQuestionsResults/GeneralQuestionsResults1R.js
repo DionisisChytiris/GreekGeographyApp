@@ -8,31 +8,36 @@ import {
   } from "react-native";
   import React from "react";
   import { useNavigation, useRoute } from "@react-navigation/native";
-  import { AntDesign, MaterialIcons, Ionicons } from "@expo/vector-icons";
+  import { AntDesign} from "@expo/vector-icons";
   
-  const MountainResultsRepeat = () => {
+  const GeneralQuestionsResults1R = () => {
     const route = useRoute();
     const navigation = useNavigation();
+    // const data= props.data
+    // const repeatQ = props.repeatQ
   
-    const score = Math.floor((route.params.points * 100) / route.params.data.length);
+  
+    // const score = 60;
+    const score = (route.params.points * 100) / route.params.data.length
   
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
         <ImageBackground
-          source={require("../../assets/MorePhotos/mountain1.jpeg")}
+          source={require("../../assets/MorePhotos/Acropolis.jpg")}
           resizeMode="cover"
           style={{ height: "100vh" }}
         >
           <View style={{ marginVertical: "auto" }}>
-            <View style={styles.title}>
-              <Text style={{ color: "darkgreen", fontWeight: 600, fontSize: 30 }}>
+            <View style={stylesT.title}>
+              <Text style={{ fontWeight: 600, fontSize: 26, color: "white" }}>
                 Βαθμολογία
               </Text>
             </View>
-            <View style={styles.container}>
+  
+            <View style={stylesT.container}>
               {score > 49 ? (
                 <View>
-                  <View style={styles.score}>
+                  <View style={stylesT.score}>
                     <Text
                       style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
                     >
@@ -76,7 +81,7 @@ import {
                 </View>
               ) : (
                 <View>
-                  <View style={styles.score}>
+                  <View style={stylesT.score}>
                     <Text
                       style={{ fontSize: 60, fontWeight: "bold", color: "red" }}
                     >
@@ -93,7 +98,7 @@ import {
                         marginTop: 20,
                       }}
                     >
-                      Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να σκεφτείς
+                      Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να προσπαθήσεις
                       περισσότερο για να βρεις τις σωστές απαντήσεις. Επανέλαβε το
                       κουίζ για να βελτιώσεις τις γνώσεις σου.
                     </Text>
@@ -101,22 +106,23 @@ import {
                 </View>
               )}
             </View>
-            <View style={styles.buttonBox}>
+  
+            <View style={stylesT.buttonBox}>
               <Pressable
                 onPress={() => navigation.navigate("Quiz")}
-                style={styles.button0}
+                style={stylesT.button0}
               >
-                <View style={styles.button1} />
-                <View style={styles.btnText}>
+                <View style={stylesT.button1} />
+                <View style={stylesT.btnText}>
                   <AntDesign name="home" size={24} color="white" />
                 </View>
               </Pressable>
               {/* <Pressable
-                onPress={() => navigation.navigate("Mountain")}
-                style={styles.button0}
+                onPress={() => navigation.navigate(props.repeat)}
+                style={stylesT.button0}
               >
-                <View style={styles.button1} />
-                <View style={styles.btnText}>
+                <View style={stylesT.button1} />
+                <View style={stylesT.btnText}>
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
               </Pressable> */}
@@ -127,9 +133,9 @@ import {
     );
   };
   
-  export default MountainResultsRepeat;
+  export default GeneralQuestionsResults1R;
   
-  const styles = StyleSheet.create({
+  const stylesT = StyleSheet.create({
     title: {
       // marginTop: "10%",
       marginHorizontal: "auto",

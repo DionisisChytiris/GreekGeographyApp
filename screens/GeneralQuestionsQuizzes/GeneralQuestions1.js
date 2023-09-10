@@ -12,6 +12,7 @@ const GeneralQuestions1 = () => {
         <GenerQuestTemplate
           questions={questions1}
           nomoiResults={"GeneralQuestionsResult1"}
+          losescr={"GenQResLoseScreen"}
           // num={1}
           // star={
           //   <View style={{ flexDirection: "row" }}>

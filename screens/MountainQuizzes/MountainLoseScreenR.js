@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
-const NomoiLoseScreen = () => {
+const MountainLoseScreenR = () => {
   const navigation = useNavigation();
 
   return (
@@ -17,9 +17,6 @@ const NomoiLoseScreen = () => {
           style={{
             width: "75%",
             height: "50%",
-            // borderWidth: 1,
-            // borderColor: 'red',
-            // backgroundColor: "#ccc",
             marginHorizontal: "auto",
             marginTop: "35%",
             borderRadius: 20,
@@ -65,17 +62,6 @@ const NomoiLoseScreen = () => {
               >
                 Τέλος χρόνου
               </Text>
-              <Text
-                style={{
-                  color: "black",
-                  fontSize: 16,
-                  fontWeight: "bold",
-                  margin: 20,
-                }}
-              >
-                Επανέλαβε το κουίζ{" "}
-                <MaterialIcons name="replay" size={24} color="white" />
-              </Text>
 
               <Text
                 style={{
@@ -83,6 +69,7 @@ const NomoiLoseScreen = () => {
                   fontSize: 16,
                   fontWeight: "bold",
                   marginHorizontal: 20,
+                  marginTop: 30
                 }}
               >
                 Επιστροφή στην αρχική σελίδα{" "}
@@ -91,19 +78,6 @@ const NomoiLoseScreen = () => {
             </View>
           </View>
         </View>
-
-        {/* <View
-          style={{
-            width: "75%",
-            height: 400,
-            backgroundColor: "#ccc",
-            marginHorizontal: "auto",
-            marginTop: '40%',
-            borderRadius: 20,
-          }}
-        >
-          <Text style={{ color: "white" }}>Λυπάμαι Έχασες</Text>
-        </View> */}
 
         <View
           style={{
@@ -114,12 +88,10 @@ const NomoiLoseScreen = () => {
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={{
-              // backgroundColor: "magenta",
               padding: 10,
               alignItems: "center",
               width: 80,
               height: 50,
-              // borderRadius: 6,
               marginHorizontal: "auto",
             }}
           >
@@ -128,46 +100,14 @@ const NomoiLoseScreen = () => {
                 position: "absolute",
                 top: 0,
                 backgroundColor: "magenta",
-                // padding: 10,
-                // alignItems: "center",
                 width: "100%",
                 height: "100%",
                 borderRadius: 6,
-                // marginHorizontal: "auto",
                 opacity: 0.5,
               }}
             />
             <View>
               <AntDesign name="home" size={24} color="white" />
-            </View>
-          </Pressable>
-          <Pressable
-            // onPress={() => navigation.navigate("Results")}
-            onPress={() => navigation.navigate('Nomoi1R')}
-            style={{
-              padding: 10,
-              alignItems: "center",
-              width: 80,
-              height: 50,
-              // borderRadius: 6,
-              marginHorizontal: "auto",
-            }}
-          >
-            <View
-              style={{
-                position: "absolute",
-                backgroundColor: "magenta",
-                //  padding: 10,
-                //  alignItems: "center",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                borderRadius: 6,
-                opacity: 0.5,
-              }}
-            />
-            <View style={{ marginTop: 2.5 }}>
-              <MaterialIcons name="replay" size={24} color="white" />
             </View>
           </Pressable>
         </View>
@@ -176,4 +116,4 @@ const NomoiLoseScreen = () => {
   );
 };
 
-export default NomoiLoseScreen;
+export default MountainLoseScreenR;
