@@ -101,7 +101,16 @@ const LakeRiver = () => {
           <ImageBackground
             source={require("../../assets/MorePhotos/lake2.jpg")}
             resizeMode="cover"
+            style={
+              answerStatus == null ? { height: "100vh" } : { height: "150vh" }
+            }
           >
+            <View style={styles.containerInfo}>
+              {/* <View style={styles.levelBox}>
+              <View>{props.star}</View>
+              <Text style={{ color: "white" }}>Επίπεδο </Text>
+            </View> */}
+            </View>
 
             <View style={styles.progressContainerInfo}>
               <View>
