@@ -309,6 +309,9 @@ const Mountain = () => {
                       />
                       <Text>Προσπάθησε περισσότερο</Text>
                     </View>
+                    <Text style={{ margin: 20, color: "green" }}>
+                      {currentQuestion?.result}{" "}
+                    </Text>
                   </View>
                 )}
               </View>

@@ -315,6 +315,15 @@ const MountainRepeat = () => {
                       />
                       <Text>Προσπάθησε περισσότερο</Text>
                     </View>
+                    <Text 
+                       style={{
+                        color: "darkblue",
+                        paddingBottom: 30,
+                        paddingHorizontal: 20,
+                      }}
+                    >
+                      {currentQuestion?.result}{" "}
+                    </Text>
                   </View>
                 )}
               </View>

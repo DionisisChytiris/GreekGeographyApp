@@ -304,6 +304,9 @@ const LakeRiver = () => {
                       />
                       <Text>Προσπάθησε περισσότερο</Text>
                     </View>
+                    <View style={{ paddingBottom: 20, paddingHorizontal: 25 }}>
+                      <Text>{currentQuestion?.result} </Text>
+                    </View>
                   </View>
                 )}
               </View>

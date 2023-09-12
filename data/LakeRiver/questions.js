@@ -40,7 +40,7 @@ const questions =  [
             },
             {
                 id:"3",
-                answer:"Αιτωλοακαρνανία",
+                answer:"Αιτωλοκαρ/νία",
             },
         ],
         correctAnswerIndex: 0,
