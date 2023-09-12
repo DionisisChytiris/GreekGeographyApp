@@ -56,78 +56,83 @@ const Mountain = () => {
     setAnswerStatus(null);
   }, [index]);
 
-    useEffect(() => {
-      const myInterval = () => {
-        if (counter >= 1) {
-          setCounter((counter) => counter - 1);
-        }
-        if (counter === 1) {
-          navigation.navigate("MountainLoseScreen");
-        }
-      };
-      interval = setTimeout(myInterval, 1000);
+  useEffect(() => {
+    const myInterval = () => {
+      if (counter >= 1) {
+        setCounter((counter) => counter - 1);
+      }
+      if (counter === 1) {
+        navigation.navigate("MountainLoseScreen");
+      }
+    };
+    interval = setTimeout(myInterval, 1000);
 
-      return () => {
-        clearTimeout(interval);
-      };
-    }, [counter]);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
   //   setCounter(15)
   // }
 
-    useEffect(() => {
-      if (index + 1 > data.length) {
-        navigation.navigate("MountainResults");
-      }
-    }, [currentQuestion]);
+  useEffect(() => {
+    if (index + 1 > data.length) {
+      navigation.navigate("MountainResults");
+    }
+  }, [currentQuestion]);
 
-    useEffect(() => {
-      if (!interval) {
-        setCounter(15);
-      }
-    }, [index]);
+  useEffect(() => {
+    if (!interval) {
+      setCounter(15);
+    }
+  }, [index]);
 
   const currentQuestion = data[index];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        {/* <View style={{ height: "110vh", backgroundColor: "darkblue" }}> */}
-        {/* <View style={{ height: '110vh', backgroundColor: "darkblue" }}> */}
         <ImageBackground
           source={require("../../assets/meteora.jpg")}
-          resizeMode="cover"
+          // resizeMode="cover"
           style={
-            answerStatus == null ? { height: "100vh" } : { height: "180vh" }
+            answerStatus == null ? { height: "100%" } : { height: "180%" }
             // answerStatus == null ? { height: "100vh" } : { aspectRatio: 10/5}
           }
         >
-          <View style={styles.containerInfo}>
-            {/* <View style={styles.levelBox}>
-              <View>{props.star}</View>
-              <Text style={{ color: "white" }}>Επίπεδο </Text>
-            </View> */}
+          <View style={ styles.containerInfo}>
+          <Text
+              style={{
+                fontSize: 20,
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+                paddingTop: 30,
+              }}
+            >
+              Βουνά
+            </Text>
           </View>
-
           <View style={styles.progressContainerInfo}>
             <View>
               <Text style={{ color: "white" }}>
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
-            <Text
+           
+            <View
               style={{
-                fontSize: 20,
-                fontWeight: 600,
-                color: "white",
-                paddingBottom: 30,
+                //  padding: 5,
+                alignItems: "center",
+                justifyContent: "center",
+                width: 28,
+                height: 28,
+                backgroundColor: "green",
+                borderRadius: 20,
               }}
             >
-              Βουνά
-            </Text>
-            <View style={styles.counterBox}>
               <Text style={styles.counterNumber}>{counter}</Text>
             </View>
           </View>
@@ -148,24 +153,28 @@ const Mountain = () => {
             />
           </View>
 
-          <View style={{ paddingVertical: 20, paddingHorizontal: 20 }}>
+          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
             <View style={style}>
               <Image
                 source={currentQuestion?.img}
-                resizeMode="cover"
-                style={styles.image}
+                // resizeMode="cover"
+                style={{
+                  borderRadius: 10,
+                  marginBottom: 10,
+                  width: "100%",
+                  height: 180,
+                }}
               />
               <Text style={styles.question}>{currentQuestion?.question}</Text>
               <View style={styles.answersContainer}>
                 {currentQuestion?.options.map((item, index) => (
                   <Pressable
                     key={index}
-                    onPress={() =>{
+                    onPress={() => {
                       selectedAnswerIndex === null &&
-                      setSelectedAnswerIndex(index)
-                      setCounter(false)
-                    }
-                    }
+                        setSelectedAnswerIndex(index);
+                      setCounter(false);
+                    }}
                     style={
                       selectedAnswerIndex === index &&
                       index === currentQuestion.correctAnswerIndex
@@ -179,7 +188,7 @@ const Mountain = () => {
                     <Text
                       style={{
                         marginHorizontal: "auto",
-                        fontWeight: 600,
+                        fontWeight: "600",
                         color: "white",
                       }}
                     >
@@ -211,7 +220,7 @@ const Mountain = () => {
                 onPress={() => setIndex(index + 1)}
                 style={nextQueButton}
               >
-                <Text style={{ color: "white" }}>Επόμενη Ερώτηση</Text>
+                <Text style={{ color: "white", fontSize: 12 }}>Επόμενη Ερώτηση</Text>
               </Pressable>
             )}
 
@@ -310,13 +319,12 @@ const Mountain = () => {
             onPress={() => navigation.navigate("Quiz")}
             style={stylesT.button0}
           >
-            <View style={stylesT.button1}/>
+            <View style={stylesT.button1} />
             <View style={stylesT.btnText}>
               <Ionicons name="home-outline" size={24} color="white" />
             </View>
           </Pressable>
         </ImageBackground>
-        {/* </View> */}
       </ScrollView>
     </SafeAreaView>
   );
@@ -332,7 +340,8 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 20,
+    // marginTop: 20,
+    marginBottom: 40,
   },
   button1: {
     position: "absolute",

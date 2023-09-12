@@ -8,27 +8,38 @@ import {
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { AntDesign, MaterialIcons, Ionicons } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
 const MountainResults = () => {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const score = Math.floor((route.params.points * 100) / route.params.data.length);
+  const score = 50;
+  // const score = Math.floor((route.params.points * 100) / route.params.data.length);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>
       <ImageBackground
         source={require("../../assets/MorePhotos/mountain1.jpeg")}
-        resizeMode="cover"
-        style={{ height: "100vh" }}
+        // resizeMode="cover"
+        style={{ height: "100%" }}
       >
-        <View style={{ marginVertical: "auto" }}>
+        <View>
           <View style={styles.title}>
-            <Text style={{ color: "darkgreen", fontWeight: 600, fontSize: 30 }}>
+            <Text
+              style={{ 
+                color: "darkgreen", 
+                fontWeight: "600", 
+                fontSize: 25,
+                marginTop: 120,
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
               Βαθμολογία
             </Text>
           </View>
+
           <View style={styles.container}>
             {score > 49 ? (
               <View>
@@ -46,7 +57,7 @@ const MountainResults = () => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 18,
+                          fontSize: 16,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -60,7 +71,7 @@ const MountainResults = () => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -88,7 +99,7 @@ const MountainResults = () => {
                   <Text
                     style={{
                       textAlign: "center",
-                      fontSize: 16,
+                      fontSize: 14,
                       color: "red",
                       marginTop: 20,
                     }}
@@ -134,13 +145,15 @@ const styles = StyleSheet.create({
   title: {
     // marginTop: "10%",
     marginHorizontal: "auto",
-    marginBottom: "10%",
+    marginBottom: "5%",
   },
   container: {
-    width: "90%",
+    width: "80%",
     backgroundColor: "#ccc",
-    marginHorizontal: "auto",
     borderRadius: 20,
+    marginVertical: 30,
+    marginLeft: "auto",
+    marginRight: "auto",
     padding: 10,
     paddingVertical: 60,
   },
@@ -161,7 +174,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   buttonBox: {
-    marginTop: 80,
+    marginTop: 30,
     flexDirection: "row",
   },
   button0: {

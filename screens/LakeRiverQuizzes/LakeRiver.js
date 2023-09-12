@@ -57,285 +57,268 @@ const LakeRiver = () => {
     setAnswerStatus(null);
   }, [index]);
 
-    useEffect(() => {
-      const myInterval = () => {
-        if (counter >= 1) {
-          setCounter((counter) => counter - 1);
-        }
-        if (counter === 1) {
-          navigation.navigate("LakeRiverLoseScreen");
-        }
-      };
-      interval = setTimeout(myInterval, 1000);
+  useEffect(() => {
+    const myInterval = () => {
+      if (counter >= 1) {
+        setCounter((counter) => counter - 1);
+      }
+      if (counter === 1) {
+        navigation.navigate("LakeRiverLoseScreen");
+      }
+    };
+    interval = setTimeout(myInterval, 1000);
 
-      return () => {
-        clearTimeout(interval);
-      };
-    }, [counter]);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
   //   setCounter(15)
   // }
 
-    useEffect(() => {
-      if (index + 1 > data.length) {
-        navigation.navigate("LakeRiverResults");
-      }
-    }, [currentQuestion]);
+  useEffect(() => {
+    if (index + 1 > data.length) {
+      navigation.navigate("LakeRiverResults");
+    }
+  }, [currentQuestion]);
 
-    useEffect(() => {
-      if (!interval) {
-        setCounter(15);
-      }
-    }, [index]);
+  useEffect(() => {
+    if (!interval) {
+      setCounter(15);
+    }
+  }, [index]);
 
   const currentQuestion = data[index];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        {/* <View style={{ height: '110vh', backgroundColor: "darkblue" }}> */}
-        <View>
-          {/* <View > */}
-          <ImageBackground
-            source={require("../../assets/MorePhotos/lake2.jpg")}
-            resizeMode="cover"
-            style={
-              answerStatus == null ? { height: "100vh" } : { height: "150vh" }
-            }
-          >
-            <View style={styles.containerInfo}>
-              {/* <View style={styles.levelBox}>
-              <View>{props.star}</View>
-              <Text style={{ color: "white" }}>Επίπεδο </Text>
-            </View> */}
-            </View>
+        <ImageBackground
+          source={require("../../assets/MorePhotos/lake2.jpg")}
+          style={answerStatus == null ? { height: "100%" } : { height: "150%" }}
+        >
+          <View style={styles.containerInfo}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+                paddingTop: 30,
+              }}
+            >
+              Λίμνες / Ποτάμια
+            </Text>
+          </View>
 
-            <View style={styles.progressContainerInfo}>
-              <View>
-                <Text style={{ color: "white" }}>
-                  {index + 1} / {totalQuestions}
-                </Text>
-              </View>
-              <Text
-                style={{
-                  fontSize: 20,
-                  fontWeight: 600,
-                  color: "white",
-                  paddingBottom: 30,
-                }}
-              >
-                Λίμνες / Ποτάμια
+          <View style={styles.progressContainerInfo}>
+            <View>
+              <Text style={{ color: "white" }}>
+                {index + 1} / {totalQuestions}
               </Text>
-              <View style={{
-                 padding: 10,
-                 backgroundColor: "blue",
-                 borderRadius: 20,
-              }}>
-                <Text style={styles.counterNumber}>{counter}</Text>
-              </View>
             </View>
 
-            {/* Progress Bar */}
-            <View style={styles.progressBarBack}>
-              <Text
-                style={{
-                  // backgroundColor: "#ffc0cb",
-                  backgroundColor: "blue",
-                  borderRadius: 12,
-                  position: "absolute",
-                  left: 0,
-                  height: 8,
-                  right: 0,
-                  width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
-                }}
-              />
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                width: 28,
+                height: 28,
+                backgroundColor: "blue",
+                borderRadius: 20,
+              }}
+            >
+              <Text style={styles.counterNumber}>{counter}</Text>
             </View>
+          </View>
 
-            <View style={{ paddingVertical: 20, paddingHorizontal: 20 }}>
-              {/* <View style={[style, {opacity: 0.5}]}> */}
-              <View style={style}>
-                <View>
-                  <Image
-                    source={currentQuestion?.img}
-                    resizeMode="cover"
-                    style={styles.image}
-                  />
-                  <Text style={styles.question}>
-                    {currentQuestion?.question}
-                  </Text>
-                  <View style={styles.answersContainer}>
-                    {currentQuestion?.options.map((item, index) => (
-                      <Pressable
-                        key={index}
-                        onPress={() =>{
-                          selectedAnswerIndex === null &&
-                          setSelectedAnswerIndex(index)
-                          setCounter(false)
-                        }
-                        }
-                        style={
-                          selectedAnswerIndex === index &&
-                          index === currentQuestion.correctAnswerIndex
-                            ? styles.correctAnswer
-                            : selectedAnswerIndex !== null &&
-                              selectedAnswerIndex === index
-                            ? styles.wrongAnswer
-                            : styles.borderAnswer
-                        }
+          {/* Progress Bar */}
+          <View style={styles.progressBarBack}>
+            <Text
+              style={{
+                // backgroundColor: "#ffc0cb",
+                backgroundColor: "blue",
+                borderRadius: 12,
+                position: "absolute",
+                left: 0,
+                height: 8,
+                right: 0,
+                width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
+              }}
+            />
+          </View>
+
+          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
+            {/* <View style={[style, {opacity: 0.5}]}> */}
+            <View style={style}>
+              <View>
+                <Image
+                  source={currentQuestion?.img}
+                  style={{
+                    borderRadius: 10,
+                    marginBottom: 10,
+                    width: "100%",
+                    height: 180,
+                  }}
+                />
+                <Text style={styles.question}>{currentQuestion?.question}</Text>
+                <View style={styles.answersContainer}>
+                  {currentQuestion?.options.map((item, index) => (
+                    <Pressable
+                      key={index}
+                      onPress={() => {
+                        selectedAnswerIndex === null &&
+                          setSelectedAnswerIndex(index);
+                        setCounter(false);
+                      }}
+                      style={
+                        selectedAnswerIndex === index &&
+                        index === currentQuestion.correctAnswerIndex
+                          ? styles.correctAnswer
+                          : selectedAnswerIndex !== null &&
+                            selectedAnswerIndex === index
+                          ? styles.wrongAnswer
+                          : styles.borderAnswer
+                      }
+                    >
+                      <Text
+                        style={{
+                          marginHorizontal: "auto",
+                          fontWeight: "600",
+                          color: "white",
+                          // padding: 30
+                        }}
                       >
-                        <Text
-                          style={{
-                            marginHorizontal: "auto",
-                            fontWeight: 600,
-                            color: "white",
-                            // padding: 30
-                          }}
-                        >
-                          {item.answer}
-                        </Text>
-                      </Pressable>
-                    ))}
-                  </View>
+                        {item.answer}
+                      </Text>
+                    </Pressable>
+                  ))}
                 </View>
               </View>
             </View>
+          </View>
 
-            <View style={styles.feedBackArea}>
-              {index + 1 >= data.length ? (
-                answerStatus === null ? null : (
-                  <Pressable
-                    onPress={() =>
-                      navigation.navigate("LakeRiverResults", {
-                        points: points,
-                        data: data,
-                      })
-                    }
-                    style={nextQueButton}
-                  >
-                    <Text style={{ color: "white" }}>Αποτελέσματα</Text>
-                  </Pressable>
-                )
-              ) : answerStatus === null ? null : (
+          <View style={styles.feedBackArea}>
+            {index + 1 >= data.length ? (
+              answerStatus === null ? null : (
                 <Pressable
-                  onPress={() => setIndex(index + 1)}
+                  onPress={() =>
+                    navigation.navigate("LakeRiverResults", {
+                      points: points,
+                      data: data,
+                    })
+                  }
                   style={nextQueButton}
                 >
-                  <Text style={{ color: "white" }}>Επόμενη Ερώτηση</Text>
+                  <Text style={{ color: "white" }}>Αποτελέσματα</Text>
                 </Pressable>
-              )}
+              )
+            ) : answerStatus === null ? null : (
+              <Pressable
+                onPress={() => setIndex(index + 1)}
+                style={nextQueButton}
+              >
+                <Text style={{ color: "white", fontSize: 12 }}>
+                  Επόμενη Ερώτηση
+                </Text>
+              </Pressable>
+            )}
 
-              {answerStatus === null ? null : (
-                <View
-                  style={
-                    answerStatus === null ? null : { alignItems: "center" }
-                  }
-                >
-                  {!!answerStatus ? (
+            {answerStatus === null ? null : (
+              <View
+                style={answerStatus === null ? null : { alignItems: "center" }}
+              >
+                {!!answerStatus ? (
+                  <View
+                    style={{
+                      margin: 40,
+                      alignItems: "center",
+                      backgroundColor: "white",
+                      borderRadius: 20,
+                      width: "80%",
+                    }}
+                  >
                     <View
                       style={{
-                        margin: 40,
+                        flexDirection: "column",
                         alignItems: "center",
-                        backgroundColor: "white",
-                        borderRadius: 20,
-                        width: "80%",
+                        marginTop: 30,
+                        // width: 300,
+                        height: 180,
                       }}
                     >
-                      <View
+                      <Text
+                        style={{ color: "green", fontSize: 20, padding: 10 }}
+                      >
+                        Σωστή Απάντηση
+                      </Text>
+                      <Image
+                        source={require("../../assets/thumbUp.jpg")}
+                        resizeMode="cover"
                         style={{
-                          flexDirection: "column",
-                          alignItems: "center",
-                          marginTop: 30,
-                          // width: 300,
-                          height: 180,
+                          marginVertical: 20,
+                          width: 50,
+                          height: 50,
                         }}
-                      >
-                        <Text
-                          style={{ color: "green", fontSize: 20, padding: 10 }}
-                        >
-                          Σωστή Απάντηση
-                        </Text>
-                        <Image
-                          source={require("../../assets/thumbUp.jpg")}
-                          resizeMode="cover"
-                          style={{
-                            marginVertical: 20,
-                            width: 50,
-                            height: 50,
-                          }}
-                        />
-                        <Text>Συνέχισε έτσι</Text>
-                      </View>
-                      {/* <Image
-                      source={currentQuestion?.imgMap}
-                      resizeMode="cover"
-                      style={{
-                        borderRadius: 10,
-                        marginBottom: 10,
-                        marginHorizontal: 3,
-                        width: 300,
-                        height: 250,
-                      }}
-                    /> */}
-                      <View
-                        style={{ paddingBottom: 20, paddingHorizontal: 20 }}
-                      >
-                        <Text>{currentQuestion?.result} </Text>
-                      </View>
+                      />
+                      <Text>Συνέχισε έτσι</Text>
                     </View>
-                  ) : (
+                   
+                    <View style={{ paddingBottom: 20, paddingHorizontal: 25 }}>
+                      <Text>{currentQuestion?.result} </Text>
+                    </View>
+                  </View>
+                ) : (
+                  <View
+                    style={{
+                      margin: 40,
+                      alignItems: "center",
+                      backgroundColor: "white",
+                      borderRadius: 20,
+                      width: "80%",
+                    }}
+                  >
                     <View
                       style={{
-                        margin: 40,
+                        flexDirection: "column",
                         alignItems: "center",
-                        backgroundColor: "white",
-                        borderRadius: 20,
-                        width: "80%",
+                        marginTop: 30,
+                        width: 250,
+                        height: 200,
                       }}
                     >
-                      <View
+                      <Text style={{ color: "red", fontSize: 20, padding: 10 }}>
+                        Λάθος Απάντηση
+                      </Text>
+                      <Image
+                        source={require("../../assets/sadFace.jpg")}
+                        resizeMode="cover"
                         style={{
-                          flexDirection: "column",
-                          alignItems: "center",
-                          marginTop: 30,
-                          width: 250,
-                          height: 200,
+                          marginVertical: 20,
+                          width: 50,
+                          height: 50,
                         }}
-                      >
-                        <Text
-                          style={{ color: "red", fontSize: 20, padding: 10 }}
-                        >
-                          Λάθος Απάντηση
-                        </Text>
-                        <Image
-                          source={require("../../assets/sadFace.jpg")}
-                          resizeMode="cover"
-                          style={{
-                            marginVertical: 20,
-                            width: 50,
-                            height: 50,
-                          }}
-                        />
-                        <Text>Προσπάθησε περισσότερο</Text>
-                      </View>
+                      />
+                      <Text>Προσπάθησε περισσότερο</Text>
                     </View>
-                  )}
-                </View>
-              )}
-            </View>
-
-            <Pressable
-              onPress={() => navigation.navigate("Quiz")}
-              style={stylesT.button0}
-            >
-              <View style={stylesT.button1} />
-              <View style={stylesT.btnText}>
-                <Ionicons name="home-outline" size={24} color="white" />
+                  </View>
+                )}
               </View>
-            </Pressable>
-          </ImageBackground>
-        </View>
+            )}
+          </View>
+
+          <Pressable
+            onPress={() => navigation.navigate("Quiz")}
+            style={stylesT.button0}
+          >
+            <View style={stylesT.button1} />
+            <View style={stylesT.btnText}>
+              <Ionicons name="home-outline" size={24} color="white" />
+            </View>
+          </Pressable>
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
@@ -351,7 +334,8 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 20,
+    // marginTop: 20,
+    marginBottom: 40,
   },
   button1: {
     position: "absolute",

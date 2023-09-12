@@ -13,12 +13,12 @@ const QuizScreen = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../assets/MorePhotos/door.jpg")}
+        source={require("../assets/romaikiAgora.jpg")}
         // source={require("../assets/ath.jpg")}
         resizeMode="cover"
         style={{ flex: 1, justifyContent: "center" }}
       >
-        <Text style={{ textAlign: "center", color: "white", fontSize: 30, fontWeight: '600'}}>
+        <Text style={{ textAlign: "center", color: "white", fontSize: 25, fontWeight: '600', marginBottom: 50}}>
           Επέλεξε κατηγορία
         </Text>
         <Pressable
@@ -60,8 +60,10 @@ const styles = StyleSheet.create({
   },
   buttonA: {
     position: "relative",
-    width: 215,
-    height: 60,
+    // width: 215,
+    width: '55%',
+    // height: 60,
+    height: '8%',
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
   button1: {
     position: "absolute",
-    opacity: 0.7,
+    opacity: 0.5,
     backgroundColor: "blue",
     width: "100%",
     height: "100%",
@@ -77,12 +79,12 @@ const styles = StyleSheet.create({
   },
   buttonTxt1: {
     position: "absolute",
-    bottom: 20,
-    left: 30,
+    bottom: '35%',
+    left: '16%',
     color: "white",
     fontWeight: "600",
-    textAlign: "center",
-    fontSize: 20,
+    // textAlign: "center",
+    fontSize: 16,
   },
   buttonB: {
     position: "relative",
@@ -91,11 +93,11 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 50,
+    marginTop: 40,
   },
   button2: {
     position: "absolute",
-    opacity: 0.5,
+    opacity: 0.4,
     backgroundColor: "green",
     width: "100%",
     height: "100%",
@@ -107,8 +109,8 @@ const styles = StyleSheet.create({
     left: 40,
     color: "white",
     fontWeight: "600",
-    textAlign: "center",
-    fontSize: 20,
+    // textAlign: "center",
+    fontSize: 18,
   },
   buttonC: {
     position: "relative",
@@ -117,11 +119,11 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 50,
+    marginTop: 40,
   },
   button3: {
     position: "absolute",
-    opacity: 0.9,
+    opacity: 0.8,
     backgroundColor: "gray",
     width: "100%",
     height: "100%",
@@ -130,11 +132,11 @@ const styles = StyleSheet.create({
   buttonTxt3: {
     position: "absolute",
     bottom: 20,
-    left: 30,
+    left: 34,
     color: "white",
     fontWeight: "600",
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
   },
   buttonD: {
     position: "relative",
@@ -143,11 +145,11 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 50,
+    marginTop: 40,
   },
   button4: {
     position: "absolute",
-    opacity: 0.7,
+    opacity: 0.4,
     backgroundColor: "magenta",
     width: "100%",
     height: "100%",
@@ -156,11 +158,11 @@ const styles = StyleSheet.create({
   buttonTxt4: {
     position: "absolute",
     bottom: 20,
-    left: 30,
+    left: 32,
     color: "white",
     fontWeight: "600",
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
   },
 });
 

@@ -8,9 +8,9 @@ const NomoiInstructions = () => {
     <View style={{ flex: 1, backgroundColor: "lightblue" }}>
       <Image
         source={require("../../assets/salonika.jpg")}
-        resizeMode="cover"
+        // resizeMode="cover"
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           width: "100%",
           height: "25%",
@@ -19,7 +19,7 @@ const NomoiInstructions = () => {
       <View
         style={{
           flex: 2,
-          justifyContent: 'center',
+          justifyContent: "center",
           alignItems: "center",
           backgroundColor: "transparent",
         }}
@@ -29,21 +29,21 @@ const NomoiInstructions = () => {
             fontSize: 25,
             padding: 20,
             textDecoration: "underline",
-            fontWeight: 600,
+            fontWeight: "600",
           }}
         >
           Νόμοι / Πόλεις
         </Text>
-        <Text style={{ fontSize: 20 }}> - Αυτή η κατηγορία ερωτήσεων</Text>
-        <Text style={{ fontSize: 20 }}>αποτελείται από 6 επίπεδα.</Text>
-        <Text style={{ fontSize: 20, paddingTop: 15 }}>
+        <Text style={{ fontSize: 16 }}> - Αυτή η κατηγορία ερωτήσεων</Text>
+        <Text style={{ fontSize: 16 }}>αποτελείται από 6 επίπεδα.</Text>
+        <Text style={{ fontSize: 16, paddingTop: 15 }}>
           - Το κάθε επίπεδο έχει 10 ερωτήσεις.
         </Text>
-        <Text style={{ fontSize: 20, paddingTop: 15 }}>
+        <Text style={{ fontSize: 16, paddingTop: 15 }}>
           - Για να ανέβεις κατηγορία πρέπει
         </Text>
-        <Text style={{ fontSize: 20 }}>να απαντήσεις τουλάχιστον</Text>
-        <Text style={{ fontSize: 20 }}>5 ερωτήσεις σωστά.</Text>
+        <Text style={{ fontSize: 16 }}>να απαντήσεις τουλάχιστον</Text>
+        <Text style={{ fontSize: 16 }}>5 ερωτήσεις σωστά.</Text>
         <Pressable
           onPress={() => navigation.navigate("Nomoi1")}
           style={{
@@ -51,7 +51,7 @@ const NomoiInstructions = () => {
             backgroundColor: "magenta",
             padding: 10,
             paddingBottom: 15,
-            marginVertical: "5%",
+            marginVertical: "8%",
             alignItems: "center",
             borderRadius: 20,
           }}
@@ -62,7 +62,7 @@ const NomoiInstructions = () => {
 
       <Image
         source={require("../../assets/athina.jpg")}
-        resizeMode="cover"
+        // resizeMode="cover"
         style={{
           position: "absolute",
           bottom: 0,

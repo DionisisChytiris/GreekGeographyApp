@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: 30,
-    marginBottom: 20
+    marginBottom: 5
   },
   levelBox1: {
     // backgroundColor: 'darkblue',
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontWeight: "bold",
+    fontSize: 12
   },
   progressContainerInfo: {
     flexDirection: "row",
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     width: "85%",
     flexDirection: "row",
     alignItems: "center",
-    height: 8,
+    height: 7,
     borderRadius: 20,
     justifyContent: "center",
     marginTop: "3%",
@@ -58,12 +59,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
     marginTop: 10,
+    // marginHorizontal: 10,
     backgroundColor: "lightgray",
     padding: 20,
     borderRadius: 16,
     shadowColor: "lightblue",
     shadowOffset: { width: 5, height: 8 },
-    shadowRadius: 10,
+    shadowRadius: 20,
+    elevation: 10
+    // shadowOpacity: 0.5
     // height: 600
   },
   quizContainer1: {
@@ -73,10 +77,14 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgray",
     padding: 20,
     borderRadius: 16,
-    shadowColor: "green",
-    shadowOffset: { width: 5, height: 8 },
+    // shadowColor: "green",
+    // shadowOffset: { width: 5, height: 8 },
     // shadowOpacity: 0.4,
-    shadowRadius: 10,
+    // shadowRadius: 10,
+  },
+  androidProp:{
+    shadowColor: 'green',
+    elevation: 20
   },
   quizContainer2: {
     flex: 1,
@@ -94,21 +102,21 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginVertical: 10,
     width: "100%",
-    height: 200,
+    height: 150,
   },
   question: {
     // marginLeft: 20,
     textAlign: 'center',
     marginTop: 10,
     paddingHorizontal: 20,
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: "bold",
   },
   answersContainer: {
     // flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
-    marginTop: 12,
+    marginTop: 10,
     padding: 5,
     // width: '100%',
     // height: '40%'
@@ -116,50 +124,58 @@ const styles = StyleSheet.create({
   correctAnswer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: 'center',
     backgroundColor: "green",
     width: "48%",
     // height: '40%',
-    height: 100,
+    height: 80,
     borderRadius: 6,
     margin: "1%",
   },
   wrongAnswer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: 'center',
     backgroundColor: "#dd0530",
     width: "48%",
-    height: 100,
+    height: 80,
     borderRadius: 6,
     margin: "1%",
   },
   borderAnswer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: 'center',
     backgroundColor: "blue",
     width: "48%",
-    height: 100,
+    height: 80,
     borderRadius: 6,
     margin: "1%",
   },
   feedBackArea: {
     // backgroundColor: "darkblue",
     paddingTop: 20,
+    marginHorizontal: 'auto'
   },
   nextQueButton: {
     backgroundColor: "magenta",
     padding: 10,
     alignItems: "center",
+    justifyContent: 'center',
     width: 140,
     borderRadius: 6,
-    marginHorizontal: "auto",
+    // marginHorizontal: "auto",
   },
   nextQueButton1: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
     backgroundColor: "green",
     padding: 10,
     alignItems: "center",
+    // justifyContent: 'center',
     width: 140,
     borderRadius: 6,
-    marginHorizontal: "auto",
+    // marginHorizontal: "auto",
   },
   nextQueButton2: {
     backgroundColor: "#dd0530",
@@ -167,7 +183,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 140,
     borderRadius: 6,
-    marginHorizontal: "auto",
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    // marginHorizontal: "auto",
   },
 });
 

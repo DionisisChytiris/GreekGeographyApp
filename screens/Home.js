@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   button1: {
     position: 'absolute',
-    opacity: 0.4,
+    opacity: 0.3,
     backgroundColor: "magenta",
     width: '100%',
     height: '100%',
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
   },
   btnText: {
     position: 'absolute',
-    bottom: 15,
-    left: 42,
+    bottom: 13,
+    left: 40,
     color: "white",
     fontWeight: "600",
     fontSize: 20,

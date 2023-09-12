@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { AntDesign, MaterialIcons, Ionicons } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
 const GenerQueResultsTemplate = (props) => {
   const route = useRoute();
@@ -16,20 +16,28 @@ const GenerQueResultsTemplate = (props) => {
   // const data= props.data
   // const repeatQ = props.repeatQ
 
-
-  // const score = 60;
-  const score = Math.floor((route.params.points * 100) / route.params.data.length)
+  const score = 60;
+  // const score = Math.floor((route.params.points * 100) / route.params.data.length)
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
       <ImageBackground
         source={require("../../assets/MorePhotos/Acropolis.jpg")}
-        resizeMode="cover"
-        style={{ height: "100vh" }}
+        // resizeMode="cover"
+        style={{ height: "100%" }}
       >
-        <View style={{ marginVertical: "auto" }}>
+        <View>
           <View style={stylesT.title}>
-            <Text style={{ fontWeight: 600, fontSize: 26, color: "white" }}>
+            <Text
+              style={{
+                fontWeight: "600",
+                fontSize: 20,
+                color: "white",
+                marginTop: 100,
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
               Βαθμολογία
             </Text>
           </View>
@@ -51,7 +59,7 @@ const GenerQueResultsTemplate = (props) => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 18,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -65,7 +73,7 @@ const GenerQueResultsTemplate = (props) => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -140,13 +148,15 @@ const stylesT = StyleSheet.create({
   title: {
     // marginTop: "10%",
     marginHorizontal: "auto",
-    marginBottom: "10%",
+    marginBottom: "8%",
   },
   container: {
-    width: "90%",
+    width: "80%",
     backgroundColor: "#ccc",
-    marginHorizontal: "auto",
     borderRadius: 20,
+    marginVertical: 30,
+    marginLeft: "auto",
+    marginRight: "auto",
     padding: 10,
     paddingVertical: 60,
   },
@@ -167,7 +177,7 @@ const stylesT = StyleSheet.create({
     marginHorizontal: "auto",
   },
   buttonBox: {
-    marginTop: 80,
+    marginTop: 40,
     flexDirection: "row",
   },
   button0: {

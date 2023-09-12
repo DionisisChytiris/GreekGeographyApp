@@ -7,20 +7,17 @@ const NomoiLoseScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{ height: "100vh", backgroundColor: "darkblue" }}>
+    <View style={{ height: "100%", backgroundColor: "darkblue" }}>
       <ImageBackground
         source={require("../../assets/meteora.jpg")}
-        resizeMode="cover"
-        style={{ height: "100vh" }}
+        style={{ height: "100%" }}
       >
         <View
           style={{
             width: "75%",
             height: "50%",
-            // borderWidth: 1,
-            // borderColor: 'red',
-            // backgroundColor: "#ccc",
-            marginHorizontal: "auto",
+            marginLeft: "auto",
+            marginRight: "auto",
             marginTop: "35%",
             borderRadius: 20,
           }}
@@ -30,52 +27,55 @@ const NomoiLoseScreen = () => {
               width: "100%",
               height: "100%",
               backgroundColor: "#ccc",
-              marginHorizontal: "auto",
+              // marginHorizontal: "auto",
               borderRadius: 20,
-              opacity: 0.7,
+              opacity: 0.5,
             }}
           />
           <View
             style={{
               position: "absolute",
               top: "20%",
-              left: "13%",
+              left: "10%",
             }}
           >
-            <View
-              style={{
-                width: "100%",
-                height: "100%",
-                marginHorizontal: "auto",
-                // backgroundColor: 'yellow'
-              }}
-            >
-              <Text style={{ color: "red", fontSize: 30, fontWeight: 600 }}>
+            <View>
+              <Text style={{ color: "red", fontSize: 25, fontWeight: "600", marginLeft: 10}}>
                 Λυπάμαι Έχασες
               </Text>
               <Text
                 style={{
                   color: "white",
-                  fontSize: 24,
-                  fontWeight: 600,
-                  marginLeft: 30,
-                  marginTop: 20,
-                  marginBottom: 40,
+                  fontSize: 22,
+                  fontWeight: "600",
+                  marginLeft: 35,
+                  marginTop: 30,
+                  marginBottom: 30,
                 }}
               >
                 Τέλος χρόνου
               </Text>
-              <Text
+              <View
                 style={{
-                  color: "black",
-                  fontSize: 16,
-                  fontWeight: "bold",
-                  margin: 20,
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                Επανέλαβε το κουίζ{" "}
-                <MaterialIcons name="replay" size={24} color="white" />
-              </Text>
+                <Text
+                  style={{
+                    color: "black",
+                    fontSize: 16,
+                    fontWeight: "bold",
+                    marginVertical: 20,
+                  }}
+                >
+                  Επανέλαβε το κουίζ{" "}
+                </Text>
+                <View>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </View>
 
               <Text
                 style={{
@@ -86,90 +86,67 @@ const NomoiLoseScreen = () => {
                 }}
               >
                 Επιστροφή στην αρχική σελίδα{" "}
-                <AntDesign name="home" size={24} color="white" />
+                <AntDesign name="home" size={20} color="white" />
               </Text>
             </View>
           </View>
         </View>
 
-        {/* <View
-          style={{
-            width: "75%",
-            height: 400,
-            backgroundColor: "#ccc",
-            marginHorizontal: "auto",
-            marginTop: '40%',
-            borderRadius: 20,
-          }}
-        >
-          <Text style={{ color: "white" }}>Λυπάμαι Έχασες</Text>
-        </View> */}
-
+        <View style={{marginHorizontal: 35}}>
         <View
           style={{
             flexDirection: "row",
+            justifyContent: "space-around",
             marginTop: 80,
           }}
         >
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={{
-              // backgroundColor: "magenta",
-              padding: 10,
               alignItems: "center",
-              width: 80,
-              height: 50,
-              // borderRadius: 6,
-              marginHorizontal: "auto",
+              width: 90,
+              height: 60,
             }}
           >
             <View
               style={{
                 position: "absolute",
                 top: 0,
-                backgroundColor: "magenta",
-                // padding: 10,
-                // alignItems: "center",
+                backgroundColor: "magenta",               
                 width: "100%",
                 height: "100%",
-                borderRadius: 6,
-                // marginHorizontal: "auto",
+                borderRadius: 20,
                 opacity: 0.5,
               }}
             />
-            <View>
+            <View style={{ position: "absolute", top: 15 }}>
               <AntDesign name="home" size={24} color="white" />
             </View>
           </Pressable>
           <Pressable
-            // onPress={() => navigation.navigate("Results")}
-            onPress={() => navigation.navigate('Nomoi1R')}
+            onPress={() => navigation.navigate("Nomoi1R")}
             style={{
-              padding: 10,
               alignItems: "center",
-              width: 80,
-              height: 50,
-              // borderRadius: 6,
-              marginHorizontal: "auto",
+              width: 90,
+              height: 60,
             }}
           >
             <View
               style={{
                 position: "absolute",
+                top: 0,
                 backgroundColor: "magenta",
-                //  padding: 10,
-                //  alignItems: "center",
                 width: "100%",
                 height: "100%",
-                top: 0,
-                borderRadius: 6,
+                borderRadius: 20,
                 opacity: 0.5,
               }}
             />
-            <View style={{ marginTop: 2.5 }}>
+            <View style={{ position: "absolute", top: 15 }}>
               <MaterialIcons name="replay" size={24} color="white" />
             </View>
           </Pressable>
+        </View>
         </View>
       </ImageBackground>
     </View>

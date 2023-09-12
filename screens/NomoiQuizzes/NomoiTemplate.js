@@ -5,7 +5,7 @@ import {
   Pressable,
   Image,
   ScrollView,
-  StyleSheet
+  StyleSheet,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -54,46 +54,46 @@ const NomoiTemplate = (props) => {
     setAnswerStatus(null);
   }, [index]);
 
-    useEffect(() => {
-      const myInterval = () => {
-        if (counter >= 1) {
-          setCounter((counter) => counter - 1);
-        }
-        if (counter === 1) {
-          navigation.navigate("NomoiLoseScreen");
-        }
-      };
-      interval = setTimeout(myInterval, 1000);
+  useEffect(() => {
+    const myInterval = () => {
+      if (counter >= 1) {
+        setCounter((counter) => counter - 1);
+      }
+      if (counter === 1) {
+        navigation.navigate("NomoiLoseScreen");
+      }
+    };
+    interval = setTimeout(myInterval, 1000);
 
-      return () => {
-        clearTimeout(interval);
-      };
-    }, [counter]);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, [counter]);
 
   // if(counter === 0){
   //   setIndex(index + 1)
   //   setCounter(15)
   // }
 
-    // useEffect(() => {
-    //   if (index + 1 > data.length) {
-    //     navigation.navigate("Results");
-    //   }
-    // }, [currentQuestion]);
+  useEffect(() => {
+    if (index + 1 > data.length) {
+      navigation.navigate("NomoiResultTemplate");
+    }
+  }, [currentQuestion]);
 
-    useEffect(() => {
-      if (!interval) {
-        setCounter(15);
-      }
-    }, [index]);
+  useEffect(() => {
+    if (!interval) {
+      setCounter(15);
+    }
+  }, [index]);
 
   const currentQuestion = data[index];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        {/* <View style={{ height: "110vh", backgroundColor: "darkblue" }}> */}
-        <View style={{ height: '110vh', backgroundColor: "#005ce6" }}>
+        <View style={{ height: "100%", backgroundColor: "#005ce6" }}>
+          <View style={{ marginTop: 20 }} />
           <View style={styles.containerInfo}>
             <View style={styles.levelBox}>
               <View>{props.star}</View>
@@ -107,48 +107,69 @@ const NomoiTemplate = (props) => {
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
-            <Text style={{ fontSize: 20, fontWeight: 600, color: "white", paddingBottom: 30 }}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                color: "white",
+                paddingBottom: 30,
+              }}
+            >
               Νομοί / Πόλεις
             </Text>
-            <View style={styles.counterBox}>
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                width: 28,
+                height: 28,
+                backgroundColor: "gray",
+                borderRadius: 20,
+              }}
+            >
               <Text style={styles.counterNumber}>{counter}</Text>
             </View>
           </View>
 
           {/* Progress Bar */}
-          <View style={styles.progressBarBack}>
-            <Text
-              style={{
-                // backgroundColor: "#ffc0cb",
-                backgroundColor: "green",
-                borderRadius: 12,
-                position: "absolute",
-                left: 0,
-                height: 8,
-                right: 0,
-                width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
-              }}
-            />
+          <View style={{ marginTop: -10 }}>
+            <View style={styles.progressBarBack}>
+              <Text
+                style={{
+                  // backgroundColor: "#ffc0cb",
+                  backgroundColor: "gray",
+                  borderRadius: 12,
+                  position: "absolute",
+                  left: 0,
+                  height: 8,
+                  right: 0,
+                  width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
+                }}
+              />
+            </View>
           </View>
 
-          <View style={{ paddingVertical: 20, paddingHorizontal: 20 }}>
+          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
             <View style={style}>
               <Image
                 source={currentQuestion?.img}
-                resizeMode="cover"
-                style={styles.image}
+                style={{
+                  borderRadius: 10,
+                  marginBottom: 10,
+                  width: "100%",
+                  height: 180,
+                }}
               />
               <Text style={styles.question}>{currentQuestion?.question}</Text>
               <View style={styles.answersContainer}>
                 {currentQuestion?.options.map((item, index) => (
                   <Pressable
                     key={index}
-                    onPress={() =>{
+                    onPress={() => {
                       selectedAnswerIndex === null &&
-                      setSelectedAnswerIndex(index)
-                      setCounter(false)
-                    }
-                    }
+                        setSelectedAnswerIndex(index);
+                      setCounter(false);
+                    }}
                     style={
                       selectedAnswerIndex === index &&
                       index === currentQuestion.correctAnswerIndex
@@ -162,7 +183,7 @@ const NomoiTemplate = (props) => {
                     <Text
                       style={{
                         marginHorizontal: "auto",
-                        fontWeight: 600,
+                        fontWeight: "600",
                         color: "white",
                       }}
                     >
@@ -194,7 +215,9 @@ const NomoiTemplate = (props) => {
                 onPress={() => setIndex(index + 1)}
                 style={nextQueButton}
               >
-                <Text style={{ color: "white" }}>Επόμενη Ερώτηση</Text>
+                <Text style={{ color: "white", fontSize: 12 }}>
+                  Επόμενη Ερώτηση
+                </Text>
               </Pressable>
             )}
 
@@ -286,11 +309,11 @@ const NomoiTemplate = (props) => {
               </View>
             )}
           </View>
-        <Pressable
+          <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={stylesT.button0}
           >
-            <View style={stylesT.button1}/>
+            <View style={stylesT.button1} />
             <View style={stylesT.btnText}>
               <Ionicons name="home-outline" size={24} color="white" />
             </View>
@@ -303,7 +326,6 @@ const NomoiTemplate = (props) => {
 
 export default NomoiTemplate;
 
-
 const stylesT = StyleSheet.create({
   button0: {
     position: "relative",
@@ -312,12 +334,14 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
+    marginBottom: 40
     // marginTop: 20,
   },
   button1: {
     position: "absolute",
     opacity: 0.4,
-    backgroundColor: "#2E86C1",
+    // backgroundColor: "#2E86C1",
+    backgroundColor: "lightgray",
     width: "100%",
     height: "100%",
     borderRadius: 25,

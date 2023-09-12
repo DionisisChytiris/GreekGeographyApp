@@ -16,8 +16,8 @@ const StackNavigator =()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="Home" component={Nomoi1} options={{headerShown: false, orientation: 'portrait'}}/>  */}
-        <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>    
+        <Stack.Screen name="Home" component={NomoiInstructions} options={{headerShown: false, orientation: 'portrait'}}/> 
+        {/* <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>     */}
         <Stack.Screen name="Quiz" component={QuizScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Instructions" component={NomoiInstructions} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Cities" component={Cities} options={{headerShown: false, orientation: 'portrait'}}/>

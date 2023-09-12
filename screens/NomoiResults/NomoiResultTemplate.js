@@ -16,202 +16,187 @@ const NomoiResultTemplate = (props) => {
   const dataQ = props.dataQ;
   const repeatQ = props.repeatQ;
   const nextQ = props.nextQ;
-  const img = props.img
+  const img = props.img;
 
-  const score = Math.floor((route.params.points * 100) / route.params.data.length);
+  const score = Math.floor(
+    (route.params.points * 100) / route.params.data.length
+  );
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
       <ImageBackground
         source={img}
-        resizeMode="cover"
-        style={{ height: "100vh" }}
+        // resizeMode="cover"
+        style={{ height: "100%" }}
       >
-        <View style={{marginVertical: 'auto'}}>
+        <View>
           <View style={styles.title}>
-            <Text style={{ color: "white", fontSize: 20 }}>Βαθμολογία</Text>
+            <Text
+              style={{
+                color: "white",
+                fontWeight: "600",
+                fontSize: 22,
+                marginTop: 40,
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              Βαθμολογία
+            </Text>
           </View>
 
-          <View style={styles.container}>
-            {score > 49 ? (
-              <View>
-                <View style={styles.score}>
-                  <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
-                  >
-                    {score}
-                  </Text>
-                  <Text style={{ fontSize: 20, color: "green" }}>%</Text>
-                </View>
-                <View
-                  style={{
-                    textAlign: "center",
-                    width: "100%",
-                    marginHorizontal: "auto",
-                  }}
-                >
-                  <Text
-                    style={{
-                      color: "green",
-                      fontSize: 16,
-                      fontWeight: "bold",
-                      margin: 20,
-                    }}
-                  >
-                    Συγχαρητήρια!!! Πέτυχες την απαιτούμενη βαθμολογία για να
-                    προχωρήσεις στο επόμενο επίπεδο.
-                  </Text>
-                  <Text
-                    style={{
-                      color: "magenta",
-                      fontSize: 18,
-                      fontWeight: "bold",
-                      marginBottom: 10,
-                    }}
-                  >
-                    Σωστές Απαντήσεις
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    marginHorizontal: 60,
-                  }}
-                >
-                  <Text
-                    style={{
-                      fontWeight: "bold",
-                      padding: 2,
-                      fontSize: 16,
-                      color: "darkblue",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    Νομός
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 16,
-                      color: "darkblue",
-                      fontWeight: "bold",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    Πρωτεύουσα
-                  </Text>
-                </View>
-                {dataQ.map((item, index) => (
+          <View style={{ marginHorizontal: 25 }}>
+            <View style={styles.container}>
+              {score > 49 ? (
+                <View>
+                  <View style={styles.score}>
+                    <Text
+                      style={{
+                        marginTop: 20,
+                        fontSize: 50,
+                        fontWeight: "bold",
+                        color: "green",
+                      }}
+                    >
+                      {score}
+                    </Text>
+                    <Text style={{ fontSize: 20, color: "green" }}>%</Text>
+                  </View>
                   <View
-                    key={index}
                     style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "space-around",
-                      marginHorizontal: 40,
+                      textAlign: "center",
+                      width: "100%",
+                      marginHorizontal: "auto",
                     }}
                   >
                     <Text
-                      style={{ fontWeight: "bold", padding: 2, fontSize: 16 }}
+                      style={{
+                        color: "green",
+                        fontSize: 20,
+                        fontWeight: "bold",
+                        marginTop: 30,
+                        textAlign: 'center'
+                      }}
                     >
-                      {item.nomos}
+                      Συγχαρητήρια!!! 
                     </Text>
-                    <Text style={{ fontSize: 16 }}>{item.capital}</Text>
+                    <Text
+                       style={{
+                        color: "green",
+                        fontSize: 14,
+                        fontWeight: "bold",
+                        marginTop: 30,
+                        margin: 20,
+                        textAlign: 'center'
+                      }}
+                    >
+                      Πέτυχες την απαιτούμενη βαθμολογία για να
+                      προχωρήσεις στο επόμενο επίπεδο.
+                    </Text>
                   </View>
-                ))}
-              </View>
-            ) : (
-              <View>
-                <View style={styles.score}>
-                  <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "red" }}
-                  >
-                    {score}
-                  </Text>
-                  <Text style={{ fontSize: 20, color: "red" }}>%</Text>
                 </View>
-                <View
-                  style={{
-                    textAlign: "center",
-                    width: "100%",
-                    marginHorizontal: "auto",
-                  }}
-                >
-                  <Text
+              ) : (
+                <View>
+                  <View style={styles.score}>
+                    <Text
+                      style={{ fontSize: 50, fontWeight: "bold", color: "red" }}
+                    >
+                      {score}
+                    </Text>
+                    <Text style={{ fontSize: 20, color: "red" }}>%</Text>
+                  </View>
+                  <View
                     style={{
-                      color: "red",
-                      fontSize: 16,
-                      fontWeight: "bold",
-                      margin: 20,
+                      textAlign: "center",
+                      width: "100%",
+                      marginHorizontal: "auto",
                     }}
                   >
-                     Δυστυχώς δεν πέτυχες την απαιτούμενη βαθμολογία για να
-                    προχωρήσεις στο επόμενο επίπεδο.
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    textAlign: "center",
-                    width: "100%",
-                    marginHorizontal: "auto",
-                  }}
-                >
-                  <Text
+                    <Text
+                      style={{
+                        color: "red",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        margin: 20,
+                      }}
+                    >
+                      Δυστυχώς δεν πέτυχες την απαιτούμενη βαθμολογία για να
+                      προχωρήσεις στο επόμενο επίπεδο.
+                    </Text>
+                  </View>
+                  <View
                     style={{
-                      color: "red",
-                      fontSize: 16,
-                      fontWeight: "bold",
-                      margin: 20,
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
-                    Επανέλαβε το κουίζ <MaterialIcons name="replay" size={24} color="red"/>
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    textAlign: "center",
-                    width: "100%",
-                    marginHorizontal: "auto",
-                  }}
-                >
-                  <Text
+                    <Text
+                      style={{
+                        color: "red",
+                        fontSize: 16,
+                        fontWeight: "bold",
+                        marginVertical: 20,
+                      }}
+                    >
+                      Επανέλαβε το κουίζ{" "}
+                    </Text>
+                    <View>
+                      <MaterialIcons name="replay" size={24} color="white" />
+                    </View>
+                  </View>
+
+                  <View
                     style={{
-                      color: "red",
-                      fontSize: 16,
-                      fontWeight: "bold",
-                      marginHorizontal: 20,
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
-                    Επιστροφή στην αρχική σελίδα <AntDesign name="home" size={24} color="red" />
-                  </Text>
+                    <Text
+                      style={{
+                        color: "red",
+                        fontSize: 16,
+                        fontWeight: "bold",
+                        marginHorizontal: 20,
+                      }}
+                    >
+                      Επιστροφή στην αρχική σελίδα{" "}
+                      <AntDesign name="home" size={20} color="white" />
+                    </Text>
+                  </View>
                 </View>
-              </View>
-            )}
+              )}
+            </View>
           </View>
 
           {score < 50 ? (
-            <View style={styles.buttonBox}>
-              <Pressable
-                onPress={() => navigation.navigate("Quiz")}
-                style={styles.button}
-              >
-                <AntDesign name="home" size={24} color="white" />
-              </Pressable>
-              <Pressable
-                onPress={() => navigation.navigate(repeatQ)}
-                style={styles.button}
-              >
-                <MaterialIcons name="replay" size={24} color="white" />
-              </Pressable>
+            <View style={{marginHorizontal: 35}}>
+              <View style={styles.buttonBox}>
+                <Pressable
+                  onPress={() => navigation.navigate("Quiz")}
+                  style={styles.button}
+                >
+                  <AntDesign name="home" size={24} color="white" />
+                </Pressable>
+                <Pressable
+                  onPress={() => navigation.navigate(repeatQ)}
+                  style={styles.button}
+                >
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </Pressable>
+              </View>
             </View>
           ) : (
-            <Pressable
-              onPress={() => navigation.navigate(nextQ)}
-              style={styles.nextQueButton}
-            >
-              <Text style={{ color: "white" }}>Επόμενο Επίπεδο</Text>
-            </Pressable>
+            <View style={styles.buttonBox1}>
+              <Pressable
+                onPress={() => navigation.navigate(nextQ)}
+                style={styles.nextQueButton}
+              >
+                <Text style={{ color: "white" }}>Επόμενο Επίπεδο</Text>
+              </Pressable>
+            </View>
           )}
         </View>
       </ImageBackground>
@@ -224,16 +209,17 @@ export default NomoiResultTemplate;
 const styles = StyleSheet.create({
   title: {
     marginTop: "10%",
-    marginHorizontal: "auto",
     marginBottom: "10%",
   },
   container: {
     width: "90%",
     backgroundColor: "#ccc",
-    marginHorizontal: "auto",
+    marginLeft: "auto",
+    marginRight: "auto",
     borderRadius: 20,
     padding: 10,
-    paddingVertical: 60,
+    paddingTop: 30,
+    paddingBottom: 60,
   },
   score: {
     flexDirection: "row",
@@ -254,6 +240,12 @@ const styles = StyleSheet.create({
   buttonBox: {
     marginTop: 80,
     flexDirection: "row",
+    justifyContent: 'space-around'
+  },
+  buttonBox1: {
+    marginTop: 40,
+    flexDirection: "row",
+    justifyContent: 'space-around'
   },
   button: {
     backgroundColor: "magenta",
