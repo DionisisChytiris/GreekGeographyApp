@@ -40,7 +40,14 @@ const NomoiLoseScreen = () => {
             }}
           >
             <View>
-              <Text style={{ color: "red", fontSize: 25, fontWeight: "600", marginLeft: 10}}>
+              <Text
+                style={{
+                  color: "red",
+                  fontSize: 25,
+                  fontWeight: "600",
+                  marginLeft: 10,
+                }}
+              >
                 Λυπάμαι Έχασες
               </Text>
               <Text
@@ -92,61 +99,61 @@ const NomoiLoseScreen = () => {
           </View>
         </View>
 
-        <View style={{marginHorizontal: 35}}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-around",
-            marginTop: 80,
-          }}
-        >
-          <Pressable
-            onPress={() => navigation.navigate("Quiz")}
+        <View style={{ marginHorizontal: 35 }}>
+          <View
             style={{
-              alignItems: "center",
-              width: 90,
-              height: 60,
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop: 80,
             }}
           >
-            <View
+            <Pressable
+              onPress={() => navigation.navigate("Quiz")}
               style={{
-                position: "absolute",
-                top: 0,
-                backgroundColor: "magenta",               
-                width: "100%",
-                height: "100%",
-                borderRadius: 20,
-                opacity: 0.5,
+                alignItems: "center",
+                width: 90,
+                height: 60,
               }}
-            />
-            <View style={{ position: "absolute", top: 15 }}>
-              <AntDesign name="home" size={24} color="white" />
-            </View>
-          </Pressable>
-          <Pressable
-            onPress={() => navigation.navigate("Nomoi1R")}
-            style={{
-              alignItems: "center",
-              width: 90,
-              height: 60,
-            }}
-          >
-            <View
+            >
+              <View
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  backgroundColor: "magenta",
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 20,
+                  opacity: 0.5,
+                }}
+              />
+              <View style={{ position: "absolute", top: 15 }}>
+                <AntDesign name="home" size={24} color="white" />
+              </View>
+            </Pressable>
+            <Pressable
+              onPress={() => navigation.navigate("Nomoi1R")}
               style={{
-                position: "absolute",
-                top: 0,
-                backgroundColor: "magenta",
-                width: "100%",
-                height: "100%",
-                borderRadius: 20,
-                opacity: 0.5,
+                alignItems: "center",
+                width: 90,
+                height: 60,
               }}
-            />
-            <View style={{ position: "absolute", top: 15 }}>
-              <MaterialIcons name="replay" size={24} color="white" />
-            </View>
-          </Pressable>
-        </View>
+            >
+              <View
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  backgroundColor: "magenta",
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 20,
+                  opacity: 0.5,
+                }}
+              />
+              <View style={{ position: "absolute", top: 15 }}>
+                <MaterialIcons name="replay" size={24} color="white" />
+              </View>
+            </Pressable>
+          </View>
         </View>
       </ImageBackground>
     </View>

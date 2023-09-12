@@ -16,8 +16,8 @@ const GeneralQuestionsResults1R = () => {
   // const data= props.data
   // const repeatQ = props.repeatQ
 
-  const score = 60;
-  // const score = (route.params.points * 100) / route.params.data.length
+  // const score = 60;
+  const score = (route.params.points * 100) / route.params.data.length
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>

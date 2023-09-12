@@ -14,8 +14,8 @@ const MountainResults = () => {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const score = 50;
-  // const score = Math.floor((route.params.points * 100) / route.params.data.length);
+  // const score = 50;
+  const score = Math.floor((route.params.points * 100) / route.params.data.length);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>

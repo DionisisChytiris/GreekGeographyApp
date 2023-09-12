@@ -7,6 +7,7 @@ import {
   ScrollView,
   ImageBackground,
   StyleSheet,
+  Platform
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -265,7 +266,7 @@ const LakeRiver = () => {
                       />
                       <Text>Συνέχισε έτσι</Text>
                     </View>
-                   
+
                     <View style={{ paddingBottom: 20, paddingHorizontal: 25 }}>
                       <Text>{currentQuestion?.result} </Text>
                     </View>
@@ -309,6 +310,7 @@ const LakeRiver = () => {
             )}
           </View>
 
+          
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
             style={stylesT.button0}
@@ -318,6 +320,7 @@ const LakeRiver = () => {
               <Ionicons name="home-outline" size={24} color="white" />
             </View>
           </Pressable>
+
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -334,9 +337,24 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    // marginTop: 20,
     marginBottom: 40,
   },
+  // ...Platform.select({
+  //   ios:{
+  //     commonProp: {
+  //       shadowColor: 'white',
+  //       shadowOffset: {width: 35, height: 5},
+  //       shadowOpacity: 0.3,
+  //       shadowRadius: 3
+  //     }
+  //   },
+  //   android: {
+  //     commonProp: {
+  //       elevation: 30,
+  //       shadowColor: 'green'
+  //     }
+  //   }
+  // }),
   button1: {
     position: "absolute",
     opacity: 0.4,
