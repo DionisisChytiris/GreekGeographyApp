@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'relative',
-    width: 160,
-    height: 50,
+    width: 140,
+    height: 45,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -51,11 +51,11 @@ const styles = StyleSheet.create({
   },
   btnText: {
     position: 'absolute',
-    bottom: 13,
-    left: 40,
+    bottom: 12,
+    left: 37,
     color: "white",
     fontWeight: "600",
-    fontSize: 20,
+    fontSize: 17,
   }
 });
 
