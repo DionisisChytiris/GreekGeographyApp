@@ -153,7 +153,7 @@ const Mountain = () => {
             />
           </View>
 
-          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
+          <View style={{ paddingVertical: 20, paddingHorizontal: 30 }}>
             <View style={style}>
               <Image
                 source={currentQuestion?.img}

@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: "8%",
+    paddingHorizontal: "10%",
   },
   progressBarBack: {
     backgroundColor: "white",
     // backgroundColor: "green",
-    width: "85%",
+    width: "80%",
     flexDirection: "row",
     alignItems: "center",
     height: 7,
@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     // marginHorizontal: 10,
     backgroundColor: "lightgray",
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
     borderRadius: 16,
     shadowColor: "lightblue",
     shadowOffset: { width: 5, height: 8 },
@@ -75,7 +76,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 10,
     backgroundColor: "lightgray",
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
     borderRadius: 16,
     // shadowColor: "green",
     // shadowOffset: { width: 5, height: 8 },
@@ -91,7 +93,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 10,
     backgroundColor: "lightgray",
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
     borderRadius: 16,
     shadowColor: "#dd0530",
     shadowOffset: { width: 5, height: 8 },
@@ -155,7 +158,7 @@ const styles = StyleSheet.create({
   feedBackArea: {
     // backgroundColor: "darkblue",
     paddingTop: 20,
-    marginHorizontal: 'auto'
+    marginHorizontal: 20
   },
   nextQueButton: {
     backgroundColor: "magenta",

@@ -36,7 +36,7 @@ const NomoiResultTemplate = (props) => {
                 color: "white",
                 fontWeight: "600",
                 fontSize: 22,
-                marginTop: 40,
+                marginTop: 80,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   buttonBox1: {
-    marginTop: 40,
+    marginTop: 20,
     flexDirection: "row",
     justifyContent: 'space-around'
   },

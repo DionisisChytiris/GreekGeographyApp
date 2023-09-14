@@ -10,7 +10,6 @@ const GenQResLoseScreenR = () => {
     <View style={{ height: "100%", backgroundColor: "darkblue" }}>
       <ImageBackground
         source={require("../../assets/meteora.jpg")}
-        // resizeMode="cover"
         style={{ height: "100%" }}
       >
         <View
@@ -70,68 +69,31 @@ const GenQResLoseScreenR = () => {
                   alignItems: "center",
                 }}
               >
-                {/* <Text
+                <Text
                   style={{
                     color: "black",
                     fontSize: 16,
                     fontWeight: "bold",
-                    marginVertical: 20,
+                    marginHorizontal: 20,
                   }}
                 >
-                  Επανέλαβε το κουίζ{" "}
+                  Επιστροφή στην αρχική σελίδα{" "}
+                  <AntDesign name="home" size={20} color="white" />
                 </Text>
-                <View>
-                  <MaterialIcons name="replay" size={24} color="white" />
-                </View> */}
-
-              <Text
-                style={{
-                  color: "black",
-                  fontSize: 16,
-                  fontWeight: "bold",
-                  marginHorizontal: 20,
-                }}
-                >
-                Επιστροφή στην αρχική σελίδα{" "}
-                <AntDesign name="home" size={20} color="white" />
-              </Text>
-                </View>
+              </View>
             </View>
           </View>
         </View>
 
         <View
           style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            marginLeft: "auto",
+            marginRight: "auto",
             marginTop: 80,
           }}
         >
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
-            style={{
-              alignItems: "center",
-              width: 90,
-              height: 60,
-            }}
-          >
-            <View
-              style={{
-                position: "absolute",
-                top: 0,
-                backgroundColor: "magenta",               
-                width: "100%",
-                height: "100%",
-                borderRadius: 20,
-                opacity: 0.5,
-              }}
-            />
-            <View style={{ position: "absolute", top: 15 }}>
-              <AntDesign name="home" size={24} color="white" />
-            </View>
-          </Pressable>
-          {/* <Pressable
-            onPress={() => navigation.navigate(props.loseScreen)}
             style={{
               alignItems: "center",
               width: 90,
@@ -150,13 +112,13 @@ const GenQResLoseScreenR = () => {
               }}
             />
             <View style={{ position: "absolute", top: 15 }}>
-              <MaterialIcons name="replay" size={24} color="white" />
+              <AntDesign name="home" size={24} color="white" />
             </View>
-          </Pressable> */}
+          </Pressable>
         </View>
       </ImageBackground>
     </View>
   );
 };
 
-export default GenQResLoseScreenR ;
+export default GenQResLoseScreenR;

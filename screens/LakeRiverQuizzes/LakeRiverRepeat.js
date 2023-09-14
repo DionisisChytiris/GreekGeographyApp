@@ -150,7 +150,7 @@ const LakeRiverRepeat = () => {
             />
           </View>
 
-          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
+          <View style={{ paddingVertical: 20, paddingHorizontal: 30 }}>
             {/* <View style={[style, {opacity: 0.5}]}> */}
             <View style={style}>
               <View>

@@ -149,8 +149,9 @@ const NomoiTemplate = (props) => {
             </View>
           </View>
 
-          <View style={{ paddingVertical: 20, paddingHorizontal: 25 }}>
-            <View style={style}>
+          <View style={{ paddingVertical: 20, paddingHorizontal: 30 }}>
+            <View style={[style, styles.androidShadow]}>
+            {/* <View style={style}> */}
               <Image
                 source={currentQuestion?.img}
                 style={{

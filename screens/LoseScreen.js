@@ -19,7 +19,7 @@ const LoseScreen = (props) => {
             height: "50%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "35%",
+            marginTop: "40%",
             borderRadius: 20,
           }}
         >
@@ -102,6 +102,7 @@ const LoseScreen = (props) => {
           </View>
         </View>
 
+        <View style={{marginHorizontal: 40}}>
         <View
           style={{
             flexDirection: "row",
@@ -155,6 +156,7 @@ const LoseScreen = (props) => {
               <MaterialIcons name="replay" size={24} color="white" />
             </View>
           </Pressable>
+        </View>
         </View>
       </ImageBackground>
     </View>
