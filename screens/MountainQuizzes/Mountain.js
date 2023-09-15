@@ -96,11 +96,9 @@ const Mountain = () => {
       <ScrollView>
         <ImageBackground
           source={require("../../assets/meteora.jpg")}
-          // resizeMode="cover"
-          style={
-            answerStatus == null ? { height: "100%" } : { height: "180%" }
-            // answerStatus == null ? { height: "100vh" } : { aspectRatio: 10/5}
-          }
+          // style={
+          //   answerStatus == null ? { height: "100%" } : { height: "120%" }
+          // }
         >
           <View style={ styles.containerInfo}>
           <Text

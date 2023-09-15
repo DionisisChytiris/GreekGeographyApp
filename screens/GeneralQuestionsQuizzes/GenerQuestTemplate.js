@@ -94,11 +94,7 @@ const GenerQuestTemplate = (props) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <ImageBackground
-          source={require("../../assets/generalQuestions/imgpxls.jpg")}
-          // resizeMode="contain"
-          // style={answerStatus == null ? { height: "100%"} : { height: "170%"}}
-        >
+        <ImageBackground source={require("../../assets/MorePhotos/ath.jpg")}>
           <View>
             <View style={styles.containerInfo}>
               {/* <View style={styles.levelBox}>
@@ -194,7 +190,7 @@ const GenerQuestTemplate = (props) => {
                           marginHorizontal: "auto",
                           fontWeight: "600",
                           color: "white",
-                          fontSize: 12,
+                          fontSize: 14,
                         }}
                       >
                         {item.answer}

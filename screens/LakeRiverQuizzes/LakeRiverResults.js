@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
   buttonBox: {
     marginTop: 40,
     flexDirection: "row",
+    marginHorizontal: 40
   },
   button0: {
     position: "relative",

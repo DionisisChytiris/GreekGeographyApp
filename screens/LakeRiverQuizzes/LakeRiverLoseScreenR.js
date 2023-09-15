@@ -18,7 +18,7 @@ const LakeRiverLoseScreenR = () => {
             height: "50%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "35%",
+            marginTop: "40%",
             borderRadius: 20,
           }}
         >
