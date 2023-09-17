@@ -39,12 +39,11 @@ const Introduction = () => {
             ref={video}
             style={styles.video}
             source={require("../assets/video/aiVideo.mp4")}
-            useNativeControls
+            // useNativeControls
             resizeMode={ResizeMode.CONTAIN}
             isLooping={false}
             shouldPlay
             // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-            // onLoad={() => {video.setPositionAsync(0); video.current.playAsync()}}
           />
         </View>
         {/* <View style={styles.buttons}>
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontSize: 17,
   },
-  video: { width: "120%", height: "80%", borderRadius: 25 },
+  video: { width: "120%", height: "80%", borderRadius: 45 },
   buttons: { 
     width: 100, 
     marginLeft: "auto", 

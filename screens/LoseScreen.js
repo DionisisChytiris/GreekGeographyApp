@@ -2,6 +2,7 @@ import { View, Text, Pressable, ImageBackground } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import LoseScreenAiMsg from "./LoseScreenAi";
 
 const LoseScreen = (props) => {
   const navigation = useNavigation();
@@ -16,10 +17,10 @@ const LoseScreen = (props) => {
         <View
           style={{
             width: "75%",
-            height: "50%",
+            height: "58%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "40%",
+            marginTop: "35%",
             borderRadius: 20,
           }}
         >
@@ -37,7 +38,7 @@ const LoseScreen = (props) => {
           <View
             style={{
               position: "absolute",
-              top: "20%",
+              top: "10%",
               left: "10%",
             }}
           >
@@ -65,7 +66,7 @@ const LoseScreen = (props) => {
                 Τέλος χρόνου
               </Text>
 
-              <View
+              {/* <View
                 style={{
                   flexDirection: "row",
                   justifyContent: "center",
@@ -85,9 +86,9 @@ const LoseScreen = (props) => {
                 <View>
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
-              </View>
+              </View> */}
 
-              <Text
+              {/* <Text
                 style={{
                   color: "black",
                   fontSize: 16,
@@ -97,7 +98,10 @@ const LoseScreen = (props) => {
               >
                 Επιστροφή στην αρχική σελίδα{" "}
                 <AntDesign name="home" size={20} color="white" />
-              </Text>
+              </Text> */}
+            </View>
+            <View>
+              <LoseScreenAiMsg/>
             </View>
           </View>
         </View>
@@ -107,7 +111,7 @@ const LoseScreen = (props) => {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: 80,
+            marginTop: 60,
           }}
         >
           <Pressable
