@@ -18,7 +18,7 @@ const NomoiLoseScreen = () => {
             height: "50%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "35%",
+            marginTop: "40%",
             borderRadius: 20,
           }}
         >
@@ -104,7 +104,7 @@ const NomoiLoseScreen = () => {
             style={{
               flexDirection: "row",
               justifyContent: "space-around",
-              marginTop: 80,
+              marginTop: 60,
             }}
           >
             <Pressable
