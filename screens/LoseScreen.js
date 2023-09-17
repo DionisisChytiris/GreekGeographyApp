@@ -1,11 +1,19 @@
 import { View, Text, Pressable, ImageBackground } from "react-native";
-import React from "react";
+import React,{useState} from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import LoseScreenAiMsg from "./LoseScreenAi";
 
 const LoseScreen = (props) => {
   const navigation = useNavigation();
+  const [btn1, setBtn1] = useState(false)
+  const [btn2, setBtn2] = useState(false)
+
+  const hide1 = () => setBtn1(true)
+  const hide2 = () => setBtn2(true)
+
+  setTimeout(hide1, 6500)
+  setTimeout(hide2, 9500)
 
   return (
     <View style={{ height: "100%", backgroundColor: "darkblue" }}>
@@ -65,40 +73,6 @@ const LoseScreen = (props) => {
               >
                 Τέλος χρόνου
               </Text>
-
-              {/* <View
-                style={{
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    color: "black",
-                    fontSize: 16,
-                    fontWeight: "bold",
-                    marginVertical: 20,
-                  }}
-                >
-                  Επανέλαβε το κουίζ{" "}
-                </Text>
-                <View>
-                  <MaterialIcons name="replay" size={24} color="white" />
-                </View>
-              </View> */}
-
-              {/* <Text
-                style={{
-                  color: "black",
-                  fontSize: 16,
-                  fontWeight: "bold",
-                  marginHorizontal: 20,
-                }}
-              >
-                Επιστροφή στην αρχική σελίδα{" "}
-                <AntDesign name="home" size={20} color="white" />
-              </Text> */}
             </View>
             <View>
               <LoseScreenAiMsg/>
@@ -116,11 +90,18 @@ const LoseScreen = (props) => {
         >
           <Pressable
             onPress={() => navigation.navigate("Quiz")}
-            style={{
+            style={ btn2 ? ({
+              opacity: 1,
               alignItems: "center",
               width: 90,
               height: 60,
-            }}
+            }) : ({
+              opacity: 0,
+              alignItems: "center",
+              width: 90,
+              height: 60,
+            })
+            }
           >
             <View
               style={{
@@ -139,11 +120,18 @@ const LoseScreen = (props) => {
           </Pressable>
           <Pressable
             onPress={() => navigation.navigate(props.loseScreen)}
-            style={{
+            style={ btn1 ? ({
+              opacity: 1,
               alignItems: "center",
               width: 90,
               height: 60,
-            }}
+            }) : ({
+              opacity: 0,
+              alignItems: "center",
+              width: 90,
+              height: 60,
+            })
+            }
           >
             <View
               style={{

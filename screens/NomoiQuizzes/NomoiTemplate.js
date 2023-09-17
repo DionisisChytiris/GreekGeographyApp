@@ -58,6 +58,7 @@ const NomoiTemplate = (props) => {
     const myInterval = () => {
       if (counter >= 1) {
         setCounter((counter) => counter - 1);
+        console.log(counter)
       }
       if (counter === 1) {
         navigation.navigate("NomoiLoseScreen");
