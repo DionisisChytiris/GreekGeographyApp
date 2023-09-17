@@ -14,6 +14,7 @@ const Introduction = () => {
   const navigation = useNavigation();
   const video = React.useRef(null);
   const [showBtn, setShowBtn] = useState(false);
+  const [show, setShow] = useState(true)
 
   const hide = ()=> setShowBtn(true)
 
@@ -56,14 +57,18 @@ const Introduction = () => {
             // useNativeControls
             resizeMode={ResizeMode.CONTAIN}
             isLooping={false}
-            shouldPlay
+            shouldPlay={show}
           />
         </View>
 
         <Pressable
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() => {
+            navigation.navigate("Quiz")
+            setShow(false)
+          }}
           // style={showBtn > 8 ? styles.button : styles.buttonA}
           style={showBtn ? styles.button : styles.buttonA}
+
         >
           <View style={styles.button1} />
           <Text style={styles.btnText}>Κατηγορίες</Text>

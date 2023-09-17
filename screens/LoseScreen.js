@@ -8,6 +8,7 @@ const LoseScreen = (props) => {
   const navigation = useNavigation();
   const [btn1, setBtn1] = useState(false)
   const [btn2, setBtn2] = useState(false)
+  const [show, setShow] = useState(true)
 
   const hide1 = () => setBtn1(true)
   const hide2 = () => setBtn2(true)
@@ -37,8 +38,6 @@ const LoseScreen = (props) => {
               width: "100%",
               height: "100%",
               backgroundColor: "#ccc",
-              // marginLeft: "auto",
-              // marginRight: "auto",
               borderRadius: 20,
               opacity: 0.5,
             }}
@@ -75,7 +74,7 @@ const LoseScreen = (props) => {
               </Text>
             </View>
             <View>
-              <LoseScreenAiMsg/>
+              <LoseScreenAiMsg showT={show}/>
             </View>
           </View>
         </View>
@@ -89,7 +88,10 @@ const LoseScreen = (props) => {
           }}
         >
           <Pressable
-            onPress={() => navigation.navigate("Quiz")}
+            onPress={() => {
+              navigation.navigate("Quiz")
+              setShow(false)
+            }}
             style={ btn2 ? ({
               opacity: 1,
               alignItems: "center",
@@ -119,7 +121,10 @@ const LoseScreen = (props) => {
             </View>
           </Pressable>
           <Pressable
-            onPress={() => navigation.navigate(props.loseScreen)}
+            onPress={() => {
+              navigation.navigate(props.loseScreen)
+              setShow(false)
+            }}
             style={ btn1 ? ({
               opacity: 1,
               alignItems: "center",

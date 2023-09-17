@@ -17,7 +17,7 @@ const StackNavigator =()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={LakeRiverLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/> 
+        <Stack.Screen name="Home" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/> 
         {/* <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>     */}
         <Stack.Screen name="Quiz" component={QuizScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Introduction" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/>

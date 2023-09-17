@@ -2,7 +2,7 @@ import * as React from "react";
 import {View} from "react-native";
 import { Video, ResizeMode } from "expo-av";
 
-const LoseScreenAiMsg = () => {
+const LoseScreenAiMsg = (props) => {
   const video = React.useRef(null);
   
   return (
@@ -17,7 +17,6 @@ const LoseScreenAiMsg = () => {
             height: '120%',
             marginLeft: "auto",
             marginRight: "auto",
-            // borderRadius: 40,
           }}
         >
           <Video
@@ -30,7 +29,7 @@ const LoseScreenAiMsg = () => {
             source={require("../assets/video/aiTimeEnd.mp4")}
             resizeMode={ResizeMode.CONTAIN}
             isLooping={false}
-            shouldPlay
+            shouldPlay={props.showT}
           />
         </View>
     </View>

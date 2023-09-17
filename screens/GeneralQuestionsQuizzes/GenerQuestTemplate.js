@@ -25,14 +25,14 @@ const GenerQuestTemplate = (props) => {
   const [answerStatus, setAnswerStatus] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [counter, setCounter] = useState(15);
+  const [counter, setCounter] = useState(3);
   const [style, setStyle] = useState(styles.quizContainer);
   const [nextQueButton, setNextQueButton] = useState(styles.nextQueButton);
   let interval = null;
   let index1 = index + 1;
 
   useEffect(() => {
-    if (selectedAnswerIndex !== null) {
+    if (selectedAnswerIndex !== null) { 
       if (selectedAnswerIndex === currentQuestion?.correctAnswerIndex) {
         setPoints((points) => points + 1);
         setAnswerStatus(true);
