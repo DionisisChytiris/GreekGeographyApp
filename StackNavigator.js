@@ -9,6 +9,7 @@ import {GeneralQuestions1, GeneralQuestions1R} from './screens/GeneralQuestionsQ
 import { LakeRiver, LakeRiverRepeat, LakeRiverResults, LakeRiverResultsRepeat, LakeRiverLoseScreen, LakeRiverLoseScreenR} from './screens/LakeRiverQuizzes'
 import { Mountain, MountainRepeat, MountainResults, MountainResultsRepeat, MountainLoseScreen, MountainLoseScreenR } from './screens/MountainQuizzes';
 import {GeneralQuestionsResults1, GeneralQuestionsResults1R, GenQResLoseScreen, GenQResLoseScreenR} from './screens/GeneralQuestionsResults';
+import Introduction from './screens/Introduction';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +17,10 @@ const StackNavigator =()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="Home" component={NomoiInstructions} options={{headerShown: false, orientation: 'portrait'}}/>  */}
+        {/* <Stack.Screen name="Home" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/>  */}
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>    
         <Stack.Screen name="Quiz" component={QuizScreen} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="Introduction" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Instructions" component={NomoiInstructions} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Cities" component={Cities} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="LakeRiver" component={LakeRiver} options={{headerShown: false, orientation: 'portrait'}}/>

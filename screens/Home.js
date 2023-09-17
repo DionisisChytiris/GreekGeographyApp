@@ -17,7 +17,7 @@ const Home = () => {
           <Text style={{color: "white", fontSize: 30 }}>Ελλάδας</Text>
         </View>
         <Pressable
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() => navigation.navigate("Introduction")}
           style={styles.button}
         >
           <View style={styles.button1}/>
