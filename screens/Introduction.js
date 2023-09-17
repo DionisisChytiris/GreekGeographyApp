@@ -14,6 +14,7 @@ const Introduction = () => {
   const navigation = useNavigation();
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
+  
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -41,7 +42,9 @@ const Introduction = () => {
             useNativeControls
             resizeMode={ResizeMode.CONTAIN}
             isLooping={false}
+            shouldPlay
             // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+            // onLoad={() => {video.setPositionAsync(0); video.current.playAsync()}}
           />
         </View>
         {/* <View style={styles.buttons}>
