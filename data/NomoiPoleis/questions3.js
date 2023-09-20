@@ -24,7 +24,8 @@ const questions3 =  [
         img: require('../../assets/capitals/rethymno.jpg'),
         imgMap: require('../../assets/maps/N.Rethymnis.png'),
         nomos: 'Ρεθύμνου',
-        capital: 'Ρέθυμνο'
+        capital: 'Ρέθυμνο',
+        answer: 'Πρωτεύουσα του Ν.Ρεθύμνου είναι η πόλη του Ρεθύμνου.'
     },
     {
         id: 2,
@@ -51,7 +52,8 @@ const questions3 =  [
         img: require('../../assets/capitals/drama.png'),
         imgMap: require('../../assets/maps/N.Dramas.png'),
         nomos: 'Δράμας',
-        capital: 'Δράμα'
+        capital: 'Δράμα',
+        answer: 'Πρωτεύουσα του Ν.Δράμας είναι η πόλη της Δράμας.'
     },
     {
         id: 3,
@@ -78,7 +80,8 @@ const questions3 =  [
         img: require('../../assets/capitals/kozani.jpg'),
         imgMap: require('../../assets/maps/N.Kozanis.png'),
         nomos: 'Κοζάνης',
-        capital: 'Κοζάνη'
+        capital: 'Κοζάνη',
+        answer: 'Πρωτεύουσα του Ν.Κοζάνης είναι η πόλη της Κοζάνης.'
     },
     {
         id: 4,
@@ -105,11 +108,12 @@ const questions3 =  [
         img: require('../../assets/capitals/grevena.jpg'),
         imgMap: require('../../assets/maps/N.Grevenwn.png'),
         nomos: 'Γρεβενών',
-        capital: 'Γρεβενά'
+        capital: 'Γρεβενά',
+        answer: 'Πρωτεύουσα του Ν.Γρεβενών είναι η πόλη των Γρεβενών.'
     },
     {
         id: 5,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Ηράκλειο;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Ηρακλείου;",
         options:[
             {
                 id:"0",
@@ -132,7 +136,8 @@ const questions3 =  [
         img: require('../../assets/capitals/Knossos.jpg'),
         imgMap: require('../../assets/maps/N.Hrakliou.png'),
         nomos: 'Ηρακλείου',
-        capital: 'Ηράκλειο'
+        capital: 'Ηράκλειο',
+        answer: 'Πρωτεύουσα του Ν.Ηρακλείου είναι η πόλη του Ηρακλείου.'
     },
     {
         id: 6,
@@ -159,7 +164,8 @@ const questions3 =  [
         img: require('../../assets/capitals/siros.jpg'),
         imgMap: require('../../assets/maps/N.Kykladwn.png'),
         nomos: 'Κυκλάδων',
-        capital: 'Ερμούπολη'
+        capital: 'Ερμούπολη',
+        answer: 'Πρωτεύουσα του Ν.Κυκλάδων είναι η πόλη της Σύρου.'
     },
    
     {
@@ -187,7 +193,8 @@ const questions3 =  [
         img: require('../../assets/capitals/Alexandroupoli.jpg'),
         imgMap: require('../../assets/maps/N.Evrou.png'),
         nomos: 'Εβρου',
-        capital: 'Αλεξανδρούπολη'
+        capital: 'Αλεξανδρούπολη',
+        answer: 'Πρωτεύουσα του Ν.Έβρου είναι η πόλη της Αλεξανδρούπολης.'
     },
     {
         id: 8,
@@ -214,7 +221,8 @@ const questions3 =  [
         img: require('../../assets/capitals/patra.jpg'),
         imgMap: require('../../assets/maps/N.Axaias.png'),
         nomos: 'Αχαΐας',
-        capital: 'Πάτρα'
+        capital: 'Πάτρα',
+        answer: 'Πρωτεύουσα του Ν.Αχαΐας είναι η πόλη της Πάτρας.'
     },
     {
         id: 9,
@@ -241,7 +249,8 @@ const questions3 =  [
         img: require('../../assets/capitals/Komotini.jpg'),
         imgMap: require('../../assets/maps/N.Rodopis.jpg'),
         nomos: 'Ροδόπης',
-        capital: 'Κομοτηνή'
+        capital: 'Κομοτηνή',
+        answer: 'Πρωτεύουσα του Ν.Αχαΐας είναι η πόλη της Πάτρας.'
     },
     {
         id: 10,
@@ -268,7 +277,8 @@ const questions3 =  [
         img: require('../../assets/capitals/rodos.png'),
         imgMap: require('../../assets/maps/N.Dodekanisou1.png'),
         nomos: 'Δωδεκανήσου',
-        capital: 'Ρόδος'
+        capital: 'Ρόδος',
+        answer: 'Πρωτεύουσα του Ν.Δωδεκανήσου είναι η πόλη της Ρόδου.'
     },
 ]
 export default questions3

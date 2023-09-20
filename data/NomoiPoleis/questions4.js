@@ -24,7 +24,8 @@ const questions4 =  [
         img: require('../../assets/capitals/Mesologi.jpg'),
         imgMap: require('../../assets/maps/N.Aitoloakarnanias.png'),
         nomos: 'Αιτωλοακαρνανίας',
-        capital: 'Μεσολόγγι'
+        capital: 'Μεσολόγγι',
+        answer: 'Πρωτεύουσα του Ν.Αιτωλοακαρνανίας είναι η πόλη του Μεσολογγίου.'
     },
     {
         id: 2,
@@ -51,7 +52,8 @@ const questions4 =  [
         img: require('../../assets/capitals/igoumenitsa.jpg'),
         imgMap: require('../../assets/maps/N.Thesprotias.png'),
         nomos: 'Θεσπρωτίας',
-        capital: 'Ηγουμενίτσα'
+        capital: 'Ηγουμενίτσα',
+        answer: 'Πρωτεύουσα του Ν.Θεσπρωτίας είναι η πόλη της Ηγουμενίτσας.'
     },
     {
         id: 3,
@@ -78,7 +80,8 @@ const questions4 =  [
         img: require('../../assets/capitals/tripoli.jpg'),
         imgMap: require('../../assets/maps/N.Arkadias.png'),
         nomos: 'Αρκαδίας',
-        capital: 'Τρίπολη'
+        capital: 'Τρίπολη',
+        answer: 'Πρωτεύουσα του Ν.Αρκαδίας είναι η πόλη της Τρίπολης.'
     },
     {
         id: 4,
@@ -105,7 +108,8 @@ const questions4 =  [
         img: require('../../assets/capitals/volos.jpg'),
         imgMap: require('../../assets/maps/N.Magnisias.png'),
         nomos: 'Μαγνησίας',
-        capital: 'Βόλος'
+        capital: 'Βόλος',
+        answer: 'Πρωτεύουσα του Ν.Μαγνησίας είναι η πόλη του Βόλου.'
     },
     {
         id: 5,
@@ -132,7 +136,8 @@ const questions4 =  [
         img: require('../../assets/capitals/athens.jpg'),
         imgMap: require('../../assets/maps/attiki.png'),
         nomos: 'Αττικής',
-        capital: 'Αθήνα'
+        capital: 'Αθήνα',
+        answer: 'Πρωτεύουσα του Ν.Αττικής είναι η πόλη της Αθήνας.'
     },
     {
         id: 6,
@@ -159,11 +164,12 @@ const questions4 =  [
         img: require('../../assets/capitals/Mitilini.jpg'),
         imgMap: require('../../assets/maps/N.Lesvou.png'),
         nomos: 'Λέσβου',
-        capital: 'Μυτιλήνη'
+        capital: 'Μυτιλήνη',
+        answer: 'Πρωτεύουσα του Ν.Λέσβου είναι η πόλη της Μυτιλήνης.'
     },
     {
         id: 7,
-        question: "Ποια είναι η πρωτεύουσα του Ν.Κεφαλληνίας;",
+        question: "Ποια είναι η πρωτεύουσα του Ν.Κεφαλονιάς;",
         options:[
             {
                 id:"0",
@@ -186,7 +192,8 @@ const questions4 =  [
         img: require('../../assets/capitals/kefalonia.jpg'),
         imgMap: require('../../assets/maps/N.Kefalinias.png'),
         nomos: 'Κεφαλληνίας',
-        capital: 'Αργοστόλι'
+        capital: 'Αργοστόλι',
+        answer: 'Πρωτεύουσα του Ν.Κεφαλονιάς είναι η πόλη του Αργοστολίου.'
     },
     {
         id: 8,
@@ -213,7 +220,8 @@ const questions4 =  [
         img: require('../../assets/capitals/xalkida.jpg'),
         imgMap: require('../../assets/maps/N.Evoias.png'),
         nomos: 'Ευβοίας',
-        capital: 'Χαλκίδα'
+        capital: 'Χαλκίδα',
+        answer: 'Πρωτεύουσα του Ν.Ευβοίας είναι η πόλη της Χαλκίδας.'
     },
     {
         id: 9,
@@ -240,7 +248,8 @@ const questions4 =  [
         img: require('../../assets/capitals/nafplio.jpg'),
         imgMap: require('../../assets/maps/N.Argolidas.png'),
         nomos: 'Αργολίδας',
-        capital: 'Ναύπλιο'
+        capital: 'Ναύπλιο',
+        answer: 'Πρωτεύουσα του Ν.Αργολίδας είναι η πόλη του Ναυπλίου.'
     },
     {
         id: 10,
@@ -267,7 +276,8 @@ const questions4 =  [
         img: require('../../assets/capitals/kalamata.jpg'),
         imgMap: require('../../assets/maps/N.Messinias.png'),
         nomos: 'Μεσσηνίας',
-        capital: 'Καλαμάτα'
+        capital: 'Καλαμάτα',
+        answer: 'Πρωτεύουσα του Ν.Μεσσηνίας είναι η πόλη της Καλαμάτας.'
     }
 ]
 export default questions4

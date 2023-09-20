@@ -24,7 +24,8 @@ const questions6 =  [
         img: require('../../assets/capitals/lasithi.jpg'),
         imgMap: require('../../assets/maps/N.Lasithiou.png'),
         nomos: 'Λασιθίου',
-        capital: 'Άγιος Νικόλαος'
+        capital: 'Άγιος Νικόλαος',
+        answer: 'Πρωτεύουσα του Ν.Λασιθίου είναι η πόλη του Αγίου Νικολάου.'
     },
     {
         id: 2,
@@ -51,7 +52,8 @@ const questions6 =  [
         img: require('../../assets/capitals/monemvasia.jpg'),
         imgMap: require('../../assets/maps/N.Lakonias.png'),
         nomos: 'Λακωνίας',
-        capital: 'Σπάρτη'
+        capital: 'Σπάρτη',
+        answer: 'Η Μονεμβασιά βρίσκεται στον Ν.Λακωνίας.'
     },
     {
         id: 3,
@@ -78,7 +80,8 @@ const questions6 =  [
         img: require('../../assets/capitals/hliaOlympia.jpg'),
         imgMap: require('../../assets/maps/N.Hlias.png'),
         nomos: 'Ηλείας',
-        capital: 'Πύργος'
+        capital: 'Πύργος',
+        answer: 'Η Αρχαία Ολυμπία βρίσκεται στον Ν.Ηλίας.'
     },
     {
         id: 4,
@@ -105,7 +108,8 @@ const questions6 =  [
         img: require('../../assets/capitals/delphiFokida.jpg'),
         imgMap: require('../../assets/maps/N.Fokidas.png'),
         nomos: 'Φωκίδα',
-        capital: 'Άμφισσα'
+        capital: 'Άμφισσα',
+        answer: 'Ο χώρος των Δελφών βρίσκεται στον Ν.Φωκίδας.'
     },
     {
         id: 5,
@@ -132,7 +136,8 @@ const questions6 =  [
         img: require('../../assets/capitals/siros.jpg'),
         imgMap: require('../../assets/maps/N.Kykladwn.png'),
         nomos: 'Κυκλάδες',
-        capital: 'Ερμούπολη'
+        capital: 'Ερμούπολη',
+        answer: 'Η Σύρος βρίσκεται στον Ν.Κυκλάδων.'
     },
     {
         id: 6,
@@ -159,7 +164,8 @@ const questions6 =  [
         img: require('../../assets/capitals/fthiotidaThermopiles.jpg'),
         imgMap: require('../../assets/maps/N.Fthiotidas.png'),
         nomos: 'Φθιώτιδα',
-        capital: 'Λαμία'
+        capital: 'Λαμία',
+        answer: 'Οι Θερμοπύλες βρίσκονται στον Ν.Φθιώτιδας.'
     },
     {
         id: 7,
@@ -186,7 +192,8 @@ const questions6 =  [
         img: require('../../assets/capitals/Knossos.jpg'),
         imgMap: require('../../assets/maps/N.Hrakliou.png'),
         nomos: 'Ηράκλειο',
-        capital: 'Ηράκλειο'
+        capital: 'Ηράκλειο',
+        answer: 'Η Κνωσσός βρίσκεται στον Ν.Ηρακλείου.'
     },
     {
         id: 8,
@@ -213,7 +220,8 @@ const questions6 =  [
         img: require('../../assets/meteora.jpg'),
         imgMap: require('../../assets/maps/N.Trikalwn.png'),
         nomos: 'Τρικάλων',
-        capital: 'Τρίκαλα'
+        capital: 'Τρίκαλα',
+        answer: 'Τα Μετέωρα βρίσκονται στον Ν.Τρικάλων.'
     },
     {
         id: 9,
@@ -240,7 +248,8 @@ const questions6 =  [
         img: require('../../assets/capitals/limnos.png'),
         imgMap: require('../../assets/maps/N.Lesvou.png'),
         nomos: 'Λέσβος',
-        capital: 'Μυτιλήνη'
+        capital: 'Μυτιλήνη',
+        answer: 'Η Λίμνος βρίσκεται στον Ν.Λέσβου.'
     },
     {
         id: 10,
@@ -267,7 +276,8 @@ const questions6 =  [
         img: require('../../assets/capitals/santorini.jpg'),
         imgMap: require('../../assets/maps/N.Kykladwn.png'),
         nomos: 'Ν.Κυκλάδων',
-        capital: 'Ερμούπολη'
+        capital: 'Ερμούπολη',
+        answer: 'Η Σαντορίνι βρίσκεται στον Ν.Κυκλάδων.'
     },
 ]
 export default questions6

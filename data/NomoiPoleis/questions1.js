@@ -24,7 +24,8 @@ const questions1 =  [
         img: require('../../assets/capitals/kerkyra1.jpg'),
         imgMap: require('../../assets/maps/N.Kerkyras.png'),
         nomos: 'Κέρκυρα',
-        capital: 'Κέρκυρα'
+        capital: 'Κέρκυρα',
+        answer: 'Πρωτεύουσα του νομού είναι η πόλη της Κέρκυρας.'
     },
     {
         id: 2,
@@ -51,7 +52,8 @@ const questions1 =  [
         img: require('../../assets/capitals/kilkis.jpg'),
         imgMap: require('../../assets/maps/N.Kilkis.png'),
         nomos: 'Κιλκίς',
-        capital: 'Κιλκίς'
+        capital: 'Κιλκίς',
+        answer: 'Πρωτεύουσά του Ν.Κιλκίς είναι η πόλη του Κιλκίς.'
     },
     {
         id: 3,
@@ -78,7 +80,7 @@ const questions1 =  [
         img: require('../../assets/capitals/ioannina.jpg'),
         imgMap: require('../../assets/maps/N.Ioanninwn.png'),
         nomos: 'Ιωαννίνων',
-        capital: 'Ιωάννινα'
+        answer: 'Πρωτεύουσα του Ν.Ιωαννίνων είναι η ομώνυμη πόλη.'
     },
     {
         id: 4,
@@ -105,7 +107,7 @@ const questions1 =  [
         img: require('../../assets/capitals/larissa.jpg'),
         imgMap: require('../../assets/maps/N.Larissas.png'),
         nomos: 'Λάρισας',
-        capital: 'Λάρισα'
+        answer: 'Πρωτεύουσα του Ν.Λάρισας είναι η πόλη της Λάρισας. '
     },
     {
         id: 5,
@@ -132,7 +134,8 @@ const questions1 =  [
         img: require('../../assets/capitals/preveza.jpg'),
         imgMap: require('../../assets/maps/N.Prevezas.png'),
         nomos: 'Πρέβεζας',
-        capital: 'Πρέβεζα'
+        capital: 'Πρέβεζα',
+        answer: 'Πρωτεύουσα του Ν.Πρέβεζας είναι η πόλη της Πρέβεζας.'
     },
     {
         id: 6,
@@ -159,7 +162,8 @@ const questions1 =  [
         img: require('../../assets/capitals/thessaloniki.jpg'),
         imgMap: require('../../assets/maps/N.Thessalonikis.png'),
         nomos: 'Θεσσαλονίκης',
-        capital: 'Θεσσαλονίκη'
+        capital: 'Θεσσαλονίκη',
+        answer: 'Πρωτεύουσα του Ν.Θεσσαλονίκης είναι η ομώνυμη πόλη.'
     },
     
     {
@@ -187,7 +191,8 @@ const questions1 =  [
         img: require('../../assets/capitals/arta.jpg'),
         imgMap: require('../../assets/maps/N.Thessalonikis.png'),
         nomos: 'Άρτας',
-        capital: 'Άρτα'
+        capital: 'Άρτα',
+        answer: 'Πρωτεύουσα του Ν.Άρτας είναι η πόλη της Άρτας.'
     },
     {
         id: 8,
@@ -214,7 +219,8 @@ const questions1 =  [
         img: require('../../assets/capitals/xiosad1.jpg'),
         imgMap: require('../../assets/maps/N.Xiou.png'),
         nomos: 'Χίου',
-        capital: 'Χίος'
+        capital: 'Χίος',
+        answer: 'Πρωτεύουσα του Ν.Χίου είναι η πόλη της Χίου.'
     },
     {
         id: 9,
@@ -241,7 +247,8 @@ const questions1 =  [
         img: require('../../assets/capitals/chania.jpg'),
         imgMap: require('../../assets/maps/N.Xaniwn.png'),
         nomos: 'Χανίων',
-        capital: 'Χανιά'
+        capital: 'Χανιά',
+        answer: 'Πρωτεύουσα του Ν.Χανίων είναι η πόλη των Χανίων.'
     },
     {
         id: 10,
@@ -268,7 +275,8 @@ const questions1 =  [
         img: require('../../assets/capitals/lefkada.jpg'),
         imgMap: require('../../assets/maps/N.Lefkadas.png'),
         nomos: 'Λευκάδας',
-        capital: 'Λευκάδα'
+        capital: 'Λευκάδα',
+        answer: 'Πρωτεύουσα του Ν.Λευκάδας είναι η πόλη της Λευκάδας.'
     },
 ]
 export default questions1

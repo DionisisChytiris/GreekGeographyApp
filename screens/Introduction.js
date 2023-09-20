@@ -19,16 +19,6 @@ const Introduction = () => {
   const hide = ()=> setShowBtn(true)
 
   setTimeout(hide, 9000)
-  // useEffect(() => {
-  //   const timer = setTimeout(()=>{
-  //     setShowBtn((showBtn)=>showBtn + 1)
-  //     console.log(showBtn)
-  //   }, 1000)
-  
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, [showBtn]);
 
   return (
     <View style={styles.container}>

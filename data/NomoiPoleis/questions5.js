@@ -24,7 +24,8 @@ const questions5 =  [
         img: require('../../assets/capitals/hliaOlympia.jpg'),
         imgMap: require('../../assets/maps/N.Hlias.png'),
         nomos: 'Ηλείας',
-        capital: 'Πύργος'
+        capital: 'Πύργος',
+        answer: 'Πρωτεύουσα του Ν.Ηλίας είναι η πόλη του Πύργου.'
     },
     {
         id: 2,
@@ -51,7 +52,8 @@ const questions5 =  [
         img: require('../../assets/capitals/pieria.jpg'),
         imgMap: require('../../assets/maps/Pieria.png'),
         nomos: 'Πιερίας',
-        capital: 'Κατερίνη'
+        capital: 'Κατερίνη',
+        answer: 'Πρωτεύουσα του Ν.Πιερίας είναι η πόλη της Κατερίνης.'
     },
     {
         id: 3,
@@ -78,7 +80,8 @@ const questions5 =  [
         img: require('../../assets/capitals/karpenissi1.jpg'),
         imgMap: require('../../assets/maps/N.Evritanias.png'),
         nomos: 'Ευρυτανίας',
-        capital: 'Καρπενήσι'
+        capital: 'Καρπενήσι',
+        answer: 'Πρωτεύουσα του Ν.Ευρυτανίας είναι η πόλη του Καρπενησίου.'
     },
     {
         id: 4,
@@ -105,7 +108,8 @@ const questions5 =  [
         img: require('../../assets/capitals/delphiFokida.jpg'),
         imgMap: require('../../assets/maps/N.Fokidas.png'),
         nomos: 'Φωκίδας',
-        capital: 'Άμφισσα'
+        capital: 'Άμφισσα',
+        answer: 'Πρωτεύουσα του Ν.Φωκίδας είναι η πόλη της Άμφισσας.'
     },
     {
         id: 5,
@@ -132,7 +136,8 @@ const questions5 =  [
         img: require('../../assets/capitals/livadia1.jpg'),
         imgMap: require('../../assets/maps/N.Voiwtias.png'),
         nomos: 'Βοιωτίας',
-        capital: 'Λιβαδειά'
+        capital: 'Λιβαδειά',
+        answer: 'Πρωτεύουσα του Ν.Βοιωτίας είναι η πόλη της Λιβαδειάς.'
     },
     {
         id: 6,
@@ -159,7 +164,8 @@ const questions5 =  [
         img: require('../../assets/capitals/chalkidiki.jpg'),
         imgMap: require('../../assets/maps/N.Chalkidikis.png'),
         nomos: 'Χαλκιδικής',
-        capital: 'Πολύγυρος'
+        capital: 'Πολύγυρος',
+        answer: 'Πρωτεύουσα του Ν.Χαλκιδικής είναι η πόλη του Πολύγυρου.'
     },
     {
         id: 7,
@@ -186,7 +192,8 @@ const questions5 =  [
         img: require('../../assets/capitals/fthiotidaThermopiles.jpg'),
         imgMap: require('../../assets/maps/N.Fthiotidas.png'),
         nomos: 'Φθιώτιδας',
-        capital: 'Λαμία'
+        capital: 'Λαμία',
+        answer: 'Πρωτεύουσα του Ν.Φθιώτιδας είναι η πόλη της Λαμίας.'
     },
     {
         id: 8,
@@ -213,7 +220,8 @@ const questions5 =  [
         img: require('../../assets/capitals/monemvasia.jpg'),
         imgMap: require('../../assets/maps/N.Lakonias.png'),
         nomos: 'Λακωνίας',
-        capital: 'Σπάρτη'
+        capital: 'Σπάρτη',
+        answer: 'Πρωτεύουσα του Ν.Λακωνίας είναι η πόλη της Σπάρτης.'
     },
     {
         id: 9,
@@ -240,7 +248,8 @@ const questions5 =  [
         img: require('../../assets/capitals/veroia.jpg'),
         imgMap: require('../../assets/maps/N.Imathias.png'),
         nomos: 'Ημαθίας',
-        capital: 'Βέροια'
+        capital: 'Βέροια',
+        answer: 'Πρωτεύουσα του Ν.Ημαθίας είναι η πόλη της Βέροιας.'
     },
     {
         id: 10,
@@ -267,7 +276,8 @@ const questions5 =  [
         img: require('../../assets/capitals/edessa.jpg'),
         imgMap: require('../../assets/maps/N.Pellas.png'),
         nomos: 'Πέλλας',
-        capital: 'Έδεσσα'
+        capital: 'Έδεσσα',
+        answer: 'Πρωτεύουσα του Ν.Πέλλας είναι η πόλη της Έδεσσας.'
     }
 ]
 export default questions5

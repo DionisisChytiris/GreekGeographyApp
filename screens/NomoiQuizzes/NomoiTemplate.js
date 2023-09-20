@@ -58,7 +58,7 @@ const NomoiTemplate = (props) => {
     const myInterval = () => {
       if (counter >= 1) {
         setCounter((counter) => counter - 1);
-        console.log(counter)
+        console.log(counter);
       }
       if (counter === 1) {
         navigation.navigate("NomoiLoseScreen");
@@ -152,7 +152,7 @@ const NomoiTemplate = (props) => {
 
           <View style={{ paddingVertical: 20, paddingHorizontal: 30 }}>
             <View style={[style, styles.androidShadow]}>
-            {/* <View style={style}> */}
+              {/* <View style={style}> */}
               <Image
                 source={currentQuestion?.img}
                 style={{
@@ -288,6 +288,7 @@ const NomoiTemplate = (props) => {
                         flexDirection: "column",
                         alignItems: "center",
                         marginTop: 30,
+                        marginBottom: 30,
                         width: 250,
                         height: 200,
                       }}
@@ -299,12 +300,20 @@ const NomoiTemplate = (props) => {
                         source={require("../../assets/sadFace.jpg")}
                         resizeMode="cover"
                         style={{
-                          marginVertical: 20,
+                          marginTop: 20,
                           width: 50,
                           height: 50,
                         }}
                       />
-                      <Text>Προσπάθησε περισσότερο</Text>
+                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
+                      <View style={{margin: 30}}>
+                        <Text
+                          style={{ color: "darkblue", textAlign: "center"}}
+                        >
+                          {currentQuestion?.answer}
+                        </Text>
+                      </View>
+                     
                     </View>
                   </View>
                 )}
@@ -336,7 +345,7 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginBottom: 40
+    marginBottom: 40,
     // marginTop: 20,
   },
   button1: {
