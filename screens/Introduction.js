@@ -14,11 +14,11 @@ const Introduction = () => {
   const navigation = useNavigation();
   const video = React.useRef(null);
   const [showBtn, setShowBtn] = useState(false);
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
 
-  const hide = ()=> setShowBtn(true)
+  const hide = () => setShowBtn(true);
 
-  setTimeout(hide, 9000)
+  setTimeout(hide, 9000);
 
   return (
     <View style={styles.container}>
@@ -40,6 +40,14 @@ const Introduction = () => {
             borderRadius: 25,
           }}
         >
+          <Pressable 
+             onPress={() => {
+              navigation.navigate("Quiz");
+              setShow(false);
+            }}
+            style={{marginRight: -280}}>
+            <Text style={{ color: "white" }}>X</Text>
+          </Pressable>
           <Video
             ref={video}
             style={styles.video}
@@ -53,12 +61,11 @@ const Introduction = () => {
 
         <Pressable
           onPress={() => {
-            navigation.navigate("Quiz")
-            setShow(false)
+            navigation.navigate("Quiz");
+            setShow(false);
           }}
           // style={showBtn > 8 ? styles.button : styles.buttonA}
           style={showBtn ? styles.button : styles.buttonA}
-
         >
           <View style={styles.button1} />
           <Text style={styles.btnText}>Κατηγορίες</Text>
@@ -83,7 +90,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    opacity: 1
+    opacity: 1,
   },
   buttonA: {
     position: "absolute",
@@ -94,7 +101,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    opacity: 0
+    opacity: 0,
   },
   button1: {
     position: "absolute",

@@ -308,7 +308,7 @@ const NomoiTemplate = (props) => {
                       {/* <Text>Προσπάθησε περισσότερο</Text> */}
                       <View style={{margin: 30}}>
                         <Text
-                          style={{ color: "darkblue", textAlign: "center"}}
+                          style={{ color: "darkblue", textAlign: "center",  fontSize: 12}}
                         >
                           {currentQuestion?.answer}
                         </Text>

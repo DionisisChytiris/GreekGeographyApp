@@ -53,7 +53,7 @@ const questions1 =  [
         imgMap: require('../../assets/maps/N.Kilkis.png'),
         nomos: 'Κιλκίς',
         capital: 'Κιλκίς',
-        answer: 'Πρωτεύουσά του Ν.Κιλκίς είναι η πόλη του Κιλκίς.'
+        answer: 'Πρωτεύουσα του Ν.Κιλκίς είναι η πόλη του Κιλκίς.'
     },
     {
         id: 3,

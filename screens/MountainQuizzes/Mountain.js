@@ -139,7 +139,6 @@ const Mountain = () => {
           <View style={styles.progressBarBack}>
             <Text
               style={{
-                // backgroundColor: "#ffc0cb",
                 backgroundColor: "green",
                 borderRadius: 12,
                 position: "absolute",
@@ -359,5 +358,5 @@ const stylesT = StyleSheet.create({
     color: "white",
     fontWeight: "600",
     fontSize: 20,
-  },
+  }
 });
