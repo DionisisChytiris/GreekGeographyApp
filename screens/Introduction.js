@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Video, ResizeMode } from "expo-av";
+import { MaterialIcons } from '@expo/vector-icons';
 
 const Introduction = () => {
   const navigation = useNavigation();
@@ -46,7 +47,7 @@ const Introduction = () => {
               setShow(false);
             }}
             style={{marginRight: -280}}>
-            <Text style={{ color: "white" }}>X</Text>
+            <MaterialIcons name="cancel" size={24} color="white" />
           </Pressable>
           <Video
             ref={video}

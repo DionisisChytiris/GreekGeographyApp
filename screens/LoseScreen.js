@@ -19,7 +19,7 @@ const LoseScreen = (props) => {
   return (
     <View style={{ height: "100%", backgroundColor: "darkblue" }}>
       <ImageBackground
-        source={require("../assets/meteora.jpg")}
+        source={require("../assets/generalQuestions/river.jpg")}
         // resizeMode="cover"
         style={{ height: "100%" }}
       >

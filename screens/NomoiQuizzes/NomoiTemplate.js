@@ -288,7 +288,7 @@ const NomoiTemplate = (props) => {
                         flexDirection: "column",
                         alignItems: "center",
                         marginTop: 30,
-                        marginBottom: 30,
+                        marginBottom: 50,
                         width: 250,
                         height: 200,
                       }}
@@ -300,15 +300,15 @@ const NomoiTemplate = (props) => {
                         source={require("../../assets/sadFace.jpg")}
                         resizeMode="cover"
                         style={{
-                          marginTop: 20,
+                          marginVertical: 20,
                           width: 50,
                           height: 50,
                         }}
                       />
-                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
-                      <View style={{margin: 30}}>
+                      <Text>Προσπάθησε περισσότερο</Text>
+                      <View>
                         <Text
-                          style={{ color: "darkblue", textAlign: "center",  fontSize: 12}}
+                          style={{ color: "darkblue", textAlign: "center",  fontSize: 12, padding: 20}}
                         >
                           {currentQuestion?.answer}
                         </Text>
