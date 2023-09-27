@@ -9,6 +9,7 @@ import Nomoi4R from "./Nomoi4R";
 import Nomoi5 from "./Nomoi5";
 import Nomoi5R from "./Nomoi5R";
 import Nomoi6 from "./Nomoi6";
+import Nomoi6Final from "./Nomoi6Final";
 import Nomoi6R from "./Nomoi6R";
 import NomoiLoseScreen1 from "./NomoiLoseScreen1";
 import NomoiLoseScreen1R from "./NomoiLoseScreen1R";
@@ -23,4 +24,4 @@ import NomoiLoseScreen5R from "./NomoiLoseScreen5R";
 import NomoiLoseScreen6 from "./NomoiLoseScreen6";
 import NomoiLoseScreen6R from "./NomoiLoseScreen6R";
 
-export {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R, NomoiLoseScreen1, NomoiLoseScreen1R, NomoiLoseScreen2, NomoiLoseScreen2R, NomoiLoseScreen3, NomoiLoseScreen3R, NomoiLoseScreen4, NomoiLoseScreen4R, NomoiLoseScreen5, NomoiLoseScreen5R, NomoiLoseScreen6, NomoiLoseScreen6R}
+export {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6Final, Nomoi6R, NomoiLoseScreen1, NomoiLoseScreen1R, NomoiLoseScreen2, NomoiLoseScreen2R, NomoiLoseScreen3, NomoiLoseScreen3R, NomoiLoseScreen4, NomoiLoseScreen4R, NomoiLoseScreen5, NomoiLoseScreen5R, NomoiLoseScreen6, NomoiLoseScreen6R}

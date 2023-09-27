@@ -81,7 +81,7 @@ const questions6 =  [
         imgMap: require('../../assets/maps/N.Hlias.png'),
         nomos: 'Ηλείας',
         capital: 'Πύργος',
-        answer: 'Η Αρχαία Ολυμπία βρίσκεται στον Ν.Ηλίας.'
+        answer: 'Η Αρχαία Ολυμπία βρίσκεται στον Ν.Ηλείας.'
     },
     {
         id: 4,

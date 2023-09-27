@@ -10,7 +10,7 @@ const Nomoi6R = () => {
       <View style={{ backgroundColor: "darkblue" }}>
         <NomoiTemplate
           questions={questions6}
-          nomoiResults={"NomoiResult6"}
+          nomoiResults={"Nomoi6Final"}
           nomoiLoseScreen={'NomoiLoseScreen6R'}
           num={6}
           star={
