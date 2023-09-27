@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Home, QuizScreen, Cities, Counties, LoseScreen} from './screens'
-import {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R, NomoiLoseScreen} from './screens/NomoiQuizzes'
+import {Nomoi1, Nomoi1R, Nomoi2, Nomoi2R, Nomoi3, Nomoi3R, Nomoi4, Nomoi4R, Nomoi5, Nomoi5R, Nomoi6, Nomoi6R, NomoiLoseScreen1, NomoiLoseScreen1R, NomoiLoseScreen2, NomoiLoseScreen2R, NomoiLoseScreen3, NomoiLoseScreen3R, NomoiLoseScreen4, NomoiLoseScreen4R, NomoiLoseScreen5, NomoiLoseScreen5R, NomoiLoseScreen6, NomoiLoseScreen6R} from './screens/NomoiQuizzes'
 import {NomoiResult1, NomoiResult2, NomoiResult3, NomoiResult4, NomoiResult5, NomoiResult6, ResultsScreen} from './screens/NomoiResults'
 import NomoiInstructions from './screens/NomoiQuizzes/NomoiInstructions';
 import {GeneralQuestions1, GeneralQuestions1R} from './screens/GeneralQuestionsQuizzes';
@@ -17,7 +17,7 @@ const StackNavigator =()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="Home" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/>  */}
+        {/* <Stack.Screen name="Home" component={Nomoi6} options={{headerShown: false, orientation: 'portrait'}}/>  */}
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>    
         <Stack.Screen name="Quiz" component={QuizScreen} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="Introduction" component={Introduction} options={{headerShown: false, orientation: 'portrait'}}/>
@@ -56,7 +56,18 @@ const StackNavigator =()=> {
         <Stack.Screen name="NomoiResult4" component={NomoiResult4} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="NomoiResult5" component={NomoiResult5} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="NomoiResult6" component={NomoiResult6} options={{headerShown: false, orientation: 'portrait'}}/>
-        <Stack.Screen name="NomoiLoseScreen" component={NomoiLoseScreen} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen1" component={NomoiLoseScreen1} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen1R" component={NomoiLoseScreen1R} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen2" component={NomoiLoseScreen2} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen2R" component={NomoiLoseScreen2R} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen3" component={NomoiLoseScreen3} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen3R" component={NomoiLoseScreen3R} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen4" component={NomoiLoseScreen4} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen4R" component={NomoiLoseScreen4R} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen5" component={NomoiLoseScreen5} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen5R" component={NomoiLoseScreen5R} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen6" component={NomoiLoseScreen6} options={{headerShown: false, orientation: 'portrait'}}/>
+        <Stack.Screen name="NomoiLoseScreen6R" component={NomoiLoseScreen6R} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="GeneralQuestions1" component={GeneralQuestions1} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="GeneralQuestions1R" component={GeneralQuestions1R} options={{headerShown: false, orientation: 'portrait'}}/>
         <Stack.Screen name="GeneralQuestionsResult1" component={GeneralQuestionsResults1} options={{headerShown: false, orientation: 'portrait'}}/>

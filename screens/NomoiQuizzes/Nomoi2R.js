@@ -11,6 +11,7 @@ const Nomoi2R = () => {
         <NomoiTemplate
           questions={questions2}
           nomoiResults={"NomoiResult2"}
+          nomoiLoseScreen={'NomoiLoseScreen2R'}
           num={2}
           star={
             <View style={{ flexDirection: "row" }}>

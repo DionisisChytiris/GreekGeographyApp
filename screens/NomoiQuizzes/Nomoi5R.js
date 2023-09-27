@@ -11,9 +11,14 @@ const Nomoi5R = () => {
         <NomoiTemplate
           questions={questions5}
           nomoiResults={"NomoiResult5"}
+          nomoiLoseScreen={'NomoiLoseScreen5R'}
           num={5}
           star={
             <View style={{ flexDirection: "row" }}>
+              <Entypo name="star" size={16} color="gold" />
+              <Entypo name="star" size={16} color="gold" />
+              <Entypo name="star" size={16} color="gold" />
+              <Entypo name="star" size={16} color="gold" />
               <Entypo name="star" size={16} color="gold" />
             </View>
           }
