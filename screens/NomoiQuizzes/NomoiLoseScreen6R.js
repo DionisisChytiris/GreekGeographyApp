@@ -1,4 +1,4 @@
-import { View, Text, Pressable, ImageBackground } from "react-native";
+import { View, Text, Pressable, ImageBackground, Image} from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
@@ -16,10 +16,10 @@ const NomoiLoseScreen6R = () => {
         <View
           style={{
             width: "75%",
-            height: "58%",
+            height: "38%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "35%",
+            marginTop: "55%",
             borderRadius: 20,
           }}
         >
@@ -63,43 +63,56 @@ const NomoiLoseScreen6R = () => {
                 Τέλος χρόνου
               </Text>
             </View>
-           
+            <View>
+              <Image
+                source={require("../../assets/sadFace.jpg")}
+                resizeMode="cover"
+                style={{
+                  marginVertical: 20,
+                  width: 80,
+                  height: 80,
+                  borderRadius: 50,
+                  marginLeft: 'auto', 
+                  marginRight: 'auto', 
+                }}
+              />
+            </View>
           </View>
         </View>
 
-        <View style={{marginHorizontal: 40}}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: 60,
-          }}
-        >
-          <Pressable
-            onPress={() => navigation.navigate("Quiz")}
+        <View style={{ marginHorizontal: 40 }}>
+          <View
             style={{
-              opacity: 1,
-              alignItems: "center",
-              width: 90,
-              height: 60}}
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: 60,
+            }}
           >
-            <View
+            <Pressable
+              onPress={() => navigation.navigate("Quiz")}
               style={{
-                position: "absolute",
-                top: 0,
-                backgroundColor: "magenta",               
-                width: "100%",
-                height: "100%",
-                borderRadius: 20,
-                opacity: 0.5,
+                opacity: 1,
+                alignItems: "center",
+                width: 90,
+                height: 60,
               }}
-            />
-            <View style={{ position: "absolute", top: 15 }}>
-              <AntDesign name="home" size={24} color="white" />
-            </View>
-          </Pressable>
-         
-        </View>
+            >
+              <View
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  backgroundColor: "magenta",
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 20,
+                  opacity: 0.5,
+                }}
+              />
+              <View style={{ position: "absolute", top: 15 }}>
+                <AntDesign name="home" size={24} color="white" />
+              </View>
+            </Pressable>
+          </View>
         </View>
       </ImageBackground>
     </View>

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -14,8 +15,8 @@ const MountainResultsRepeat = () => {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const score = 60;
-  // const score = Math.floor((route.params.points * 100) / route.params.data.length);
+  // const score = 60;
+  const score = Math.floor((route.params.points * 100) / route.params.data.length);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>
@@ -64,6 +65,18 @@ const MountainResultsRepeat = () => {
                         Συγχαρητήρια!!! Οι γνώσεις σου στην γεωγραφία είναι
                         φανταστικές!!!
                       </Text>
+                      <Image
+                        source={require("../../assets/trophy.png")}
+                        resizeMode="cover"
+                        style={{
+                          marginVertical: 20,
+                          width: 80,
+                          height: 80,
+                          borderRadius: 50,
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      />
                     </View>
                   ) : (
                     <View>
@@ -121,15 +134,6 @@ const MountainResultsRepeat = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
-            {/* <Pressable
-                onPress={() => navigation.navigate("Mountain")}
-                style={styles.button0}
-              >
-                <View style={styles.button1} />
-                <View style={styles.btnText}>
-                  <MaterialIcons name="replay" size={24} color="white" />
-                </View>
-              </Pressable> */}
           </View>
         </View>
       </ImageBackground>
@@ -172,7 +176,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   buttonBox: {
-    marginTop: 30,
+    // marginTop: 30,
     flexDirection: "row",
   },
   button0: {

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -65,6 +66,18 @@ const MountainResults = () => {
                         Συγχαρητήρια!!! Οι γνώσεις σου στην γεωγραφία είναι
                         φανταστικές!!!
                       </Text>
+                      <Image
+                        source={require("../../assets/trophy.png")}
+                        resizeMode="cover"
+                        style={{
+                          marginVertical: 20,
+                          width: 80,
+                          height: 80,
+                          borderRadius: 50,
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      />
                     </View>
                   ) : (
                     <View>
@@ -112,7 +125,41 @@ const MountainResults = () => {
               </View>
             )}
           </View>
-          <View style={styles.buttonBox}>
+          { score === 100 ? (
+            <View style={styles.buttonBox2}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          ): (
+            <View style={styles.buttonBox1}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+              <Pressable
+                onPress={() => navigation.navigate("MountainRepeat")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          )}
+          {/* <View style={styles.buttonBox}>
             <Pressable
               onPress={() => navigation.navigate("Quiz")}
               style={styles.button0}
@@ -128,11 +175,11 @@ const MountainResults = () => {
             >
               <View style={styles.button1} />
               <View style={styles.btnText}>
-                {/* <Ionicons name="home-outline" size={24} color="white" /> */}
+               
                 <MaterialIcons name="replay" size={24} color="white" />
               </View>
             </Pressable>
-          </View>
+          </View> */}
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -173,10 +220,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: "auto",
   },
-  buttonBox: {
+  buttonBox1: {
     marginTop: 30,
     flexDirection: "row",
-    marginHorizontal: 40
+    marginHorizontal: 40,
+  },
+  buttonBox2: {
+    // marginTop: 10,
+    flexDirection: "row",
+    marginHorizontal: 40,
   },
   button0: {
     position: "relative",
