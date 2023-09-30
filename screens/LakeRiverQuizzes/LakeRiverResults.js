@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -63,6 +64,18 @@ const LakeRiverResults = () => {
                         Συγχαρητήρια!!! Οι γνώσεις σου στην γεωγραφία είναι
                         φανταστικές!!!
                       </Text>
+                      <Image
+                        source={require("../../assets/trophy.png")}
+                        resizeMode="cover"
+                        style={{
+                          marginVertical: 20,
+                          width: 80,
+                          height: 80,
+                          borderRadius: 50,
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      />
                     </View>
                   ) : (
                     <View>

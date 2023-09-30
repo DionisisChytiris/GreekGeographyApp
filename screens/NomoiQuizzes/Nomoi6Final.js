@@ -159,7 +159,6 @@ const Nomoi6Final = () => {
                 </View>
               </Pressable>
             </View>
-
           )}
         </View>
       </ImageBackground>

@@ -5,10 +5,11 @@ import {
   StyleSheet,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
 const GeneralQuestionsResults1R = () => {
   const route = useRoute();
@@ -67,6 +68,18 @@ const GeneralQuestionsResults1R = () => {
                         Συγχαρητήρια!!! Οι γνώσεις σου στην γεωγραφία είναι
                         φανταστικές!!!
                       </Text>
+                      <Image
+                        source={require("../../assets/trophy.png")}
+                        resizeMode="cover"
+                        style={{
+                          marginVertical: 20,
+                          width: 80,
+                          height: 80,
+                          borderRadius: 50,
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      />
                     </View>
                   ) : (
                     <View>
@@ -125,15 +138,15 @@ const GeneralQuestionsResults1R = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
-            {/* <Pressable
-                onPress={() => navigation.navigate(props.repeat)}
+            <Pressable
+                onPress={() => navigation.navigate("GeneralQuestions1")}
                 style={stylesT.button0}
               >
                 <View style={stylesT.button1} />
                 <View style={stylesT.btnText}>
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
-              </Pressable> */}
+              </Pressable>
           </View>
         </View>
       </ImageBackground>

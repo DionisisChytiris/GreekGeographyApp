@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -64,6 +65,18 @@ const LakeRiverResultsRepeat = () => {
                         Συγχαρητήρια!!! Οι γνώσεις σου στην γεωγραφία είναι
                         φανταστικές!!!
                       </Text>
+                      <Image
+                        source={require("../../assets/trophy.png")}
+                        resizeMode="cover"
+                        style={{
+                          marginVertical: 20,
+                          width: 80,
+                          height: 80,
+                          borderRadius: 50,
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      />
                     </View>
                   ) : (
                     <View>
@@ -121,6 +134,15 @@ const LakeRiverResultsRepeat = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
+            <Pressable
+                onPress={() => navigation.navigate("LakeRiver")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </Pressable>
           </View>
         </View>
       </ImageBackground>

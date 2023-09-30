@@ -126,7 +126,7 @@ const MountainResultsRepeat = () => {
           </View>
           <View style={styles.buttonBox}>
             <Pressable
-              onPress={() => navigation.navigate("Quiz")}
+              onPress={() => navigation.navigate("Mountain")}
               style={styles.button0}
             >
               <View style={styles.button1} />
@@ -134,6 +134,15 @@ const MountainResultsRepeat = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
+            <Pressable
+                onPress={() => navigation.navigate("Mountain")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </Pressable>
           </View>
         </View>
       </ImageBackground>
