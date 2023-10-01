@@ -89,8 +89,7 @@ const LakeRiverResultsRepeat = () => {
                         }}
                       >
                         Καλή προσπάθεια, αλλά πάντα υπάρχει περιθώριο βελτίωσης.
-                        Επανέλαβε το κουίζ για να τελειωποιήσεις τις γνώσεις σου
-                        ή πήγαινε στην αρχική σελίδα για να επιλέξεις άλλη
+                        Πήγαινε στην αρχική σελίδα για να επιλέξεις άλλη
                         κατηγορία.
                       </Text>
                     </View>
@@ -134,7 +133,7 @@ const LakeRiverResultsRepeat = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
-            <Pressable
+            {/* <Pressable
                 onPress={() => navigation.navigate("LakeRiver")}
                 style={styles.button0}
               >
@@ -142,7 +141,7 @@ const LakeRiverResultsRepeat = () => {
                 <View style={styles.btnText}>
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
-              </Pressable>
+              </Pressable> */}
           </View>
         </View>
       </ImageBackground>

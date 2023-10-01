@@ -128,7 +128,42 @@ const GenerQueResultsTemplate = (props) => {
             )}
           </View>
 
-          <View style={stylesT.buttonBox}>
+          { score === 100 ? (
+            <View style={stylesT.buttonBox2}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={stylesT.button0}
+              >
+                <View style={stylesT.button1} />
+                <View style={stylesT.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          ): (
+            <View style={stylesT.buttonBox1}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={stylesT.button0}
+              >
+                <View style={stylesT.button1} />
+                <View style={stylesT.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+              <Pressable
+                onPress={() => navigation.navigate(props.repeat)}
+                style={stylesT.button0}
+              >
+                <View style={stylesT.button1} />
+                <View style={stylesT.btnText}>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          )}
+
+          {/* <View style={stylesT.buttonBox}>
             <Pressable
               onPress={() => navigation.navigate("Quiz")}
               style={stylesT.button0}
@@ -139,7 +174,6 @@ const GenerQueResultsTemplate = (props) => {
               </View>
             </Pressable>
             <Pressable
-              // onPress={() => navigation.navigate("GeneralQuestions1R")}
               onPress={() => navigation.navigate(props.repeat)}
               style={stylesT.button0}
             >
@@ -148,7 +182,7 @@ const GenerQueResultsTemplate = (props) => {
                 <MaterialIcons name="replay" size={24} color="white" />
               </View>
             </Pressable>
-          </View>
+          </View> */}
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -189,8 +223,13 @@ const stylesT = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: "auto",
   },
-  buttonBox: {
+  buttonBox1: {
     marginTop: 40,
+    flexDirection: "row",
+    marginHorizontal: 40
+  },
+  buttonBox2: {
+    // marginTop: 40,
     flexDirection: "row",
     marginHorizontal: 40
   },

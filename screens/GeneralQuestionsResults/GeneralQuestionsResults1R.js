@@ -138,7 +138,7 @@ const GeneralQuestionsResults1R = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
-            <Pressable
+            {/* <Pressable
                 onPress={() => navigation.navigate("GeneralQuestions1")}
                 style={stylesT.button0}
               >
@@ -146,7 +146,7 @@ const GeneralQuestionsResults1R = () => {
                 <View style={stylesT.btnText}>
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
-              </Pressable>
+              </Pressable> */}
           </View>
         </View>
       </ImageBackground>

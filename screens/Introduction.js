@@ -1,4 +1,3 @@
-// import * as React from "react";
 import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
@@ -34,11 +33,11 @@ const Introduction = () => {
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "transparent",
-            width: "70%",
-            height: 400,
+            width: '60%',
+            height: 350,
             marginLeft: "auto",
             marginRight: "auto",
-            borderRadius: 25,
+            // borderRadius: 25,
           }}
         >
           <Pressable 
