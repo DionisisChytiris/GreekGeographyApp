@@ -304,11 +304,11 @@ const Mountain = () => {
                           height: 50,
                         }}
                       />
-                      <Text>Προσπάθησε περισσότερο</Text>
+                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
                     </View>
-                    <Text style={{ margin: 20, color: "green" }}>
-                      {currentQuestion?.result}{" "}
-                    </Text>
+                    <View style={{  marginTop: -40, paddingBottom: 40, paddingHorizontal: 25}}>
+                      <Text style={{color: 'green'}}>{currentQuestion?.result}</Text>
+                    </View>
                   </View>
                 )}
               </View>

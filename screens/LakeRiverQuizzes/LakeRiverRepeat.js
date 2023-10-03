@@ -119,7 +119,7 @@ const LakeRiverRepeat = () => {
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
-          
+
             <View
               style={{
                 alignItems: "center",
@@ -186,7 +186,7 @@ const LakeRiverRepeat = () => {
                       <Text
                         style={{
                           marginHorizontal: "auto",
-                          fontWeight: '600',
+                          fontWeight: "600",
                           color: "white",
                           // padding: 30
                         }}
@@ -220,7 +220,9 @@ const LakeRiverRepeat = () => {
                 onPress={() => setIndex(index + 1)}
                 style={nextQueButton}
               >
-                <Text style={{ color: "white", fontSize: 12}}>Επόμενη Ερώτηση</Text>
+                <Text style={{ color: "white", fontSize: 12 }}>
+                  Επόμενη Ερώτηση
+                </Text>
               </Pressable>
             )}
 
@@ -309,7 +311,16 @@ const LakeRiverRepeat = () => {
                           height: 50,
                         }}
                       />
-                      <Text>Προσπάθησε περισσότερο</Text>
+                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
+                    </View>
+                    <View
+                      style={{
+                        marginTop: -40,
+                        paddingBottom: 20,
+                        paddingHorizontal: 25,
+                      }}
+                    >
+                      <Text>{currentQuestion?.result} </Text>
                     </View>
                   </View>
                 )}

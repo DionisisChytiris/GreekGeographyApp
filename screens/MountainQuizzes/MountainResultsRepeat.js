@@ -89,8 +89,7 @@ const MountainResultsRepeat = () => {
                         }}
                       >
                         Καλή προσπάθεια, αλλά πάντα υπάρχει περιθώριο βελτίωσης.
-                        Επανέλαβε το κουίζ για να τελειωποιήσεις τις γνώσεις σου
-                        ή πήγαινε στην αρχική σελίδα για να επιλέξεις άλλη
+                        Πήγαινε στην αρχική σελίδα για να ξεκινήσεις αυτό το κουίζ από την αρχή ή να επιλέξεις άλλη
                         κατηγορία.
                       </Text>
                     </View>
@@ -117,8 +116,7 @@ const MountainResultsRepeat = () => {
                     }}
                   >
                     Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να σκεφτείς
-                    περισσότερο για να βρεις τις σωστές απαντήσεις. Επανέλαβε το
-                    κουίζ για να βελτιώσεις τις γνώσεις σου.
+                    περισσότερο για να βρεις τις σωστές απαντήσεις. 
                   </Text>
                 </View>
               </View>
@@ -126,7 +124,7 @@ const MountainResultsRepeat = () => {
           </View>
           <View style={styles.buttonBox}>
             <Pressable
-              onPress={() => navigation.navigate("Mountain")}
+              onPress={() => navigation.navigate("Quiz")}
               style={styles.button0}
             >
               <View style={styles.button1} />

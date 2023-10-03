@@ -123,26 +123,41 @@ const LakeRiverResults = () => {
               </View>
             )}
           </View>
-          <View style={styles.buttonBox}>
-            <Pressable
-              onPress={() => navigation.navigate("Quiz")}
-              style={styles.button0}
-            >
-              <View style={styles.button1} />
-              <View style={styles.btnText}>
-                <AntDesign name="home" size={24} color="white" />
-              </View>
-            </Pressable>
-            <Pressable
-              onPress={() => navigation.navigate("LakeRiverRepeat")}
-              style={styles.button0}
-            >
-              <View style={styles.button1} />
-              <View style={styles.btnText}>
-                <MaterialIcons name="replay" size={24} color="white" />
-              </View>
-            </Pressable>
-          </View>
+          { score === 100 ? (
+            <View style={styles.buttonBox2}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          ): (
+            <View style={styles.buttonBox1}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+              <Pressable
+                onPress={() => navigation.navigate("LakeRiverRepeat")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <MaterialIcons name="replay" size={24} color="white" />
+                </View>
+              </Pressable>
+            </View>
+          )}
+         
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -183,10 +198,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: "auto",
   },
-  buttonBox: {
-    marginTop: 40,
+  buttonBox1: {
+    marginTop: 30,
     flexDirection: "row",
-    marginHorizontal: 40
+    marginHorizontal: 40,
+  },
+  buttonBox2: {
+    // marginTop: 10,
+    flexDirection: "row",
+    marginHorizontal: 40,
   },
   button0: {
     position: "relative",

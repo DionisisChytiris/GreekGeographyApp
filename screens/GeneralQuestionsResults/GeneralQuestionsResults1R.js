@@ -92,8 +92,7 @@ const GeneralQuestionsResults1R = () => {
                         }}
                       >
                         Καλή προσπάθεια, αλλά πάντα υπάρχει περιθώριο βελτίωσης.
-                        Επανέλαβε το κουίζ για να τελειωποιήσεις τις γνώσεις σου
-                        ή πήγαινε στην αρχική σελίδα για να επιλέξεις άλλη
+                        Πήγαινε στην αρχική σελίδα για να ξεκινήσεις αυτό το κουίζ από την αρχή ή να επιλέξεις άλλη
                         κατηγορία.
                       </Text>
                     </View>
@@ -120,8 +119,7 @@ const GeneralQuestionsResults1R = () => {
                     }}
                   >
                     Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να προσπαθήσεις
-                    περισσότερο για να βρεις τις σωστές απαντήσεις. Επανέλαβε το
-                    κουίζ για να βελτιώσεις τις γνώσεις σου.
+                    περισσότερο για να βρεις τις σωστές απαντήσεις. 
                   </Text>
                 </View>
               </View>
@@ -138,15 +136,7 @@ const GeneralQuestionsResults1R = () => {
                 <AntDesign name="home" size={24} color="white" />
               </View>
             </Pressable>
-            {/* <Pressable
-                onPress={() => navigation.navigate("GeneralQuestions1")}
-                style={stylesT.button0}
-              >
-                <View style={stylesT.button1} />
-                <View style={stylesT.btnText}>
-                  <MaterialIcons name="replay" size={24} color="white" />
-                </View>
-              </Pressable> */}
+           
           </View>
         </View>
       </ImageBackground>

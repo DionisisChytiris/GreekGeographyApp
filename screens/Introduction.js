@@ -35,6 +35,7 @@ const Introduction = () => {
             backgroundColor: "transparent",
             width: '60%',
             height: 350,
+            marginTop: -50,
             marginLeft: "auto",
             marginRight: "auto",
             // borderRadius: 25,

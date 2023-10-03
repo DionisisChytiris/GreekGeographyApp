@@ -322,19 +322,11 @@ const GenerQuestTemplate = (props) => {
                             height: 50,
                           }}
                         />
-                        <Text>Προσπάθησε περισσότερο</Text>
+                        {/* <Text>Προσπάθησε περισσότερο</Text> */}
                       </View>
-                      <View>
-                        <Text
-                          style={{
-                            color: "darkblue",
-                            paddingBottom: 30,
-                            paddingHorizontal: 20,
-                          }}
-                        >
-                          {currentQuestion?.result}
-                        </Text>
-                      </View>
+                      <View style={{  marginTop: -40, paddingBottom: 40, paddingHorizontal: 25}}>
+                      <Text style={{color: 'darkblue'}}>{currentQuestion?.result}</Text>
+                    </View>
                     </View>
                   )}
                 </View>

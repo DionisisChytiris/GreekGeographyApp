@@ -88,8 +88,8 @@ const LakeRiverResultsRepeat = () => {
                           marginTop: 20,
                         }}
                       >
-                        Καλή προσπάθεια, αλλά πάντα υπάρχει περιθώριο βελτίωσης.
-                        Πήγαινε στην αρχική σελίδα για να επιλέξεις άλλη
+                         Καλή προσπάθεια, αλλά πάντα υπάρχει περιθώριο βελτίωσης.
+                        Πήγαινε στην αρχική σελίδα για να ξεκινήσεις αυτό το κουίζ από την αρχή ή να επιλέξεις άλλη
                         κατηγορία.
                       </Text>
                     </View>
@@ -116,25 +116,25 @@ const LakeRiverResultsRepeat = () => {
                     }}
                   >
                     Δεν ήταν άσχημη προσπάθεια, αλλά χρείαζεται να σκεφτείς
-                    περισσότερο για να βρεις τις σωστές απαντήσεις. Επανέλαβε το
-                    κουίζ για να βελτιώσεις τις γνώσεις σου.
+                    περισσότερο για να βρεις τις σωστές απαντήσεις. 
                   </Text>
                 </View>
               </View>
             )}
           </View>
-          <View style={styles.buttonBox}>
-            <Pressable
-              onPress={() => navigation.navigate("Quiz")}
-              style={styles.button0}
-            >
-              <View style={styles.button1} />
-              <View style={styles.btnText}>
-                <AntDesign name="home" size={24} color="white" />
-              </View>
-            </Pressable>
-            {/* <Pressable
-                onPress={() => navigation.navigate("LakeRiver")}
+         
+          <View style={styles.buttonBox1}>
+              <Pressable
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button0}
+              >
+                <View style={styles.button1} />
+                <View style={styles.btnText}>
+                  <AntDesign name="home" size={24} color="white" />
+                </View>
+              </Pressable>
+              {/* <Pressable
+                onPress={() => navigation.navigate("MountainRepeat")}
                 style={styles.button0}
               >
                 <View style={styles.button1} />
@@ -142,7 +142,7 @@ const LakeRiverResultsRepeat = () => {
                   <MaterialIcons name="replay" size={24} color="white" />
                 </View>
               </Pressable> */}
-          </View>
+            </View>
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -183,9 +183,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: "auto",
   },
-  buttonBox: {
-    marginTop: 40,
+  buttonBox1: {
+    marginTop: 30,
     flexDirection: "row",
+    marginHorizontal: 40,
+  },
+  buttonBox2: {
+    // marginTop: 10,
+    flexDirection: "row",
+    marginHorizontal: 40,
   },
   button0: {
     position: "relative",

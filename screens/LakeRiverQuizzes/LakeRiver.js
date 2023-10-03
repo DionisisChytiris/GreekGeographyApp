@@ -302,9 +302,9 @@ const LakeRiver = () => {
                           height: 50,
                         }}
                       />
-                      <Text>Προσπάθησε περισσότερο</Text>
+                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
                     </View>
-                    <View style={{ paddingBottom: 20, paddingHorizontal: 25 }}>
+                    <View style={{ marginTop: -40, paddingBottom: 20, paddingHorizontal: 25 }}>
                       <Text>{currentQuestion?.result} </Text>
                     </View>
                   </View>
