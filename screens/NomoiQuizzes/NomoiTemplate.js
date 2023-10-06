@@ -305,7 +305,7 @@ const NomoiTemplate = (props) => {
                           height: 50,
                         }}
                       />
-                      <Text>Προσπάθησε περισσότερο</Text>
+                      {/* <Text>Προσπάθησε περισσότερο</Text> */}
                       <View>
                         <Text
                           style={{ color: "darkblue", textAlign: "center",  fontSize: 12, padding: 20}}

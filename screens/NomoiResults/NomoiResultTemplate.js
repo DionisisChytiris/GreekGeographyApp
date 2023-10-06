@@ -129,13 +129,13 @@ const NomoiResultTemplate = (props) => {
                     style={{
                       flexDirection: "row",
                       justifyContent: "center",
-                      alignItems: "center",
+                      alignItems: "center"
                     }}
                   >
                     <Text
                       style={{
                         color: "red",
-                        fontSize: 16,
+                        fontSize: 12,
                         fontWeight: "bold",
                         marginVertical: 20,
                       }}
@@ -157,7 +157,7 @@ const NomoiResultTemplate = (props) => {
                     <Text
                       style={{
                         color: "red",
-                        fontSize: 16,
+                        fontSize: 12,
                         fontWeight: "bold",
                         marginHorizontal: 20,
                       }}
@@ -194,7 +194,7 @@ const NomoiResultTemplate = (props) => {
                 onPress={() => navigation.navigate(nextQ)}
                 style={styles.nextQueButton}
               >
-                <Text style={{ color: "white" }}>Επόμενο Επίπεδο</Text>
+                <Text style={{ fontSize: 14, color: "white" }}>Επόμενο Επίπεδο</Text>
               </Pressable>
             </View>
           )}
@@ -229,16 +229,17 @@ const styles = StyleSheet.create({
   },
   nextQueButton: {
     backgroundColor: "green",
-    padding: 15,
+    padding: 12,
     alignItems: "center",
     justifyContent: "center",
-    width: 180,
-    marginTop: 50,
+    width: 170,
+    marginTop: 40,
     borderRadius: 20,
     marginHorizontal: "auto",
   },
   buttonBox: {
-    marginTop: 80,
+    marginTop: 60,
+    marginHorizontal: 20,
     flexDirection: "row",
     justifyContent: 'space-around'
   },

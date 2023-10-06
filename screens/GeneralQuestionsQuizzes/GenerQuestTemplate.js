@@ -32,7 +32,7 @@ const GenerQuestTemplate = (props) => {
   let index1 = index + 1;
 
   useEffect(() => {
-    if (selectedAnswerIndex !== null) { 
+    if (selectedAnswerIndex !== null) {
       if (selectedAnswerIndex === currentQuestion?.correctAnswerIndex) {
         setPoints((points) => points + 1);
         setAnswerStatus(true);
@@ -324,9 +324,17 @@ const GenerQuestTemplate = (props) => {
                         />
                         {/* <Text>Προσπάθησε περισσότερο</Text> */}
                       </View>
-                      <View style={{  marginTop: -40, paddingBottom: 40, paddingHorizontal: 25}}>
-                      <Text style={{color: 'darkblue'}}>{currentQuestion?.result}</Text>
-                    </View>
+                      <View
+                        style={{
+                          marginTop: -40,
+                          paddingBottom: 40,
+                          paddingHorizontal: 25,
+                        }}
+                      >
+                        <Text style={{ color: "darkblue" }}>
+                          {currentQuestion?.result}
+                        </Text>
+                      </View>
                     </View>
                   )}
                 </View>

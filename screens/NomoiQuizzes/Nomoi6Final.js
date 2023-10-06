@@ -21,7 +21,7 @@ const Nomoi6Final = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "darkblue" }}>
       <ImageBackground
-        source={require("../../assets/MorePhotos/mountain1.jpeg")}
+        source={require("../../assets/salonika.jpg")}
         // resizeMode="cover"
         style={{ height: "100%" }}
       >
