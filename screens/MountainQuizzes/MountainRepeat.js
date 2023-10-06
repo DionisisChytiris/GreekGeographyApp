@@ -275,7 +275,7 @@ const MountainRepeat = () => {
                       /> */}
                     <Text 
                        style={{
-                        color: "darkblue",
+                        color: "green",
                         paddingBottom: 30,
                         paddingHorizontal: 20,
                       }}
