@@ -32,7 +32,7 @@ const MountainResults = () => {
                 color: "darkgreen", 
                 fontWeight: "600", 
                 fontSize: 25,
-                marginTop: 120,
+                marginTop: 110,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -46,7 +46,7 @@ const MountainResults = () => {
               <View>
                 <View style={styles.score}>
                   <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
+                    style={{ fontSize: 50, fontWeight: "bold", color: "green" }}
                   >
                     {score}
                   </Text>
@@ -58,7 +58,7 @@ const MountainResults = () => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     marginBottom: "5%",
   },
   container: {
-    width: "80%",
+    width: "70%",
     backgroundColor: "#ccc",
     borderRadius: 20,
     marginVertical: 30,
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   buttonBox1: {
-    marginTop: 30,
+    marginTop: 10,
     flexDirection: "row",
     marginHorizontal: 40,
   },

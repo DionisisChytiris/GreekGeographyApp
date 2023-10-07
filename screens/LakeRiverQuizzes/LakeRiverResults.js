@@ -31,7 +31,7 @@ const LakeRiverResults = () => {
                 color: "white", 
                 fontWeight: "600", 
                 fontSize: 25,
-                marginTop: 120,
+                marginTop: 110,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -44,7 +44,7 @@ const LakeRiverResults = () => {
               <View>
                 <View style={styles.score}>
                   <Text
-                    style={{ fontWeight: "bold", fontSize: 60, color: "green" }}
+                    style={{ fontWeight: "bold", fontSize: 50, color: "green" }}
                   >
                     {score}
                   </Text>
@@ -56,7 +56,7 @@ const LakeRiverResults = () => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -100,7 +100,7 @@ const LakeRiverResults = () => {
               <View>
                 <View style={styles.score}>
                   <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "red" }}
+                    style={{ fontSize: 50, fontWeight: "bold", color: "red" }}
                   >
                     {score}
                   </Text>
@@ -110,7 +110,7 @@ const LakeRiverResults = () => {
                   <Text
                     style={{
                       textAlign: "center",
-                      fontSize: 16,
+                      fontSize: 14,
                       color: "red",
                       marginTop: 20,
                     }}
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     marginBottom: "5%",
   },
   container: {
-    width: "80%",
+    width: "70%",
     backgroundColor: "#ccc",
     borderRadius: 20,
     marginVertical: 30,

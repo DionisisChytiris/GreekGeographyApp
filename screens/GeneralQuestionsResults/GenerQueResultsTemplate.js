@@ -48,7 +48,7 @@ const GenerQueResultsTemplate = (props) => {
               <View>
                 <View style={stylesT.score}>
                   <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
+                    style={{ fontSize: 50, fontWeight: "bold", color: "green" }}
                   >
                     {score}
                   </Text>
@@ -104,7 +104,7 @@ const GenerQueResultsTemplate = (props) => {
               <View>
                 <View style={stylesT.score}>
                   <Text
-                    style={{ fontSize: 60, fontWeight: "bold", color: "red" }}
+                    style={{ fontSize: 50, fontWeight: "bold", color: "red" }}
                   >
                     {score}
                   </Text>
@@ -114,7 +114,7 @@ const GenerQueResultsTemplate = (props) => {
                   <Text
                     style={{
                       textAlign: "center",
-                      fontSize: 16,
+                      fontSize: 14,
                       color: "red",
                       marginTop: 20,
                     }}
@@ -198,7 +198,7 @@ const stylesT = StyleSheet.create({
     marginBottom: "8%",
   },
   container: {
-    width: "80%",
+    width: "70%",
     backgroundColor: "#ccc",
     borderRadius: 20,
     marginVertical: 30,

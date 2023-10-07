@@ -29,10 +29,10 @@ const Nomoi6Final = () => {
           <View style={styles.title}>
             <Text
               style={{
-                color: "darkgreen",
+                color: "white",
                 fontWeight: "600",
                 fontSize: 25,
-                marginTop: 120,
+                marginTop: 110,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -47,7 +47,7 @@ const Nomoi6Final = () => {
                 <View style={styles.score}>
                   <Text
                     // style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
-                    style={{ fontSize: 60, fontWeight: "bold", color: "green" }}
+                    style={{ fontSize: 50, fontWeight: "bold", color: "green" }}
                   >
                     {score}
                   </Text>
@@ -59,7 +59,7 @@ const Nomoi6Final = () => {
                       <Text
                         style={{
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: 14,
                           color: "green",
                           marginTop: 20,
                         }}
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     marginBottom: "5%",
   },
   container: {
-    width: "80%",
+    width: "70%",
     backgroundColor: "#ccc",
     borderRadius: 20,
     marginVertical: 30,
