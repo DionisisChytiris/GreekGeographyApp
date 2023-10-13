@@ -18,7 +18,7 @@ const QuizScreen = () => {
         resizeMode="cover"
         style={{ flex: 1, justifyContent: "center" }}
       >
-        <Text style={{ textAlign: "center", color: "white", fontSize: 25, fontWeight: '600', marginBottom: 50}}>
+        <Text style={{ textAlign: "center", color: "white", fontSize: 22, fontWeight: '600', marginBottom: 40}}>
           Επέλεξε κατηγορία
         </Text>
         <Pressable
@@ -61,9 +61,9 @@ const styles = StyleSheet.create({
   buttonA: {
     position: "relative",
     // width: 215,
-    width: '55%',
+    width: 200,
     // height: 60,
-    height: '8%',
+    height: 55,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
   },
   buttonTxt1: {
     position: "absolute",
-    bottom: '35%',
-    left: '16%',
+    bottom: 18,
+    left: 25,
     color: "white",
     fontWeight: "600",
     // textAlign: "center",
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   },
   buttonB: {
     position: "relative",
-    width: 140,
-    height: 60,
+    width: 120,
+    height: 50,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -105,17 +105,17 @@ const styles = StyleSheet.create({
   },
   buttonTxt2: {
     position: "absolute",
-    bottom: 20,
-    left: 40,
+    bottom: 15,
+    left: 35,
     color: "white",
     fontWeight: "600",
     // textAlign: "center",
-    fontSize: 18,
+    fontSize: 16,
   },
   buttonC: {
     position: "relative",
     width: 200,
-    height: 60,
+    height: 50,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   },
   buttonTxt3: {
     position: "absolute",
-    bottom: 20,
+    bottom: 15,
     left: 34,
     color: "white",
     fontWeight: "600",
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   buttonD: {
     position: "relative",
     width: 220,
-    height: 60,
+    height: 50,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   },
   buttonTxt4: {
     position: "absolute",
-    bottom: 20,
+    bottom: 15,
     left: 32,
     color: "white",
     fontWeight: "600",

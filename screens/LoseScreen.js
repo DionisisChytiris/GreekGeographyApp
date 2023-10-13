@@ -53,7 +53,7 @@ const LoseScreen = (props) => {
               <Text
                 style={{
                   color: "red",
-                  fontSize: 25,
+                  fontSize: 22,
                   fontWeight: "600",
                   marginLeft: 10,
                 }}
@@ -63,7 +63,7 @@ const LoseScreen = (props) => {
               <Text
                 style={{
                   color: "white",
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: "600",
                   marginLeft: 35,
                   marginTop: 30,
@@ -73,7 +73,7 @@ const LoseScreen = (props) => {
                 Τέλος χρόνου
               </Text>
             </View>
-            <View>
+            <View style={{width: '110%'}}>
               <LoseScreenAiMsg showT={show}/>
             </View>
           </View>
