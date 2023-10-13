@@ -43,7 +43,7 @@ const NomoiInstructions = () => {
           - Για να ανέβεις κατηγορία πρέπει
         </Text>
         <Text style={{ fontSize: 16 }}>να απαντήσεις τουλάχιστον</Text>
-        <Text style={{ fontSize: 16 }}>5 ερωτήσεις σωστά.</Text>
+        <Text style={{ fontSize: 16, marginBottom: -10 }}>5 ερωτήσεις σωστά.</Text>
         <Pressable
           onPress={() => navigation.navigate("Nomoi1")}
           style={{
@@ -58,7 +58,7 @@ const NomoiInstructions = () => {
         >
           <Text style={{ color: "white" }}>Ερωτήσεις </Text>
         </Pressable>
-        <View style={{marginBottom: 10, marginHorizontal: 10}}>
+        <View style={{marginBottom: 10, marginTop: -15,marginHorizontal: 15}}>
           <Text style={{ fontSize: 10 }}>Ο διοικητικός διαχωρισμός σε νομούς δεν ισχύει πλέον (από το 2011), αλλά έχει ιστορική αξία και είναι ακόμα χρήσιμος.</Text>
         </View>
       </View>

@@ -31,7 +31,7 @@ const LakeRiverResults = () => {
                 color: "white", 
                 fontWeight: "600", 
                 fontSize: 25,
-                marginTop: 110,
+                marginTop: 100,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   buttonBox1: {
-    marginTop: 30,
+    marginTop: 10,
     flexDirection: "row",
     marginHorizontal: 40,
   },

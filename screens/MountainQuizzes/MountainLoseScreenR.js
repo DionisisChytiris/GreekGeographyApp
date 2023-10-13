@@ -15,10 +15,10 @@ const MountainLoseScreenR = () => {
         <View
           style={{
             width: "75%",
-            height: "50%",
+            height: "45%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "35%",
+            marginTop: 150,
             borderRadius: 20,
           }}
         >
@@ -42,7 +42,7 @@ const MountainLoseScreenR = () => {
               <Text
                 style={{
                   color: "red",
-                  fontSize: 25,
+                  fontSize: 22,
                   fontWeight: "600",
                   marginLeft: 10,
                 }}
@@ -52,7 +52,7 @@ const MountainLoseScreenR = () => {
               <Text
                 style={{
                   color: "white",
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: "600",
                   marginLeft: 35,
                   marginTop: 30,
@@ -72,13 +72,13 @@ const MountainLoseScreenR = () => {
                 <Text
                   style={{
                     color: "black",
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: "bold",
                     marginHorizontal: 20,
                   }}
                 >
                   Επιστροφή στην αρχική σελίδα{" "}
-                  <AntDesign name="home" size={20} color="white" />
+                  <AntDesign name="home" size={16} color="white" />
                 </Text>
               </View>
             </View>

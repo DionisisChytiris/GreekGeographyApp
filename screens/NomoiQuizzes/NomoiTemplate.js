@@ -94,23 +94,23 @@ const NomoiTemplate = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
         <View style={{ height: "100%", backgroundColor: "#005ce6" }}>
-          <View style={{ marginTop: 20 }} />
+          <View style={{ marginTop: 30 }} />
           <View style={styles.containerInfo}>
             <View style={styles.levelBox}>
               <View>{props.star}</View>
-              <Text style={{ color: "white" }}>Επίπεδο {props.num}</Text>
+              <Text style={{ color: "white", fontSize: 12 }}>Επίπεδο {props.num}</Text>
             </View>
           </View>
 
           <View style={styles.progressContainerInfo}>
             <View>
-              <Text style={{ color: "white" }}>
+              <Text style={{ color: "white", fontSize: 13 }}>
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
             <Text
               style={{
-                fontSize: 18,
+                fontSize: 17,
                 fontWeight: "600",
                 color: "white",
                 paddingBottom: 30,
@@ -122,8 +122,8 @@ const NomoiTemplate = (props) => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                width: 28,
-                height: 28,
+                width: 24,
+                height: 24,
                 backgroundColor: "gray",
                 borderRadius: 20,
               }}
@@ -142,7 +142,7 @@ const NomoiTemplate = (props) => {
                   borderRadius: 12,
                   position: "absolute",
                   left: 0,
-                  height: 8,
+                  height: 6,
                   right: 0,
                   width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
                 }}
@@ -157,9 +157,9 @@ const NomoiTemplate = (props) => {
                 source={currentQuestion?.img}
                 style={{
                   borderRadius: 10,
-                  marginBottom: 10,
+                  // marginBottom: 10,
                   width: "100%",
-                  height: 180,
+                  height: 160,
                 }}
               />
               <Text style={styles.question}>{currentQuestion?.question}</Text>
@@ -187,6 +187,7 @@ const NomoiTemplate = (props) => {
                         marginHorizontal: "auto",
                         fontWeight: "600",
                         color: "white",
+                        fontSize: 12
                       }}
                     >
                       {item.answer}
@@ -326,7 +327,7 @@ const NomoiTemplate = (props) => {
           >
             <View style={stylesT.button1} />
             <View style={stylesT.btnText}>
-              <Ionicons name="home-outline" size={24} color="white" />
+              <Ionicons name="home-outline" size={20} color="white" />
             </View>
           </Pressable>
         </View>
@@ -340,8 +341,8 @@ export default NomoiTemplate;
 const stylesT = StyleSheet.create({
   button0: {
     position: "relative",
-    width: 100,
-    height: 50,
+    width: 80,
+    height: 40,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -359,8 +360,8 @@ const stylesT = StyleSheet.create({
   },
   btnText: {
     position: "absolute",
-    bottom: 12,
-    left: 37,
+    bottom: 11,
+    left: 30,
     color: "white",
     fontWeight: "600",
     fontSize: 20,

@@ -102,7 +102,7 @@ const LakeRiverRepeat = () => {
           <View style={styles.containerInfo}>
             <Text
               style={{
-                fontSize: 18,
+                fontSize: 17,
                 fontWeight: "600",
                 color: "white",
                 textAlign: "center",
@@ -115,7 +115,7 @@ const LakeRiverRepeat = () => {
 
           <View style={styles.progressContainerInfo}>
             <View>
-              <Text style={{ color: "white" }}>
+              <Text style={{ color: "white", fontSize: 13 }}>
                 {index + 1} / {totalQuestions}
               </Text>
             </View>
@@ -124,8 +124,8 @@ const LakeRiverRepeat = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                width: 28,
-                height: 28,
+                width: 24,
+                height: 24,
                 backgroundColor: "blue",
                 borderRadius: 20,
               }}
@@ -143,7 +143,7 @@ const LakeRiverRepeat = () => {
                 borderRadius: 12,
                 position: "absolute",
                 left: 0,
-                height: 8,
+                height: 6,
                 right: 0,
                 width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
               }}
@@ -158,9 +158,9 @@ const LakeRiverRepeat = () => {
                   source={currentQuestion?.img}
                   style={{
                     borderRadius: 10,
-                    marginBottom: 10,
+                    // marginBottom: 10,
                     width: "100%",
-                    height: 180,
+                    height: 160
                   }}
                 />
                 <Text style={styles.question}>{currentQuestion?.question}</Text>
@@ -188,6 +188,7 @@ const LakeRiverRepeat = () => {
                           marginHorizontal: "auto",
                           fontWeight: "600",
                           color: "white",
+                          fontSize: 12
                           // padding: 30
                         }}
                       >
@@ -334,7 +335,7 @@ const LakeRiverRepeat = () => {
           >
             <View style={stylesT.button1} />
             <View style={stylesT.btnText}>
-              <Ionicons name="home-outline" size={24} color="white" />
+              <Ionicons name="home-outline" size={20} color="white" />
             </View>
           </Pressable>
         </ImageBackground>
@@ -348,8 +349,8 @@ export default LakeRiverRepeat;
 const stylesT = StyleSheet.create({
   button0: {
     position: "relative",
-    width: 100,
-    height: 50,
+    width: 80,
+    height: 40,
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
@@ -365,8 +366,8 @@ const stylesT = StyleSheet.create({
   },
   btnText: {
     position: "absolute",
-    bottom: 12,
-    left: 37,
+    bottom: 11,
+    left: 30,
     color: "white",
     fontWeight: "600",
     fontSize: 20,

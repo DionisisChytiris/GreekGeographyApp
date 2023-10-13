@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontWeight: "bold",
-    fontSize: 12
+    fontSize: 10
   },
   progressContainerInfo: {
     flexDirection: "row",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     width: "80%",
     flexDirection: "row",
     alignItems: "center",
-    height: 7,
+    height: 6,
     borderRadius: 20,
     justifyContent: "center",
     marginTop: "3%",
