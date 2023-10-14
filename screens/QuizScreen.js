@@ -46,10 +46,6 @@ const QuizScreen = () => {
           <View style={styles.button4}/>
           <Text style={styles.buttonTxt4}>Γενικές Ερωτήσεις</Text>
         </Pressable>
-
-        <View>
-          <Text>helo</Text>
-        </View>
         
       </ImageBackground>
     </View>
