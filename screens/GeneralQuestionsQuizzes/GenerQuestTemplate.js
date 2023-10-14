@@ -103,7 +103,7 @@ const GenerQuestTemplate = (props) => {
             </View> */}
               <Text
                 style={{
-                  fontSize: 17,
+                  fontSize: 18,
                   fontWeight: "600",
                   color: "white",
                   textAlign: "center",
@@ -116,7 +116,7 @@ const GenerQuestTemplate = (props) => {
 
             <View style={styles.progressContainerInfo}>
               <View>
-                <Text style={{ color: "white", fontSize: 13 }}>
+                <Text style={{ color: "white"}}>
                   {index + 1} / {totalQuestions}
                 </Text>
               </View>
@@ -144,7 +144,7 @@ const GenerQuestTemplate = (props) => {
                   borderRadius: 12,
                   position: "absolute",
                   left: 0,
-                  height: 6,
+                  height: 7,
                   right: 0,
                   width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
                 }}
@@ -159,9 +159,9 @@ const GenerQuestTemplate = (props) => {
                   // style={styles.image}
                   style={{
                     borderRadius: 10,
-                    // marginBottom: 10,
+                    marginBottom: 10,
                     width: "100%",
-                    height: 160,
+                    height: 180,
                   }}
                   // imageStyle={{borderRadius: 16}}
                 />
@@ -190,7 +190,7 @@ const GenerQuestTemplate = (props) => {
                           marginHorizontal: "auto",
                           fontWeight: "600",
                           color: "white",
-                          fontSize: 12,
+                          fontSize: 14,
                         }}
                       >
                         {item.answer}
@@ -367,7 +367,7 @@ const stylesT = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: 40,
-    // marginTop: 0
+    marginTop: 15
   },
   button1: {
     position: "absolute",

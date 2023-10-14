@@ -46,7 +46,7 @@ const LoseScreen = (props) => {
             style={{
               position: "absolute",
               top: "10%",
-              left: "10%",
+              left: "15%"
             }}
           >
             <View>
@@ -55,7 +55,7 @@ const LoseScreen = (props) => {
                   color: "red",
                   fontSize: 22,
                   fontWeight: "600",
-                  marginLeft: 10,
+                  // marginHorizontal: 'auto',
                 }}
               >
                 Λυπάμαι Έχασες
@@ -65,7 +65,7 @@ const LoseScreen = (props) => {
                   color: "white",
                   fontSize: 20,
                   fontWeight: "600",
-                  marginLeft: 35,
+                  marginLeft: 25,
                   marginTop: 30,
                   marginBottom: 30,
                 }}

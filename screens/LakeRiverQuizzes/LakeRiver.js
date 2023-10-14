@@ -98,12 +98,12 @@ const LakeRiver = () => {
       <ScrollView>
         <ImageBackground
           source={require("../../assets/MorePhotos/lake2.jpg")}
-          style={answerStatus == null ? { height: "100%" } : { height: "150%" }}
+          // style={answerStatus == null ? { height: "100%" } : { height: "150%" }}
         >
           <View style={styles.containerInfo}>
             <Text
               style={{
-                fontSize: 17,
+                fontSize: 18,
                 fontWeight: "600",
                 color: "white",
                 textAlign: "center",
@@ -144,7 +144,7 @@ const LakeRiver = () => {
                 borderRadius: 12,
                 position: "absolute",
                 left: 0,
-                height: 6,
+                height: 8,
                 right: 0,
                 width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
               }}
@@ -159,9 +159,9 @@ const LakeRiver = () => {
                   source={currentQuestion?.img}
                   style={{
                     borderRadius: 10,
-                    // marginBottom: 10,
+                    marginBottom: 5,
                     width: "100%",
-                    height: 160,
+                    height: 180,
                   }}
                 />
                 <Text style={styles.question}>{currentQuestion?.question}</Text>
@@ -189,7 +189,7 @@ const LakeRiver = () => {
                           marginHorizontal: "auto",
                           fontWeight: "600",
                           color: "white",
-                          fontSize:12
+                          fontSize:14
                           // padding: 30
                         }}
                       >

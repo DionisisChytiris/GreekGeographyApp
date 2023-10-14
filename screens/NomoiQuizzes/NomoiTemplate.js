@@ -110,10 +110,10 @@ const NomoiTemplate = (props) => {
             </View>
             <Text
               style={{
-                fontSize: 17,
+                fontSize: 18,
                 fontWeight: "600",
                 color: "white",
-                paddingBottom: 30,
+                paddingBottom: 50,
               }}
             >
               Νομοί / Πόλεις
@@ -133,7 +133,7 @@ const NomoiTemplate = (props) => {
           </View>
 
           {/* Progress Bar */}
-          <View style={{ marginTop: -10 }}>
+          <View style={{ marginTop: -20 }}>
             <View style={styles.progressBarBack}>
               <Text
                 style={{
@@ -142,7 +142,7 @@ const NomoiTemplate = (props) => {
                   borderRadius: 12,
                   position: "absolute",
                   left: 0,
-                  height: 6,
+                  height: 8,
                   right: 0,
                   width: `${Math.floor((index1 / totalQuestions) * 100)}%`,
                 }}
@@ -157,9 +157,9 @@ const NomoiTemplate = (props) => {
                 source={currentQuestion?.img}
                 style={{
                   borderRadius: 10,
-                  // marginBottom: 10,
+                  marginBottom: 5,
                   width: "100%",
-                  height: 160,
+                  height: 180,
                 }}
               />
               <Text style={styles.question}>{currentQuestion?.question}</Text>
@@ -187,7 +187,7 @@ const NomoiTemplate = (props) => {
                         marginHorizontal: "auto",
                         fontWeight: "600",
                         color: "white",
-                        fontSize: 12
+                        fontSize: 14
                       }}
                     >
                       {item.answer}
@@ -346,7 +346,7 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginBottom: 40,
+    marginBottom: 30,
     // marginTop: 20,
   },
   button1: {
