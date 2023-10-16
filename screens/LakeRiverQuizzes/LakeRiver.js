@@ -341,7 +341,7 @@ const stylesT = StyleSheet.create({
     borderRadius: 25,
     marginLeft: "auto",
     marginRight: "auto",
-    marginBottom: 40,
+    marginBottom: 60,
   },
   // ...Platform.select({
   //   ios:{

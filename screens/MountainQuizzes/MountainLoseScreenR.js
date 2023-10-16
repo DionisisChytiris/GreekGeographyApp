@@ -41,10 +41,11 @@ const MountainLoseScreenR = () => {
             <View>
               <Text
                 style={{
-                  color: "red",
-                  fontSize: 22,
+                  color: "magenta",
+                  fontSize: 25,
                   fontWeight: "600",
                   marginLeft: 10,
+                  marginBottom: 30
                 }}
               >
                 Λυπάμαι Έχασες
@@ -72,7 +73,7 @@ const MountainLoseScreenR = () => {
                 <Text
                   style={{
                     color: "black",
-                    fontSize: 14,
+                    fontSize: 16,
                     fontWeight: "bold",
                     marginHorizontal: 20,
                   }}

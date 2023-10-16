@@ -52,7 +52,7 @@ const LoseScreen = (props) => {
             <View>
               <Text
                 style={{
-                  color: "red",
+                  color: "magenta",
                   fontSize: 22,
                   fontWeight: "600",
                   // marginHorizontal: 'auto',

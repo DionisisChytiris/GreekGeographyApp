@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "quizapp",
-    "slug": "quizapp",
+    "name": "Γεωγραφία της Ελλάδας",
+    "slug": "quizappgeography",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.quizapp.geography",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4094fcb2-46e3-4218-9b71-457b15409801"
+      }
     }
   }
 }

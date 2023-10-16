@@ -42,10 +42,11 @@ const NomoiLoseScreen6R = () => {
             <View>
               <Text
                 style={{
-                  color: "red",
+                  color: "magenta",
                   fontSize: 25,
                   fontWeight: "600",
                   marginLeft: 10,
+                  marginBottom: 30
                 }}
               >
                 Λυπάμαι Έχασες

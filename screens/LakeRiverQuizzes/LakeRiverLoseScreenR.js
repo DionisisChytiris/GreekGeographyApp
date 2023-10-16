@@ -1,4 +1,4 @@
-import { View, Text, Pressable, ImageBackground } from "react-native";
+import { View, Text, Pressable, ImageBackground, Image } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
@@ -39,12 +39,23 @@ const LakeRiverLoseScreenR = () => {
             }}
           >
             <View>
+              {/* <Image
+                source={require("../../assets/sad.png")}
+                resizeMode="cover"
+                style={{
+                  width: 90,
+                  height: 90,
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              /> */}
               <Text
                 style={{
-                  color: "red",
+                  color: "magenta",
                   fontSize: 25,
                   fontWeight: "600",
                   marginLeft: 10,
+                  marginBottom: 30
                 }}
               >
                 Λυπάμαι Έχασες
