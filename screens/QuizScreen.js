@@ -5,6 +5,7 @@ import {
   Text,
   Pressable,
   ImageBackground,
+  Platform
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -46,6 +47,9 @@ const QuizScreen = () => {
           <View style={styles.button4}/>
           <Text style={styles.buttonTxt4}>Γενικές Ερωτήσεις</Text>
         </Pressable>
+        <View>
+          <Text>Api version {Platform.Version?.toString()}</Text>
+        </View>
         
       </ImageBackground>
     </View>
